@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     var percent: Double
+    var exerciseTrack: Int
     func ridzero(result: Double) -> String {
             let value = String(format: "%g", result)
             return value
@@ -19,12 +20,17 @@ struct HomeView: View {
         VStack {
 
             CircularProgressView(progress: CGFloat(percent))
-                .frame(width: 150, height: 150)
-                .offset(x: -95, y: -260)
+                .frame(width: 130, height: 130)
+                .offset(x: -95, y: -250)
                        
             Text("\(ridzero(result:percent*100))%")
-                .font(.system(size: 20, weight: .bold, design: .rounded))
-                .offset(x:-95, y:-355)
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .offset(x:-95, y:-345)
+            
+            Text("\(exerciseTrack) mins of exercise completed today")
+                .frame(width: 200, height: 50)
+                .font(.system(size: 20, design: .rounded))
+                .offset(x:80, y:-435)
             }
         }
     }
@@ -32,6 +38,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(percent: 0.19)
+        HomeView(percent: 0.19, exerciseTrack: 10)
     }
 }
