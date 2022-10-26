@@ -17,21 +17,24 @@ struct HomeView: View {
     }
     
     var body: some View {
-        VStack {
+        ZStack {
+            VStack {
 
-            CircularProgressView(progress: CGFloat(percent))
-                .frame(width: 130, height: 130)
-                .offset(x: -95, y: -250)
-                       
-            Text("\(ridzero(result:percent*100))%")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .offset(x:-95, y:-345)
-            
-            Text("\(exerciseTrack) mins of exercise completed today")
-                .frame(width: 200, height: 50)
-                .font(.system(size: 20, design: .rounded))
-                .offset(x:80, y:-435)
-            }
+                CircularProgressView(progress: CGFloat(percent))
+                    .frame(width: 130, height: 130)
+                    .offset(x: -95, y: -235)
+                           
+                Text("\(ridzero(result:percent*100))%")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .offset(x:-95, y:-331)
+                
+                Text("\(exerciseTrack) mins of exercise completed today")
+                    .frame(width: 200, height: 50)
+                    .font(.system(size: 20, design: .rounded))
+                    .offset(x:80, y:-425)
+                }
+        }
+        
         }
     }
 
