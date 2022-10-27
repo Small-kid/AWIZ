@@ -17,7 +17,6 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ZStack {
             VStack {
 
                 CircularProgressView(progress: CGFloat(percent))
@@ -33,7 +32,14 @@ struct HomeView: View {
                     .font(.system(size: 20, design: .rounded))
                     .offset(x:80, y:-425)
                 }
+        
+        Button {
+            <#code#>
+        } label: {
+            <#code#>
         }
+
+        
         
         }
     }
