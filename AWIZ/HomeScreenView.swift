@@ -27,19 +27,26 @@ struct HomeView: View {
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .offset(x:-95, y:-331)
                 
-                Text("\(exerciseTrack) mins of exercise completed today")
+                Text("\(exerciseTrack) mins/25 mins of exercise completed today")
                     .frame(width: 200, height: 50)
-                    .font(.system(size: 20, design: .rounded))
-                    .offset(x:80, y:-425)
-                }
+                    .font(.system(size: 17, design: .rounded))
+                    .offset(x:95, y:-425)
+                
         
         Button {
-            <#code#>
+            
+            print("Placeholder")
+            
         } label: {
-            <#code#>
+            Text("Start excercise")
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .offset(x: 75, y: -415)
         }
 
-        
+            }
         
         }
     }
@@ -47,6 +54,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(percent: 0.19, exerciseTrack: 10)
-    }
+        HomeView(percent: 0.48, exerciseTrack: 12)
+    } 
 }
