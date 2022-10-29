@@ -16,14 +16,16 @@ struct HomeView: View {
     }
     
     var body: some View {
-            VStack {
+        GeometryReader { geometry in
+        ScrollView {
+        VStack {
                 
             let percent = Double(exerciseTrack/25)
                 
                 CircularProgressView(progress: CGFloat(percent))
                     .frame(width: 130, height: 130)
                     .offset(x: -95, y: -235)
-                    .padding(EdgeInsets(top: 100, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
                            
                 Text("\(ridzero(result:percent*100))%")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -50,9 +52,12 @@ struct HomeView: View {
 
                 
             }
-        
+        .frame(width: geometry.size.width)
+        .edgesIgnoringSafeArea(.all)
         }
     }
+}
+}
 
 
 struct HomeView_Previews: PreviewProvider {

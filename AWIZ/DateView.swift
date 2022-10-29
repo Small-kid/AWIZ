@@ -23,11 +23,10 @@ struct DateView: View {
                 ForEach(date) { date in
                     Text(date.day)
                     
-                }
-                    
-                }
             }
-            }
+        }
+    }
+}
         
     
 
