@@ -8,12 +8,28 @@
 import SwiftUI
 
 struct DateView: View {
-    let day = ["M","T","W","T","F","S","S"]
+    let date = [ Date(day: "M"),
+                 Date(day: "T"),
+                 Date(day: "W"),
+                 Date(day: "T"),
+                 Date(day: "F"),
+                 Date(day: "S"),
+                 Date(day: "S")
+                 
+                 ]
     var body: some View {
-        HStack {
+      
+            List {
+                ForEach(date) { date in
+                    Text(date.day)
+                    
+                }
+                    
+                }
             }
-        }
-    }
+            }
+        
+    
 
 
 struct DateView_Previews: PreviewProvider {
