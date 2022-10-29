@@ -18,15 +18,21 @@ struct DateView: View {
                  
                  ]
     var body: some View {
-      
-            List {
+        let row = GridItem(.fixed(50), spacing: 20, alignment: .center)
+        ScrollView(.horizontal) {
+            LazyHGrid(rows: [row]) {
                 ForEach(date) { date in
                     Text(date.day)
-                    
+                }
             }
         }
+            //List {
+                //ForEach(date) { date in
+                    //Text(date.day)
+            //}
+        }
     }
-}
+
         
     
 
