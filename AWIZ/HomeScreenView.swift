@@ -19,6 +19,7 @@ struct HomeView: View {
     var body: some View {
             VStack {
 
+                
                 CircularProgressView(progress: CGFloat(percent))
                     .frame(width: 130, height: 130)
                     .offset(x: -95, y: -235)
@@ -27,10 +28,10 @@ struct HomeView: View {
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .offset(x:-95, y:-331)
                 
-                Text("\(exerciseTrack) mins/25 mins of exercise completed today")
+                Text("\(exerciseTrack) mins of exercise completed today")
                     .frame(width: 200, height: 50)
-                    .font(.system(size: 17, design: .rounded))
-                    .offset(x:95, y:-425)
+                    .font(.system(size: 20, design: .rounded))
+                    .offset(x:90, y:-425)
                 
         
         Button {
