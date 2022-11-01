@@ -49,9 +49,13 @@ struct HomeView: View {
                 .cornerRadius(10)
                 .offset(x: 75, y: -415)
         }
+            Text("Streak")
+                .bold()
+                .font(.system(size: 20))
+                .offset(x: -145, y: -360)
             
          DateView()
-                .offset(x: 125, y: -370)
+                .offset(x: 18, y: -370)
                 
             }
         .frame(width: geometry.size.width)

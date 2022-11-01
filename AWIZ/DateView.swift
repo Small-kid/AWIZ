@@ -23,6 +23,8 @@ struct DateView: View {
             LazyHGrid(rows: [row]) {
                 ForEach(date) { date in
                     Text(date.day)
+                        .bold()
+                        .padding()
                 }
             }
         }
@@ -39,6 +41,6 @@ struct DateView: View {
 
 struct DateView_Previews: PreviewProvider {
     static var previews: some View {
-        DateView()
+        HomeView(exerciseTrack: 12)
     }
 }
