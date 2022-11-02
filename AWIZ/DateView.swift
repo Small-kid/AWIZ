@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DateView: View {
+    @Binding var exerciseTrack: Double
     let date = [ Date(day: "M"),
                  Date(day: "T"),
                  Date(day: "W"),
@@ -25,6 +26,7 @@ struct DateView: View {
                     Text(date.day)
                         .bold()
                         .padding()
+                        .background(Rectangle().fill(exerciseTrack<25.0 ? .white:(Color(red: 255/255, green: 237/255, blue: 237/255))).shadow(radius: 3).cornerRadius(10))
                 }
             }
         }
@@ -41,6 +43,7 @@ struct DateView: View {
 
 struct DateView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(exerciseTrack: 12)
+        HomeView(exerciseTrack: 20)
     }
 }
+

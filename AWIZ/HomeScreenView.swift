@@ -54,7 +54,7 @@ struct HomeView: View {
                 .font(.system(size: 20))
                 .offset(x: -145, y: -360)
             
-         DateView()
+            DateView(exerciseTrack: $exerciseTrack)
                 .offset(x: 18, y: -370)
                 
             }
