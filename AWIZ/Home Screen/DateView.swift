@@ -30,10 +30,6 @@ struct DateView: View {
                 }
             }
         }
-            //List {
-                //ForEach(date) { date in
-                    //Text(date.day)
-            //}
         }
     }
 
