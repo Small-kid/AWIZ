@@ -28,7 +28,7 @@ struct ExercisePlanView: View {
                                 .foregroundColor(.black)
                                 .frame(width: 120, height: 130)
                                 .padding()
-                                .background((Color(red: 240/255, green: 162/255, blue: 2/255)))
+                                .background((Color(red: 220/255, green: 247/255, blue: 99/255)))
                                 .cornerRadius(10)
                         }
                         
