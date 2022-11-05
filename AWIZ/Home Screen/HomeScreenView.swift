@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @State var isSheetPresented = false
     @State var exerciseTrack: Double
     func ridzero(result: Double) -> String {
         let value = String(format: "%g", result)
@@ -16,10 +17,10 @@ struct HomeView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView {
+        NavigationView {
+            GeometryReader { geometry in                ScrollView {
                 ZStack {
-                VStack {
+                    VStack {
                         
                         Text("Welcome back!")
                             .font(.system(size: 25, design: .rounded))
@@ -62,26 +63,27 @@ struct HomeView: View {
                         DateView(exerciseTrack: $exerciseTrack)
                             .offset(x: 18, y: -370)
                         
-                    Text("Choose your exercise Plan:")
-                        .bold()
-                        .font(.system(size: 25))
-                        .offset(x: -30, y: -350)
-                        .zIndex(1.0)
+                        Text("Choose your exercise Plan:")
+                            .bold()
+                            .font(.system(size: 25))
+                            .offset(x: -30, y: -350)
+                            .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 1, y: -410)
+                            .offset(x: 5, y: -350)
                             .zIndex(-1.0)
+                        //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         
                     }
                     .frame(width: geometry.size.width)
                     .edgesIgnoringSafeArea(.all)
                 }
             }
+            }
         }
     }
 }
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(exerciseTrack: 9)

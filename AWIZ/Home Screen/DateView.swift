@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DateView: View {
+    
     @Binding var exerciseTrack: Double
     let date = [ Date(day: "M"),
                  Date(day: "T"),
@@ -18,6 +19,7 @@ struct DateView: View {
                  Date(day: "S")
                  
     ]
+
     var body: some View {
         let row = GridItem(.fixed(50), spacing: 20, alignment: .center)
         ZStack {

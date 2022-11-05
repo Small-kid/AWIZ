@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ExercisePlanDetailView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack {
-            Text("Ba Ba black sheep have you any wool")
+            VStack {
+                Text("Ba Ba black sheep have you any wool")
+            }
         }
     }
-}
+    
 
 struct ExercisePlanDetailView_Previews: PreviewProvider {
     static var previews: some View {

@@ -8,21 +8,26 @@
 import SwiftUI
 
 struct ExercisePlanView: View {
+    
+    @State var isSheetPresented = false
     let exercisePlan = [
         ExercisePlan(title: "Exercise plan #1", details: "Czhoose this plan to aid muscle revoery after an injury and improve."),
         ExercisePlan(title: "Exercise plan #2", details: "Choose this plan to help strengthen your muscles in general."),
         ExercisePlan(title: "Exercise plan #3", details: "Choose this plan to help with mobility issues in general."),
         ExercisePlan(title: "ExercisePlan #4", details: "Choose this plan for more advanced exercises if you are already active.")
     ]
-    //@State var isSheetPresented: Bool = false
+
     var body: some View {
+        
         let row = GridItem(.fixed(50), spacing: 20, alignment: .center)
+        
         ScrollView(.horizontal) {
-            NavigationView {
                 LazyHGrid(rows: [row]) {
                     ForEach(exercisePlan) { exercisePlan in
                         NavigationLink {
                             ExercisePlanDetailView()
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            //isSheetPresented = true
                         } label: {
                             Text(exercisePlan.title)
                                 .foregroundColor(.black)
@@ -33,7 +38,10 @@ struct ExercisePlanView: View {
                         }
                         
                     }
+                    .sheet(isPresented: $isSheetPresented) {
+                        ExercisePlanDetailView()
                 }
+                
             }
             
         }

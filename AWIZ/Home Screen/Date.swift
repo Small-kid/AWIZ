@@ -9,5 +9,6 @@ import Foundation
 
 struct Date: Identifiable {
     var id = UUID()
+    //var date: String
     var day: String
 }
