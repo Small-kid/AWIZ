@@ -66,13 +66,6 @@
 			path = "Home Screen";
 			sourceTree = "<group>";
 		};
-		050D0DF92915794F00D99FBF /* Main App */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Main App";
-			sourceTree = "<group>";
-		};
 		050D0DFC291579FA00D99FBF /* Exercise tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +80,23 @@
 				05208DEA29038C73003CAECF /* SettingsView.swift */,
 			);
 			path = "Settings tab";
+			sourceTree = "<group>";
+		};
+		050D0E0029160B4D00D99FBF /* Friends tab */ = {
+			isa = PBXGroup;
+			children = (
+				05208DE629038C55003CAECF /* FriendView.swift */,
+			);
+			path = "Friends tab";
+			sourceTree = "<group>";
+		};
+		050D0E0129160B6F00D99FBF /* Main app */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3A50829037D0E00F4E36A /* AWIZApp.swift */,
+				CEB3A50A29037D0E00F4E36A /* ContentView.swift */,
+			);
+			path = "Main app";
 			sourceTree = "<group>";
 		};
 		CEB3A4FC29037D0E00F4E36A = {
@@ -108,12 +118,10 @@
 		CEB3A50729037D0E00F4E36A /* AWIZ */ = {
 			isa = PBXGroup;
 			children = (
+				050D0E0129160B6F00D99FBF /* Main app */,
+				050D0E0029160B4D00D99FBF /* Friends tab */,
 				050D0DFD29157A1600D99FBF /* Settings tab */,
 				050D0DFC291579FA00D99FBF /* Exercise tab */,
-				CEB3A50829037D0E00F4E36A /* AWIZApp.swift */,
-				050D0DF92915794F00D99FBF /* Main App */,
-				CEB3A50A29037D0E00F4E36A /* ContentView.swift */,
-				05208DE629038C55003CAECF /* FriendView.swift */,
 				050D0DF8291578B700D99FBF /* Home Screen */,
 				CEB3A50C29037D1600F4E36A /* Assets.xcassets */,
 				CEB3A50E29037D1600F4E36A /* Preview Content */,

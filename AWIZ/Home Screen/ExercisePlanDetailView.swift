@@ -10,7 +10,7 @@ import SwiftUI
 struct ExercisePlanDetailView: View {
     var body: some View {
         VStack {
-            Text("Placeholder")
+            Text("Ba Ba black sheep have you any wool")
         }
     }
 }

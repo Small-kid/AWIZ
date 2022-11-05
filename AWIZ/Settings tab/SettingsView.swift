@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     var body: some View {
-        Text("Coming soon!")
+        Text("Coming Soon!")
     }
 }
 
