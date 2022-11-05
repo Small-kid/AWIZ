@@ -26,7 +26,7 @@ struct DateView: View {
                     Text(date.day)
                         .bold()
                         .padding()
-                        .background(Rectangle().fill(exerciseTrack<25.0 ? .white:(Color(red: 255/255, green: 237/255, blue: 237/255))).shadow(radius: 3).cornerRadius(10))
+                        .background(Rectangle().fill(exerciseTrack<25.0 ? (Color(red: 255/255, green: 237/255, blue: 237/255)):(Color(red: 240/255, green: 162/255, blue: 2/255))).shadow(radius: 3).cornerRadius(10))
                 }
             }
         }

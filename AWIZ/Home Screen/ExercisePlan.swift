@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ExercisePlan {
-    
+struct ExercisePlan: Identifiable {
+    var id = UUID()
     var title: String
     var details: String
 }

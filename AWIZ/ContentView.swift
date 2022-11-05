@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HomeView(exerciseTrack: 10)
+            HomeView(exerciseTrack: 25)
                 .tabItem {
                 Label("Home", systemImage: "house.fill")
             }
@@ -33,5 +33,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
