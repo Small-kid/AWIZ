@@ -20,6 +20,9 @@ struct HomeView: View {
         ScrollView {
         VStack {
                 
+            Text("Welcome back!")
+                .font(.system(size: 25, design: .rounded))
+                .offset(x: -95, y: 25)
             let percent = Double(exerciseTrack/25)
                 
                 CircularProgressView(progress: CGFloat(percent))
@@ -57,8 +60,14 @@ struct HomeView: View {
             DateView(exerciseTrack: $exerciseTrack)
                 .offset(x: 18, y: -370)
             
+            Text("Choose your exercise Plan:")
+                .bold()
+                .font(.system(size: 25))
+                .offset(x: -30, y: -350)
+            
+            
             ExercisePlanView()
-               .offset(x: 15, y: -250)
+               .offset(x: 15, y: -365)
                 
             }
         .frame(width: geometry.size.width)

@@ -18,20 +18,26 @@ struct ExercisePlanView: View {
     var body: some View {
         let row = GridItem(.fixed(50), spacing: 20, alignment: .center)
         ScrollView(.horizontal) {
-            LazyHGrid(rows: [row]) {
-                ForEach(exercisePlan) { exercisePlan in
-                    Text(exercisePlan.title)
-                        .frame(width: 120, height: 130)
-                        .padding()
-                        .background((Color(red: 240/255, green: 162/255, blue: 2/255)))
-                        .cornerRadius(10)
+            NavigationView {
+                LazyHGrid(rows: [row]) {
+                    ForEach(exercisePlan) { exercisePlan in
+                        NavigationLink {
+                            ExercisePlanDetailView()
+                        } label: {
+                            Text(exercisePlan.title)
+                                .foregroundColor(.black)
+                                .frame(width: 120, height: 130)
+                                .padding()
+                                .background((Color(red: 240/255, green: 162/255, blue: 2/255)))
+                                .cornerRadius(10)
+                        }
                         
+                    }
                 }
             }
+            
         }
-        
     }
-        
         
         
         struct ExercisePlanView_Previews: PreviewProvider {
