@@ -54,10 +54,10 @@ struct HomeView: View {
                                 .cornerRadius(10)
                                 .offset(x: 75, y: -415)
                         }
-                        Text("Streak")
+                        Text("Weekly progress")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -145, y: -360)
+                            .offset(x: -85, y: -370)
                             .zIndex(2.0)
                         
                         DateView(exerciseTrack: $exerciseTrack)
