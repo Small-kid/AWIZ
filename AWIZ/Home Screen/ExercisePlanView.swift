@@ -14,16 +14,18 @@ struct ExercisePlanView: View {
         ExercisePlan(title: "Exercise plan #3", details: "Choose this plan to help with mobility issues in general."),
         ExercisePlan(title: "ExercisePlan #4", details: "Choose this plan for more advanced exercises if you are already active.")
     ]
-    @State var isSheetPresented: Bool = false
+    //@State var isSheetPresented: Bool = false
     var body: some View {
         let row = GridItem(.fixed(50), spacing: 20, alignment: .center)
-        let columns = GridItem(.fixed(50), spacing: 20, alignment: .center)
         ScrollView(.horizontal) {
             LazyHGrid(rows: [row]) {
                 ForEach(exercisePlan) { exercisePlan in
                     Text(exercisePlan.title)
+                        .frame(width: 120, height: 130)
                         .padding()
-                       
+                        .background((Color(red: 240/255, green: 162/255, blue: 2/255)))
+                        .cornerRadius(10)
+                        
                 }
             }
         }

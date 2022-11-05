@@ -57,8 +57,8 @@ struct HomeView: View {
             DateView(exerciseTrack: $exerciseTrack)
                 .offset(x: 18, y: -370)
             
-            //ExercisePlanView()
-               // .offset(x: 0, y: -400)
+            ExercisePlanView()
+               .offset(x: 15, y: -250)
                 
             }
         .frame(width: geometry.size.width)
