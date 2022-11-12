@@ -11,10 +11,7 @@ struct ExercisePlanView: View {
     
     @State var isSheetPresented = false
     let exercisePlan = [
-        ExercisePlan(title: "Exercise plan #1", details: "Czhoose this plan to aid muscle revoery after an injury and improve."),
-        ExercisePlan(title: "Exercise plan #2", details: "Choose this plan to help strengthen your muscles in general."),
-        ExercisePlan(title: "Exercise plan #3", details: "Choose this plan to help with mobility issues in general."),
-        ExercisePlan(title: "ExercisePlan #4", details: "Choose this plan for more advanced exercises if you are already active.")
+        ExercisePlan(title: "Exercise Plan 1", details: "Choose this for a light and basic workout", exercise: Exercise(title: "Toe touches and Arm Stretches", duration: 5))
     ]
 
     var body: some View {

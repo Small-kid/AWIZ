@@ -9,12 +9,15 @@ import Foundation
 
 struct ExercisePlan: Identifiable {
     var id = UUID()
-    struct Exercise {
-        var title: String
-        var duration: Int
-    }
+    var title: String
     let duration = 25
     var details: String
+    var exercise: Exercise
+}
+
+struct Exercise {
+    var title: String
+    var duration: Int
 }
 
 //struct ExercisePlan1: Identifiable {
