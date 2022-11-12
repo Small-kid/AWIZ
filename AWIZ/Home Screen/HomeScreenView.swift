@@ -34,27 +34,17 @@ struct HomeView: View {
                             .frame(width: 130, height: 130)
                             .offset(x: -95, y: -235)
                             .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
-                    Text("Current Streak: \(currentStreak) days")
-                            .font(.system(size: 20, weight: .bold))
-                            .offset(x:-74, y: -190)
                         
-                    Text("Highest Streak: \(highestStreak) days")
-                            .font(.system(size: 20, weight: .bold))
-                            .offset(x:-70, y: -180)
-                        
-                        ProgressView(value: 10, total: 25)
-                            .padding()
-                            .offset(y: -175)
                             
                         
                         Text("\(ridzero(result:percent*100))%")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .offset(x:-95, y:-430)
+                            .offset(x:-95, y:-329)
                         
                         Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                             .frame(width: 200, height: 50)
                             .font(.system(size: 20, design: .rounded))
-                            .offset(x:90, y:-530)
+                            .offset(x:90, y:-430)
                         
                         
                         Button {
@@ -67,26 +57,21 @@ struct HomeView: View {
                                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
-                                .offset(x: 80, y: -520)
+                                .offset(x: 80, y: -410)
                         }
-                        //Text("Weekly progress")
-                            //.bold()
-                            //.font(.system(size: 25))
-                            //.offset(x: -85, y: -370)
-                           // .zIndex(2.0)
                         
-                        //DateView(exerciseTrack: $exerciseTrack)
-                            //.offset(x: 18, y: -370)
+                        StreaksView(currentStreak: 10, highestStreak: 40)
+                            .offset(x:0, y: -280)
                         
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -30, y: -335)
+                            .offset(x: -30, y: -430)
                             .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 9, y: -315)
+                            .offset(x: 9, y: -430)
                             .zIndex(-1.0)
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         
