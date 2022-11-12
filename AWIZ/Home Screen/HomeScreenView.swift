@@ -36,15 +36,15 @@ struct HomeView: View {
                             .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
                     Text("Current Streak: \(currentStreak) days")
                             .font(.system(size: 20, weight: .bold))
-                            .offset(x:-74, y: -100)
+                            .offset(x:-74, y: -190)
                         
                     Text("Highest Streak: \(highestStreak) days")
                             .font(.system(size: 20, weight: .bold))
-                            .offset(x:-70, y: -100)
+                            .offset(x:-70, y: -180)
                         
                         ProgressView(value: 10, total: 25)
                             .padding()
-                            .offset(y: -100)
+                            .offset(y: -175)
                             
                         
                         Text("\(ridzero(result:percent*100))%")
@@ -81,12 +81,12 @@ struct HomeView: View {
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -30, y: -250)
+                            .offset(x: -30, y: -335)
                             .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 5, y: -230)
+                            .offset(x: 9, y: -315)
                             .zIndex(-1.0)
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         
