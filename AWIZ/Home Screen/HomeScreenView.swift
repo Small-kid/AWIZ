@@ -37,16 +37,17 @@ struct HomeView: View {
                         
                         ProgressView(value: 10, total: 25)
                             .padding()
+                            .offset(x: -10, y: -150)
                             
                         
                         Text("\(ridzero(result:percent*100))%")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .offset(x:-95, y:-200)
+                            .offset(x:-95, y:-370)
                         
                         Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                             .frame(width: 200, height: 50)
                             .font(.system(size: 20, design: .rounded))
-                            .offset(x:90, y:-425)
+                            .offset(x:90, y:-470)
                         
                         
                         Button {
@@ -59,7 +60,7 @@ struct HomeView: View {
                                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
-                                .offset(x: 75, y: -415)
+                                .offset(x: 80, y: -460)
                         }
                         //Text("Weekly progress")
                             //.bold()
@@ -73,12 +74,12 @@ struct HomeView: View {
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -30, y: -350)
+                            .offset(x: -30, y: -330)
                             .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 5, y: -350)
+                            .offset(x: 5, y: -320)
                             .zIndex(-1.0)
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         

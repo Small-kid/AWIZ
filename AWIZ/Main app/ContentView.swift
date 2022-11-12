@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            HomeView(exerciseTrack: 25)
+            HomeView(exerciseTrack: 25, currentStreak: 10, highestStreak: 35)
                 .tabItem {
                 Label("Home", systemImage: "house.fill")
             }
