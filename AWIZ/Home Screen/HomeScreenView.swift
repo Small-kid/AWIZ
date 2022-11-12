@@ -34,20 +34,27 @@ struct HomeView: View {
                             .frame(width: 130, height: 130)
                             .offset(x: -95, y: -235)
                             .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
+                    Text("Current Streak: \(currentStreak) days")
+                            .font(.system(size: 20, weight: .bold))
+                            .offset(x:-74, y: -100)
+                        
+                    Text("Highest Streak: \(highestStreak) days")
+                            .font(.system(size: 20, weight: .bold))
+                            .offset(x:-70, y: -100)
                         
                         ProgressView(value: 10, total: 25)
                             .padding()
-                            .offset(x: -10, y: -150)
+                            .offset(y: -100)
                             
                         
                         Text("\(ridzero(result:percent*100))%")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .offset(x:-95, y:-370)
+                            .offset(x:-95, y:-430)
                         
                         Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                             .frame(width: 200, height: 50)
                             .font(.system(size: 20, design: .rounded))
-                            .offset(x:90, y:-470)
+                            .offset(x:90, y:-530)
                         
                         
                         Button {
@@ -60,7 +67,7 @@ struct HomeView: View {
                                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
-                                .offset(x: 80, y: -460)
+                                .offset(x: 80, y: -520)
                         }
                         //Text("Weekly progress")
                             //.bold()
@@ -74,12 +81,12 @@ struct HomeView: View {
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -30, y: -330)
+                            .offset(x: -30, y: -250)
                             .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 5, y: -320)
+                            .offset(x: 5, y: -230)
                             .zIndex(-1.0)
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         
