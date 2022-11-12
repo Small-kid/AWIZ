@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		050D0DF72915788400D99FBF /* ExercisePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D0DF62915788300D99FBF /* ExercisePlan.swift */; };
 		050D0E0529161BB200D99FBF /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050D0E0429161BB100D99FBF /* Exercise.swift */; };
+		051AD674291D00AC0052744C /* Exercise Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051AD673291D00AC0052744C /* Exercise Structs.swift */; };
 		05208DE229038887003CAECF /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE129038886003CAECF /* HomeScreenView.swift */; };
 		05208DE429038C44003CAECF /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE329038C44003CAECF /* ExerciseView.swift */; };
 		05208DE729038C55003CAECF /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE629038C55003CAECF /* FriendView.swift */; };
@@ -17,7 +18,6 @@
 		0555D064290CD42700374732 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555D063290CD42700374732 /* Date.swift */; };
 		05844BF72915315E001B4933 /* ExercisePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05844BF62915315E001B4933 /* ExercisePlanView.swift */; };
 		05844BF9291532E8001B4933 /* ExercisePlanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */; };
-		05BC705D290CC0CE0068AD4F /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BC705C290CC0CE0068AD4F /* DateView.swift */; };
 		CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50829037D0E00F4E36A /* AWIZApp.swift */; };
 		CEB3A50B29037D0E00F4E36A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50A29037D0E00F4E36A /* ContentView.swift */; };
 		CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50C29037D1600F4E36A /* Assets.xcassets */; };
@@ -27,6 +27,7 @@
 /* Begin PBXFileReference section */
 		050D0DF62915788300D99FBF /* ExercisePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlan.swift; sourceTree = "<group>"; };
 		050D0E0429161BB100D99FBF /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		051AD673291D00AC0052744C /* Exercise Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise Structs.swift"; sourceTree = "<group>"; };
 		05208DE129038886003CAECF /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		05208DE329038C44003CAECF /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		05208DE629038C55003CAECF /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		0555D063290CD42700374732 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		05844BF62915315E001B4933 /* ExercisePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlanView.swift; sourceTree = "<group>"; };
 		05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlanDetailView.swift; sourceTree = "<group>"; };
-		05BC705C290CC0CE0068AD4F /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
 		CEB3A50A29037D0E00F4E36A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,9 +59,9 @@
 			children = (
 				0555D063290CD42700374732 /* Date.swift */,
 				050D0E0429161BB100D99FBF /* Exercise.swift */,
+				051AD673291D00AC0052744C /* Exercise Structs.swift */,
 				05208DE129038886003CAECF /* HomeScreenView.swift */,
 				05208DEC29039238003CAECF /* CircularProgressView.swift */,
-				05BC705C290CC0CE0068AD4F /* DateView.swift */,
 				050D0DF62915788300D99FBF /* ExercisePlan.swift */,
 				05844BF62915315E001B4933 /* ExercisePlanView.swift */,
 				05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */,
@@ -214,11 +214,11 @@
 				05208DE429038C44003CAECF /* ExerciseView.swift in Sources */,
 				05844BF72915315E001B4933 /* ExercisePlanView.swift in Sources */,
 				05208DE229038887003CAECF /* HomeScreenView.swift in Sources */,
-				05BC705D290CC0CE0068AD4F /* DateView.swift in Sources */,
 				CEB3A50B29037D0E00F4E36A /* ContentView.swift in Sources */,
 				05208DED29039238003CAECF /* CircularProgressView.swift in Sources */,
 				05208DEB29038C73003CAECF /* SettingsView.swift in Sources */,
 				05208DE729038C55003CAECF /* FriendView.swift in Sources */,
+				051AD674291D00AC0052744C /* Exercise Structs.swift in Sources */,
 				050D0E0529161BB200D99FBF /* Exercise.swift in Sources */,
 				0555D064290CD42700374732 /* Date.swift in Sources */,
 				CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */,
