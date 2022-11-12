@@ -66,12 +66,12 @@ struct HomeView: View {
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -30, y: -430)
+                            .offset(x: -45, y: -430)
                             .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 9, y: -430)
+                            .offset(x: 13, y: -430)
                             .zIndex(-1.0)
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         
