@@ -31,7 +31,7 @@ struct HomeView: View {
                         let percent = Double(exerciseTrack/25)
                         
                         CircularProgressView(progress: CGFloat(percent))
-                            .frame(width: 130, height: 130)
+                            .frame(width: 150, height: 150)
                             .offset(x: -95, y: -235)
                             .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
                         
@@ -39,12 +39,12 @@ struct HomeView: View {
                         
                         Text("\(ridzero(result:percent*100))%")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .offset(x:-95, y:-329)
+                            .offset(x:-95, y:-335)
                         
                         Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                             .frame(width: 200, height: 50)
                             .font(.system(size: 20, design: .rounded))
-                            .offset(x:90, y:-430)
+                            .offset(x:100, y:-440)
                         
                         
                         Button {
@@ -57,7 +57,7 @@ struct HomeView: View {
                                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
-                                .offset(x: 80, y: -410)
+                                .offset(x: 95, y: -420)
                         }
                         
                         StreaksView(currentStreak: 10, highestStreak: 40)
@@ -66,12 +66,12 @@ struct HomeView: View {
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -45, y: -430)
+                            .offset(x: -45, y: -410)
                             .zIndex(1.0)
                         
                         
                         ExercisePlanView()
-                            .offset(x: 13, y: -430)
+                            .offset(x: 13, y: -400)
                             .zIndex(-1.0)
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         

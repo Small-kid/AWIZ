@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ExercisePlanDetailView: View {
     
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
             VStack {

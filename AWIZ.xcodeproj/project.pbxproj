@@ -53,10 +53,10 @@
 		050D0DF8291578B700D99FBF /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				05208DE129038886003CAECF /* HomeScreenView.swift */,
-				051AD675291F4EF90052744C /* StreaksView.swift */,
-				05208DEC29039238003CAECF /* CircularProgressView.swift */,
 				050D0DF62915788300D99FBF /* ExercisePlan.swift */,
+				05208DE129038886003CAECF /* HomeScreenView.swift */,
+				05208DEC29039238003CAECF /* CircularProgressView.swift */,
+				051AD675291F4EF90052744C /* StreaksView.swift */,
 				05844BF62915315E001B4933 /* ExercisePlanView.swift */,
 				05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */,
 			);
