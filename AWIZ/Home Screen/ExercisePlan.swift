@@ -8,7 +8,7 @@
 import Foundation
 
 struct ExercisePlan: Identifiable {
-    var id = UUID()
+    let id = UUID()
     var title: String
     let duration = 25
     var details: String
@@ -22,6 +22,7 @@ struct Exercise {
     var title: String
     var duration: Int
 }
+
 
 //struct ExercisePlan1: Identifiable {
 //    var id = UUID()

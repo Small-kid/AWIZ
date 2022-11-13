@@ -24,9 +24,9 @@ struct ExercisePlanView: View {
         
         ScrollView(.horizontal) {
                 LazyHGrid(rows: [row]) {
-                    ForEach(exercisePlan) { exercisePlan in
+                    ForEach($exercisePlan) { $exercisePlan in
                         NavigationLink {
-                            ExercisePlanDetailView()
+                            ExercisePlanDetailView(exercisePlan: $exercisePlan)
                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                         } label: {
                             Text(exercisePlan.title)
@@ -38,8 +38,8 @@ struct ExercisePlanView: View {
                         }
                         
                     }
-                    .sheet(isPresented: $isSheetPresented) {
-                        ExercisePlanDetailView()
+//                    .sheet(isPresented: $isSheetPresented) {
+//                        ExercisePlanDetailView(exercisePlan: $exercisePlan)
                 }
                 
             }
@@ -47,11 +47,11 @@ struct ExercisePlanView: View {
         }
     }
         
-        
+
         struct ExercisePlanView_Previews: PreviewProvider {
             static var previews: some View {
                 ExercisePlanView()
             }
         }
-    }
+
 
