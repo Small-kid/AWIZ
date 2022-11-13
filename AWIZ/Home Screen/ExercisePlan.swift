@@ -13,6 +13,9 @@ struct ExercisePlan: Identifiable {
     let duration = 25
     var details: String
     var exercise: Exercise
+    var exercise2: Exercise
+    var exercise3: Exercise
+    var exercise4: Exercise
 }
 
 struct Exercise {
