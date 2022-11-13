@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ExercisePlanDetailView: View {
-    
-    
+    @Binding var exercisePlan: ExercisePlan
     var body: some View {
             VStack {
-                Text("Ba Ba black sheep have you any wool")
+                Text(exercisePlan.title)
             }
         }
     }
@@ -20,6 +19,6 @@ struct ExercisePlanDetailView: View {
 
 struct ExercisePlanDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ExercisePlanDetailView()
+        ExercisePlanDetailView(exercisePlan: $exercisePlan)
     }
 }

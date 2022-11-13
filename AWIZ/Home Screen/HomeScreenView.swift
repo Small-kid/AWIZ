@@ -39,7 +39,7 @@ struct HomeView: View {
                         
                         Text("\(ridzero(result:percent*100))%")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .offset(x:-95, y:-335)
+                            .offset(x:-95, y:-339)
                         
                         Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                             .frame(width: 200, height: 50)
@@ -66,7 +66,7 @@ struct HomeView: View {
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -45, y: -410)
+                            .offset(x: -30, y: -410)
                             .zIndex(1.0)
                         
                         
