@@ -10,7 +10,7 @@ import SwiftUI
 struct ExercisePlanView: View {
     
     @State var isSheetPresented = false
-    @State var exercisePlan = [
+    @ObservedObject var exercisePlan = [
         ExercisePlan(title: "Exercise Plan 1", details: "Choose this for a light and basic workout", exercise:
         Exercise(title: "Toe touches and Arm Stretches", duration: 5), exercise2: Exercise(title: "ArmCircles", duration: 5), exercise3: Exercise(title: "Calf Raises", duration: 5), exercise4: Exercise(title: "Jog on the Spot", duration: 5)
         ),
