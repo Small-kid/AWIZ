@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExercisePlan: Identifiable, ObservableObject {
+struct ExercisePlan: Identifiable {
     let id = UUID()
     var title: String
     let duration = 25
@@ -17,14 +17,14 @@ class ExercisePlan: Identifiable, ObservableObject {
     var exercise3: Exercise
     var exercise4: Exercise
     
-    init(title: String, details: String, exercise: Exercise, exercise2: Exercise, exercise3: Exercise, exercise4: Exercise) {
-        self.title = title
-        self.details = details
-        self.exercise = exercise
-        self.exercise2 = exercise2
-        self.exercise3 = exercise3
-        self.exercise4 = exercise4
-    }
+//    init(title: String, details: String, exercise: Exercise, exercise2: Exercise, exercise3: Exercise, exercise4: Exercise) {
+//        self.title = title
+//        self.details = details
+//        self.exercise = exercise
+//        self.exercise2 = exercise2
+//        self.exercise3 = exercise3
+//        self.exercise4 = exercise4
+//    }
 }
 
 struct Exercise {

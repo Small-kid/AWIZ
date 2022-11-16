@@ -24,27 +24,27 @@ struct HomeView: View {
             GeometryReader { geometry in                ScrollView {
                 ZStack {
                     VStack {
-                        
-                        Text("Welcome back!")
-                            .font(.system(size: 25, design: .rounded))
-                            .offset(x: -95, y: 25)
+                        //                        Text("Welcome Back!")
+                        //                            .font(.system(size: 45, weight: .medium, design: .rounded))
+                        //                            .offset(y: -20)
+                        //                        Text("Welcome back!")
+                        //                            .font(.system(size: 25, design: .rounded))
+                        //                            .offset(x: -95, y: 25)
                         let percent = Double(exerciseTrack/25)
                         
                         CircularProgressView(progress: CGFloat(percent))
                             .frame(width: 150, height: 150)
-                            .offset(x: -95, y: -235)
+                            .offset(x: -95, y: -320)
                             .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
-                        
-                            
                         
                         Text("\(ridzero(result:percent*100))%")
                             .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .offset(x:-95, y:-339)
+                            .offset(x:-89, y:-424)
                         
                         Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                             .frame(width: 200, height: 50)
                             .font(.system(size: 20, design: .rounded))
-                            .offset(x:100, y:-440)
+                            .offset(x:100, y:-515)
                         
                         
                         Button {
@@ -57,22 +57,23 @@ struct HomeView: View {
                                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
-                                .offset(x: 95, y: -420)
+                                .offset(x: 92, y: -513)
                         }
                         
                         StreaksView(currentStreak: 10, highestStreak: 40)
-                            .offset(x:0, y: -280)
+                            .offset(x:0, y: -390)
                         
                         Text("Choose your exercise Plan:")
                             .bold()
                             .font(.system(size: 25))
-                            .offset(x: -30, y: -410)
+                            .offset(x: -30, y: -510)
                             .zIndex(1.0)
                         
                         
-                        ExercisePlanView()
-                            .offset(x: 13, y: -400)
-                            .zIndex(-1.0)
+                        //                        ExercisePlanView()
+                        //                            .offset(x: 13, y: -400)
+                        //                            .zIndex(-1.0)
+                        
                         //.frame(maxWidth: .infinity, maxHeight: .infinity)
                         
                     }
@@ -87,5 +88,5 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40)
-    } 
+    }
 }
