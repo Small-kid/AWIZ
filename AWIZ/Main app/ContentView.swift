@@ -18,7 +18,7 @@ struct ContentView: View {
   ]
     var body: some View {
         TabView {
-            HomeView(exerciseTrack: 20, currentStreak: 10, highestStreak: 35)
+            HomeView(exerciseTrack: 20, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
                 .tabItem {
                 Label("Home", systemImage: "house.fill")
             }

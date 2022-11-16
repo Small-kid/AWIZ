@@ -10,10 +10,11 @@ import SwiftUI
 struct HomeView: View {
     
     @State var isSheetPresented = false
-    @State var exerciseIsCompleted = false
+    //@State var exerciseIsCompleted = false
     @State var exerciseTrack: Double
     @State var currentStreak: Int
     @State var highestStreak: Int
+    @Binding var exercisePlans: [ExercisePlan]
     
     func ridzero(result: Double) -> String {
         let value = String(format: "%g", result)
@@ -27,20 +28,23 @@ struct HomeView: View {
                     ZStack {
                         VStack {
                             let percent = Double(exerciseTrack/25)
+                            Text("Welcome back to ElderlyFit")
+                                .font(.system(size: 25,weight: .medium, design: .rounded))
+                                .offset(x: 0, y: 40)
                             
                             CircularProgressView(progress: CGFloat(percent))
                                 .frame(width: 150, height: 150)
-                                .offset(x: -95, y: -320)
+                                .offset(x: -95, y: -210)
                                 .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
                             
                             Text("\(ridzero(result:percent*100))%")
                                 .font(.system(size: 30, weight: .bold, design: .rounded))
-                                .offset(x:-89, y:-424)
+                                .offset(x:-92, y:-315)
                             
                             Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                                 .frame(width: 200, height: 50)
                                 .font(.system(size: 20, design: .rounded))
-                                .offset(x:100, y:-515)
+                                .offset(x:100, y:-400)
                             
                             
                             Button {
@@ -53,22 +57,22 @@ struct HomeView: View {
                                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                     .foregroundColor(.black)
                                     .cornerRadius(10)
-                                    .offset(x: 92, y: -513)
+                                    .offset(x: 92, y: -390)
                             }
                             
                             StreaksView(currentStreak: 10, highestStreak: 40)
-                                .offset(x:0, y: -390)
+                                .offset(x:0, y: -270)
                             
                             Text("Choose your exercise Plan:")
                                 .bold()
                                 .font(.system(size: 25))
-                                .offset(x: -30, y: -510)
+                                .offset(x: -40, y: -400)
                                 .zIndex(1.0)
                             
                             
-                            //                        ExercisePlanView()
-                            //                            .offset(x: 13, y: -400)
-                            //                            .zIndex(-1.0)
+                            ExercisePlanView( exercisePlans: $exercisePlans)
+                                .offset(x: 20, y: -390)
+                                .zIndex(-1.0)
                             
                             //.frame(maxWidth: .infinity, maxHeight: .infinity)
                             
@@ -84,6 +88,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40)
+        HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "idk", exercise: Exercise(title: "ufje", duration: 5), exercise2: Exercise(title: "jfjfj", duration: 5), exercise3: Exercise(title: "JEu", duration: 10), exercise4: Exercise(title: "fjjf", duration: 5))]))
     }
 }
