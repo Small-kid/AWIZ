@@ -15,6 +15,7 @@ struct ExercisePlanDetailView: View {
         VStack {
             Text(exercisePlan.title)
             Text(exercisePlan.details)
+            Text(exercisePlan.exercise.title)
         }
     }
 }
