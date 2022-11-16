@@ -44,10 +44,9 @@ struct ExercisePlanView: View {
     }
 
 
-//        struct ExercisePlanView_Previews: PreviewProvider {
-//            static var previews: some View {
-//                ExercisePlanView(exercisePlans: .constant([ExercisePlan(title: "1", details: "1", exercise: "1", exercise2: "1", exercise3: "1", exercise4: "1")]))
-//            }
-//        }
-//
-//
+struct ExercisePlanView_Previews: PreviewProvider {
+    static var previews: some View {
+        ExercisePlanView(exercisePlans: .constant([ExercisePlan(title: "Exercise Plan View", details: "idk", exercise: Exercise(title: "ufje", duration: 5), exercise2: Exercise(title: "jfjfj", duration: 5), exercise3: Exercise(title: "JEu", duration: 10), exercise4: Exercise(title: "fjjf", duration: 5))]))
+    }
+    
+}
