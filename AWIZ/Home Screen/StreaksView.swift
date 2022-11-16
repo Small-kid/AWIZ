@@ -12,13 +12,12 @@ struct StreaksView: View {
     @State var highestStreak: Int
     var body: some View {
         VStack {
-            
             Rectangle()
-                            .cornerRadius(20)
-                            .frame(width: 375, height: 120)
-                            .shadow(radius: 5)
-                            .foregroundColor(.white)
-                            .offset(x: 0, y: -60 )
+                .cornerRadius(20)
+                .frame(width: 375, height: 120)
+                .shadow(radius: 5)
+                .foregroundColor(.white)
+                .offset(x: 0, y: -60 )
             
             Text("Current Streak: \(currentStreak) days")
                 .font(.system(size: 20, weight: .bold))

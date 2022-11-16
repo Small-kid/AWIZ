@@ -10,12 +10,12 @@ import SwiftUI
 struct ExercisePlanDetailView: View {
     var exercisePlan: ExercisePlan
     var body: some View {
-            VStack {
-                Text(exercisePlan.title)
-            }
+        VStack {
+            Text(exercisePlan.title)
         }
     }
-    
+}
+
 
 //struct ExercisePlanDetailView_Previews: PreviewProvider {
 //    static var previews: some View {
