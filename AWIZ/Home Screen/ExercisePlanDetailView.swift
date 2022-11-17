@@ -14,7 +14,8 @@ struct ExercisePlanDetailView: View {
     var body: some View {
         VStack {
             Text(exercisePlan.title)
-                .font(.system(size: 30))
+                .font(.system(size: 35, weight: .bold))
+                .offset(x: 0, y: -340)
             Text(exercisePlan.details)
             Text(exercisePlan.exercise.title)
             Text(exercisePlan.exercise2.title)

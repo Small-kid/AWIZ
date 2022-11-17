@@ -14,10 +14,12 @@ struct ExerciseScreenView: View {
     
     var body: some View {
         VStack {
-            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "test", withExtension: "mov")!))
+            
+            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches.mp4" , withExtension: "mp4")!))
                 .scaledToFit()
                 .offset(y: -140)
-                .frame(width: 350, height: 300)
+            //.frame(width: 350, height: 300)
+            
         }
     }
 }

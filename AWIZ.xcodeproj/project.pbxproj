@@ -14,7 +14,6 @@
 		05208DE729038C55003CAECF /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE629038C55003CAECF /* FriendView.swift */; };
 		05208DEB29038C73003CAECF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEA29038C73003CAECF /* SettingsView.swift */; };
 		05208DED29039238003CAECF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEC29039238003CAECF /* CircularProgressView.swift */; };
-		056E48EF2924DA030027C228 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 056E48EE2924DA030027C228 /* test.mov */; };
 		05844BF72915315E001B4933 /* ExercisePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05844BF62915315E001B4933 /* ExercisePlanView.swift */; };
 		05844BF9291532E8001B4933 /* ExercisePlanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */; };
 		05A1618529225E4A00F0A0AA /* ExerciseScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */; };
@@ -32,10 +31,10 @@
 		05208DE629038C55003CAECF /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		05208DEA29038C73003CAECF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		05208DEC29039238003CAECF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		056E48EE2924DA030027C228 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
 		05844BF62915315E001B4933 /* ExercisePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlanView.swift; sourceTree = "<group>"; };
 		05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlanDetailView.swift; sourceTree = "<group>"; };
 		05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreenView.swift; sourceTree = "<group>"; };
+		05F823F329265FA0007836B2 /* ToeTouches.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ToeTouches.mp4; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
 		CEB3A50A29037D0E00F4E36A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */,
-				056E48EE2924DA030027C228 /* test.mov */,
+				05F823F329265FA0007836B2 /* ToeTouches.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -207,7 +206,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				056E48EF2924DA030027C228 /* test.mov in Resources */,
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
 			);
@@ -363,12 +361,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AWIZ/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,8 +376,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.AWIZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AWIZ/Videos/AWIZ-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -395,12 +394,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AWIZ/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -409,7 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sg.tk.AWIZ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "AWIZ/Videos/AWIZ-Bridging-Header.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
