@@ -17,7 +17,7 @@ struct ExerciseScreenView: View {
             VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "test", withExtension: "mov")!))
                 .scaledToFit()
                 .offset(y: -140)
-                //.frame(width: 350, height: 300)
+                .frame(width: 350, height: 300)
         }
     }
 }
