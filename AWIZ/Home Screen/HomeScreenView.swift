@@ -30,21 +30,21 @@ struct HomeView: View {
                             let percent = Double(exerciseTrack/25)
                             Text("Welcome back to ElderlyFit")
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
-                                .offset(x: 0, y: 40)
+                                .offset(x: 0, y: 20)
                             
                             CircularProgressView(progress: CGFloat(percent))
                                 .frame(width: 150, height: 150)
-                                .offset(x: -95, y: -210)
+                                .offset(x: -95, y: -240)
                                 .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
                             
                             Text("\(ridzero(result:percent*100))%")
                                 .font(.system(size: 30, weight: .bold, design: .rounded))
-                                .offset(x:-92, y:-315)
+                                .offset(x:-92, y:-345)
                             
                             Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
                                 .frame(width: 200, height: 50)
                                 .font(.system(size: 20, design: .rounded))
-                                .offset(x:100, y:-400)
+                                .offset(x:100, y:-445)
                             
                             
                             Button {
@@ -57,22 +57,24 @@ struct HomeView: View {
                                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                     .foregroundColor(.black)
                                     .cornerRadius(10)
-                                    .offset(x: 92, y: -390)
+                                    .offset(x: 92, y: -430)
                             }
+                            .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                             
                             StreaksView(currentStreak: 10, highestStreak: 40)
-                                .offset(x:0, y: -270)
+                                .offset(x:0, y: -310)
                             
                             Text("Choose your exercise Plan:")
                                 .bold()
                                 .font(.system(size: 25))
-                                .offset(x: -40, y: -400)
+                                .offset(x: -30, y: -440)
                                 .zIndex(1.0)
                             
                             
                             ExercisePlanView( exercisePlans: $exercisePlans)
-                                .offset(x: 20, y: -390)
+                                .offset(x: 15, y: -425)
                                 .zIndex(-1.0)
+                                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
                             
                             //.frame(maxWidth: .infinity, maxHeight: .infinity)
                             
