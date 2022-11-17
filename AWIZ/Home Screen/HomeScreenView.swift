@@ -52,7 +52,7 @@ struct HomeView: View {
                                 print("Placeholder")
                                 
                             } label: {
-                                Text("Start exercise")
+                                Text("Start last exercise")
                                     .padding()
                                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                     .foregroundColor(.black)
