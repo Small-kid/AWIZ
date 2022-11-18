@@ -27,6 +27,8 @@
 		05E027602927E16E009C9D2C /* SitUp.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E0275E2927E16E009C9D2C /* SitUp.MOV */; };
 		05E027632927E1A7009C9D2C /* HighKneeMarch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027612927E1A6009C9D2C /* HighKneeMarch.MOV */; };
 		05E027642927E1A7009C9D2C /* TricepStretch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027622927E1A7009C9D2C /* TricepStretch.MOV */; };
+		05E027672927E1C3009C9D2C /* JogOnTheSpot.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */; };
+		05E027682927E1C3009C9D2C /* WallPushUp.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027662927E1C3009C9D2C /* WallPushUp.MOV */; };
 		CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50829037D0E00F4E36A /* AWIZApp.swift */; };
 		CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50C29037D1600F4E36A /* Assets.xcassets */; };
 		CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50F29037D1600F4E36A /* Preview Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		05E0275E2927E16E009C9D2C /* SitUp.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SitUp.MOV; sourceTree = "<group>"; };
 		05E027612927E1A6009C9D2C /* HighKneeMarch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = HighKneeMarch.MOV; sourceTree = "<group>"; };
 		05E027622927E1A7009C9D2C /* TricepStretch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TricepStretch.MOV; sourceTree = "<group>"; };
+		05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = JogOnTheSpot.MOV; sourceTree = "<group>"; };
+		05E027662927E1C3009C9D2C /* WallPushUp.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = WallPushUp.MOV; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
 		CEB3A50C29037D1600F4E36A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				05E0275E2927E16E009C9D2C /* SitUp.MOV */,
 				05E027612927E1A6009C9D2C /* HighKneeMarch.MOV */,
 				05E027622927E1A7009C9D2C /* TricepStretch.MOV */,
+				05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */,
+				05E027662927E1C3009C9D2C /* WallPushUp.MOV */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05E027672927E1C3009C9D2C /* JogOnTheSpot.MOV in Resources */,
 				05E0275C2927E12C009C9D2C /* Lunges.MOV in Resources */,
 				0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */,
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
@@ -241,6 +248,7 @@
 				05E0275F2927E16E009C9D2C /* CalfRaises.MOV in Resources */,
 				05E027632927E1A7009C9D2C /* HighKneeMarch.MOV in Resources */,
 				05E027642927E1A7009C9D2C /* TricepStretch.MOV in Resources */,
+				05E027682927E1C3009C9D2C /* WallPushUp.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
