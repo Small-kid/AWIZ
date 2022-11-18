@@ -15,29 +15,35 @@ struct ExercisePlanView: View {
         
         let row = GridItem(.fixed(50), spacing: 20, alignment: .center)
         
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: [row]) {
-                ForEach(exercisePlans) { exercisePlan in
-                    NavigationLink {
-                        ExercisePlanDetailView(exercisePlan: exercisePlan)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    } label: {
-                        Text(exercisePlan.title)
-                            .foregroundColor(.black)
-                            .frame(width: 120, height: 130)
-                            .padding()
-                            .background((Color(red: 220/255, green: 247/255, blue: 99/255)))
-                            .cornerRadius(10)
+            ScrollView(.horizontal) {
+                LazyHGrid(rows: [row]) {
+                    ForEach(exercisePlans) { exercisePlan in
+                        NavigationLink {
+                            ExercisePlanDetailView(exercisePlan: exercisePlan)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        } label: {
+                            Label("", systemImage: "figure.cooldown")
+                                .font(.system(size: 30))
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                            
+                            Text(exercisePlan.title)
+                                .font(.system(size: 22))
+                                .foregroundColor(.black)
+                                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 11))
+                        }
+                        .frame(width: 140, height: 130)
+                        .padding()
+                        .background((Color(red: 220/255, green: 247/255, blue: 99/255)))
+                        .cornerRadius(10)
                     }
+                    
+                    //                    .sheet(isPresented: $isSheetPresented) {
+                    //                        ExercisePlanDetailView(exercisePlan: $exercisePlan)
+                    
                 }
-                
-                //                    .sheet(isPresented: $isSheetPresented) {
-                //                        ExercisePlanDetailView(exercisePlan: $exercisePlan)
-                
             }
         }
     }
-}
 
 
 struct ExercisePlanView_Previews: PreviewProvider {
