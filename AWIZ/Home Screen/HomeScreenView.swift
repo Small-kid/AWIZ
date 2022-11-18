@@ -90,6 +90,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "idk", exercise: Exercise(title: "ufje", duration: 5), exercise2: Exercise(title: "jfjfj", duration: 5), exercise3: Exercise(title: "JEu", duration: 10), exercise4: Exercise(title: "fjjf", duration: 5))]))
+        HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "idk", exercise: Exercise(title: "ufje", duration: 5, description: ""), exercise2: Exercise(title: "jfjfj", duration: 5,description: ""), exercise3: Exercise(title: "JEu", duration: 10, description: ""), exercise4: Exercise(title: "fjjf", duration: 5, description: ""))]))
     }
 }

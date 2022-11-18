@@ -21,7 +21,7 @@ struct ExercisePlan: Identifiable {
 struct Exercise {
     var title: String
     var duration: Int
-    //var description: String
+    var description: String
 }
 
 

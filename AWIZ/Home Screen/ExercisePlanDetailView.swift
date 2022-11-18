@@ -16,27 +16,28 @@ struct ExercisePlanDetailView: View {
             ScrollView {
                 ZStack {
                     VStack (alignment: .leading) {
+                        
                         Text(exercisePlan.title)
                             .font(.system(size: 30, weight: .bold))
-                            .padding(EdgeInsets(top: 45, leading: 0, bottom: 0, trailing: 0))
+                            .padding(EdgeInsets(top: 35, leading: 0, bottom: 0, trailing: 0))
                         
                         Text(exercisePlan.details)
                             .font(.system(size: 20, weight: .light))
-                        
-                        Text("\(exercisePlan.exercise.title) (\(exercisePlan.exercise.duration) mins)")
-                            .font(.system(size: 20, weight: .regular))
-                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                        
-                        Text("\(exercisePlan.exercise2.title) (\(exercisePlan.exercise2.duration) mins)")
-                            .font(.system(size: 20, weight: .regular))
-                            .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
-                        
-                        Text("\(exercisePlan.exercise3.title) (\(exercisePlan.exercise3.duration) mins)")
-                            .font(.system(size: 20, weight: .regular))
-                            .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
-                        Text("\(exercisePlan.exercise4.title) (\(exercisePlan.exercise4.duration) mins)")
-                            .font(.system(size: 20, weight: .regular))
-                            .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
+                      
+                            Text("\(exercisePlan.exercise.title) (\(exercisePlan.exercise.duration) mins)")
+                                .font(.system(size: 20, weight: .regular))
+                                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
+                            
+                            Text("\(exercisePlan.exercise2.title) (\(exercisePlan.exercise2.duration) mins)")
+                                .font(.system(size: 20, weight: .regular))
+                                .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
+                            
+                            Text("\(exercisePlan.exercise3.title) (\(exercisePlan.exercise3.duration) mins)")
+                                .font(.system(size: 20, weight: .regular))
+                                .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
+                            Text("\(exercisePlan.exercise4.title) (\(exercisePlan.exercise4.duration) mins)")
+                                .font(.system(size: 20, weight: .regular))
+                                .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 0))
                         
                         
                         Button {
@@ -65,11 +66,12 @@ struct ExercisePlanDetailView: View {
 }
 
 
+
 struct ExercisePlanDetailView_Previews: PreviewProvider {
     static var previews: some View {
         
         ExercisePlanDetailView(exercisePlan:ExercisePlan(title: "Exercise Plan 1", details: "Choose this for a light and basic workout", exercise:
-        Exercise(title: "Toe touches and Arm Stretches", duration: 5), exercise2: Exercise(title: "Arm Circles", duration: 5), exercise3: Exercise(title: "Calf Raises", duration: 5), exercise4: Exercise(title: "Jog on the Spot", duration: 5)))
+            Exercise(title: "Toe touches and Arm Stretches", duration: 5, description: ""), exercise2: Exercise(title: "Arm Circles", duration: 5, description: ""), exercise3: Exercise(title: "Calf Raises", duration: 5, description: ""), exercise4: Exercise(title: "Jog on the Spot", duration: 5, description: "")))
     }
     
 }
