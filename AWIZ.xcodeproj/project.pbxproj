@@ -29,6 +29,8 @@
 		05E027642927E1A7009C9D2C /* TricepStretch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027622927E1A7009C9D2C /* TricepStretch.MOV */; };
 		05E027672927E1C3009C9D2C /* JogOnTheSpot.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */; };
 		05E027682927E1C3009C9D2C /* WallPushUp.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027662927E1C3009C9D2C /* WallPushUp.MOV */; };
+		05E0276B2927E214009C9D2C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E0276A2927E214009C9D2C /* Launch Screen.storyboard */; };
+		05E0276E2927E225009C9D2C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0276D2927E225009C9D2C /* OnboardingView.swift */; };
 		CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50829037D0E00F4E36A /* AWIZApp.swift */; };
 		CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50C29037D1600F4E36A /* Assets.xcassets */; };
 		CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50F29037D1600F4E36A /* Preview Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		05E027622927E1A7009C9D2C /* TricepStretch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TricepStretch.MOV; sourceTree = "<group>"; };
 		05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = JogOnTheSpot.MOV; sourceTree = "<group>"; };
 		05E027662927E1C3009C9D2C /* WallPushUp.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = WallPushUp.MOV; sourceTree = "<group>"; };
+		05E0276A2927E214009C9D2C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		05E0276D2927E225009C9D2C /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
 		CEB3A50C29037D1600F4E36A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +143,22 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		05E027692927E204009C9D2C /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				05E0276A2927E214009C9D2C /* Launch Screen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		05E0276C2927E217009C9D2C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				05E0276D2927E225009C9D2C /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		CEB3A4FC29037D0E00F4E36A = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +178,8 @@
 		CEB3A50729037D0E00F4E36A /* AWIZ */ = {
 			isa = PBXGroup;
 			children = (
+				05E0276C2927E217009C9D2C /* Onboarding */,
+				05E027692927E204009C9D2C /* Launch Screen */,
 				055506B82924A9410029A1D0 /* Videos */,
 				050D0E0129160B6F00D99FBF /* Main app */,
 				050D0DF8291578B700D99FBF /* Home Screen */,
@@ -241,6 +263,7 @@
 				05E0275C2927E12C009C9D2C /* Lunges.MOV in Resources */,
 				0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */,
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
+				05E0276B2927E214009C9D2C /* Launch Screen.storyboard in Resources */,
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
 				05219D5729272E0E00160772 /* ElbowStretch.MOV in Resources */,
 				05E0275B2927E12C009C9D2C /* ArmCircles.MOV in Resources */,
@@ -272,6 +295,7 @@
 				05E0274F2927DF6E009C9D2C /* HomeScreenView.swift in Sources */,
 				CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */,
 				05E027532927DF9C009C9D2C /* ExercisePlanView.swift in Sources */,
+				05E0276E2927E225009C9D2C /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
