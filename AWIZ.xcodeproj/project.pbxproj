@@ -14,8 +14,10 @@
 		05208DE729038C55003CAECF /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE629038C55003CAECF /* FriendView.swift */; };
 		05208DEB29038C73003CAECF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEA29038C73003CAECF /* SettingsView.swift */; };
 		05208DED29039238003CAECF /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEC29039238003CAECF /* CircularProgressView.swift */; };
+		05219D5729272E0E00160772 /* ElbowStretch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05219D5629272E0E00160772 /* ElbowStretch.MOV */; };
 		05844BF72915315E001B4933 /* ExercisePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05844BF62915315E001B4933 /* ExercisePlanView.swift */; };
 		05844BF9291532E8001B4933 /* ExercisePlanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */; };
+		0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 0585A42E29272716007FD8A6 /* ToeTouches.MOV */; };
 		05A1618529225E4A00F0A0AA /* ExerciseScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */; };
 		CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50829037D0E00F4E36A /* AWIZApp.swift */; };
 		CEB3A50B29037D0E00F4E36A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50A29037D0E00F4E36A /* ContentView.swift */; };
@@ -31,10 +33,11 @@
 		05208DE629038C55003CAECF /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		05208DEA29038C73003CAECF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		05208DEC29039238003CAECF /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		05219D5629272E0E00160772 /* ElbowStretch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ElbowStretch.MOV; sourceTree = "<group>"; };
 		05844BF62915315E001B4933 /* ExercisePlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlanView.swift; sourceTree = "<group>"; };
 		05844BF8291532E8001B4933 /* ExercisePlanDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisePlanDetailView.swift; sourceTree = "<group>"; };
+		0585A42E29272716007FD8A6 /* ToeTouches.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ToeTouches.MOV; sourceTree = "<group>"; };
 		05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreenView.swift; sourceTree = "<group>"; };
-		05F823F329265FA0007836B2 /* ToeTouches.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ToeTouches.mp4; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
 		CEB3A50A29037D0E00F4E36A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,7 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */,
-				05F823F329265FA0007836B2 /* ToeTouches.mp4 */,
+				0585A42E29272716007FD8A6 /* ToeTouches.MOV */,
+				05219D5629272E0E00160772 /* ElbowStretch.MOV */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -206,8 +210,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */,
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
+				05219D5729272E0E00160772 /* ElbowStretch.MOV in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

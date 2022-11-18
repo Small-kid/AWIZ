@@ -10,6 +10,7 @@ import SwiftUI
 struct StreaksView: View {
     @State var currentStreak: Int
     @State var highestStreak: Int
+    
     var body: some View {
         VStack {
             Rectangle()
@@ -31,8 +32,8 @@ struct StreaksView: View {
                 .padding()
                 .frame(width: 380)
                 .scaleEffect(x:1, y: 4)
-                .cornerRadius(20)
                 .tint((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                .cornerRadius(20)
                 .offset(x:-5, y: -175)
         }
     }

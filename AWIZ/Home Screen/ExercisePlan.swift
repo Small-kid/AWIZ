@@ -16,12 +16,14 @@ struct ExercisePlan: Identifiable {
     var exercise2: Exercise
     var exercise3: Exercise
     var exercise4: Exercise
+    var exercise5: Exercise?
 }
 
 struct Exercise {
     var title: String
     var duration: Int
-    var description: String
+    var description: String?
+    var steps: String
 }
 
 

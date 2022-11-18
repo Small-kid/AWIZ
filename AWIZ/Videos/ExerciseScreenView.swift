@@ -9,17 +9,16 @@ import SwiftUI
 import AVKit
 
 struct ExerciseScreenView: View {
-    
+
     @State var player = AVPlayer()
-    
+
     var body: some View {
         VStack {
-            
-            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches.mp4" , withExtension: "mp4")!))
+
+            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "MOV")!))
                 .scaledToFit()
-                .offset(y: -140)
-            //.frame(width: 350, height: 300)
-            
+               .offset(y: -140)
+
         }
     }
 }
