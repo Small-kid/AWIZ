@@ -53,18 +53,18 @@ struct HomeView: View {
                                 
                             } label: {
                                 Text("Start last exercise")
-                                    .padding()
-                                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                                    .foregroundColor(.black)
-                                    .cornerRadius(10)
-                                    .offset(x: 92, y: -430)
                             }
+                            .padding()
+                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
+                            .offset(x: 92, y: -430)
                             .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                             
                             StreaksView(currentStreak: 10, highestStreak: 40)
-                                .offset(x:0, y: -310)
+                                .offset(x:0, y: -365)
                             
-                            Text("Choose your exercise Plan:")
+                            Text("Choose your exercise plan:")
                                 .bold()
                                 .font(.system(size: 25))
                                 .offset(x: -30, y: -440)

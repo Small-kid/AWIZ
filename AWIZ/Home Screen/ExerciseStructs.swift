@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import AVKit
 
 struct ExercisePlan: Identifiable {
     let id = UUID()
@@ -22,8 +23,9 @@ struct ExercisePlan: Identifiable {
 struct Exercise {
     var title: String
     var duration: Int
-    var description: String?
     var steps: String
+    var video: AVPlayer?
+    var description: String?
 }
 
 
