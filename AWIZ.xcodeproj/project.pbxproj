@@ -12,7 +12,6 @@
 		05208DEB29038C73003CAECF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEA29038C73003CAECF /* SettingsView.swift */; };
 		05219D5729272E0E00160772 /* ElbowStretch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05219D5629272E0E00160772 /* ElbowStretch.MOV */; };
 		0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 0585A42E29272716007FD8A6 /* ToeTouches.MOV */; };
-		05A1618529225E4A00F0A0AA /* ExerciseScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */; };
 		05E027482927DF42009C9D2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027472927DF41009C9D2C /* ContentView.swift */; };
 		05E0274D2927DF6E009C9D2C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027492927DF6D009C9D2C /* CircularProgressView.swift */; };
 		05E0274E2927DF6E009C9D2C /* ExerciseStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */; };
@@ -20,6 +19,8 @@
 		05E027502927DF6E009C9D2C /* StreaksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0274C2927DF6E009C9D2C /* StreaksView.swift */; };
 		05E027532927DF9C009C9D2C /* ExercisePlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027512927DF9C009C9D2C /* ExercisePlanView.swift */; };
 		05E027542927DF9C009C9D2C /* ExercisePlanDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027522927DF9C009C9D2C /* ExercisePlanDetailView.swift */; };
+		05E027562927DFE6009C9D2C /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027552927DFE6009C9D2C /* TimerView.swift */; };
+		05E027582927E0DA009C9D2C /* ExerciseScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027572927E0DA009C9D2C /* ExerciseScreenView.swift */; };
 		CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50829037D0E00F4E36A /* AWIZApp.swift */; };
 		CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50C29037D1600F4E36A /* Assets.xcassets */; };
 		CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50F29037D1600F4E36A /* Preview Assets.xcassets */; };
@@ -31,7 +32,6 @@
 		05208DEA29038C73003CAECF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		05219D5629272E0E00160772 /* ElbowStretch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ElbowStretch.MOV; sourceTree = "<group>"; };
 		0585A42E29272716007FD8A6 /* ToeTouches.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ToeTouches.MOV; sourceTree = "<group>"; };
-		05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreenView.swift; sourceTree = "<group>"; };
 		05E027472927DF41009C9D2C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05E027492927DF6D009C9D2C /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStructs.swift; sourceTree = "<group>"; };
@@ -39,6 +39,8 @@
 		05E0274C2927DF6E009C9D2C /* StreaksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreaksView.swift; sourceTree = "<group>"; };
 		05E027512927DF9C009C9D2C /* ExercisePlanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisePlanView.swift; sourceTree = "<group>"; };
 		05E027522927DF9C009C9D2C /* ExercisePlanDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisePlanDetailView.swift; sourceTree = "<group>"; };
+		05E027552927DFE6009C9D2C /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		05E027572927E0DA009C9D2C /* ExerciseScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseScreenView.swift; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
 		CEB3A50C29037D1600F4E36A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +107,8 @@
 		055506B82924A9410029A1D0 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				05A1618429225E4A00F0A0AA /* ExerciseScreenView.swift */,
+				05E027572927E0DA009C9D2C /* ExerciseScreenView.swift */,
+				05E027552927DFE6009C9D2C /* TimerView.swift */,
 				0585A42E29272716007FD8A6 /* ToeTouches.MOV */,
 				05219D5629272E0E00160772 /* ElbowStretch.MOV */,
 			);
@@ -228,13 +231,14 @@
 				05E027502927DF6E009C9D2C /* StreaksView.swift in Sources */,
 				05208DE429038C44003CAECF /* ExerciseView.swift in Sources */,
 				05E0274D2927DF6E009C9D2C /* CircularProgressView.swift in Sources */,
+				05E027582927E0DA009C9D2C /* ExerciseScreenView.swift in Sources */,
 				05E0274E2927DF6E009C9D2C /* ExerciseStructs.swift in Sources */,
+				05E027562927DFE6009C9D2C /* TimerView.swift in Sources */,
 				05E027482927DF42009C9D2C /* ContentView.swift in Sources */,
 				05208DEB29038C73003CAECF /* SettingsView.swift in Sources */,
 				05208DE729038C55003CAECF /* FriendView.swift in Sources */,
 				05E0274F2927DF6E009C9D2C /* HomeScreenView.swift in Sources */,
 				CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */,
-				05A1618529225E4A00F0A0AA /* ExerciseScreenView.swift in Sources */,
 				05E027532927DF9C009C9D2C /* ExercisePlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
