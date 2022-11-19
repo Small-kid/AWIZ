@@ -35,7 +35,7 @@ struct TimerView: View {
                 .animation(.easeInOut, value: vm.minutes)
                 .frame(width: width)
 
-            HStack(spacing:50) {
+            HStack(spacing: 50) {
                 Button("Start") {
                     vm.start(minutes: vm.minutes)
                 }
