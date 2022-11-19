@@ -18,17 +18,21 @@ struct ExerciseScreenView: View {
             
             Text(exercisePlan.exercise.title)
                 .font(.system(size: 35, weight: .medium))
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             
             VideoPlayer(player: exercisePlan.exercise.video)
                 .scaledToFit()
                 .frame(alignment: .center)
-                .cornerRadius(0)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0))
+                .cornerRadius(10)
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            
+            Text(exercisePlan.exercise.steps)
+                .padding()
+                .frame(alignment: .center)
                       
             
             TimerView()
-                .padding()
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 30, trailing: 0))
             
         }
     }

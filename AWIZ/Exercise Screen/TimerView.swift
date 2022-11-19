@@ -34,7 +34,7 @@ struct TimerView: View {
                 .foregroundColor(.black)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
-                //.disabled(vm.isActive)
+                .disabled(vm.isActive)
                 
                 Button(vm.isActive ? "Pause" : "Resume") {
                     vm.pause()

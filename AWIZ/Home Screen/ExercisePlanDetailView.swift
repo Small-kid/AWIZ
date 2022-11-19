@@ -26,6 +26,7 @@ struct ExercisePlanDetailView: View {
                     
                     Form {
                         Section (header: Text("1st Exercise")){
+                            
                             Text("\(exercisePlan.exercise.title) (\(exercisePlan.exercise.duration) mins)")
                                 .font(.system(size: 20, weight: .regular))
                         }
