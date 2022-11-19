@@ -14,42 +14,57 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
+            
             Text("Timer: \(vm.time)")
                 .font(.system(size: 50, weight: .medium, design: .rounded))
                 .alert("Timer done!", isPresented: $vm.showingAlert) {
                     Button("Continue", role: .cancel) {
-                        // Code
+                        
                     }
                 }
                 .padding()
-
+            
             HStack(spacing:50) {
                 Button("Start") {
-                    vm.start(minutes: vm.minutes)
+                    vm.start(minutes: Float(vm.minutes))
                 }
                 .padding()
                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                 .foregroundColor(.black)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                .disabled(vm.isActive)
                 
-                Button("Pause") {
-                    vm.isActive = false
-                }
+                if vm.isActive == true {
+                    Button("Pause") {
+                        vm.isActive = false
+                        //self.timer.upstream.connect().cancel()
+                    }
                     .padding()
                     .foregroundColor(.black)
                     .background(.red)
                     .cornerRadius(10)
                     .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                } else {
+                    Button("Resume") {
+                        vm.isActive = true
+                    }
+                    .padding()
+                    .foregroundColor(.black)
+                    .background(.green)
+                    .cornerRadius(10)
+                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                }
             }
             .frame(width: width)
+            }
+            .onReceive(timer) { _ in
+                vm.updateCountdown()
+            }
+            
         }
-        .onReceive(timer) { _ in
-            vm.updateCountdown()
-        }
-        
     }
-}
+
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
