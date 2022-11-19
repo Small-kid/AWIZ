@@ -18,7 +18,9 @@ struct ExerciseScreenView: View {
             
             VideoPlayer(player: exercisePlan.exercise.video)
                 .scaledToFit()
-               .offset(y: -140)
+                .frame(alignment: .center)
+                .cornerRadius(10)
+                .padding(EdgeInsets(top: 0, leading: 25, bottom: 300, trailing: 25))
             
         }
     }

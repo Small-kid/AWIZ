@@ -81,12 +81,12 @@
 		050D0DF8291578B700D99FBF /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				05E027492927DF6D009C9D2C /* CircularProgressView.swift */,
 				05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */,
 				05E0274B2927DF6E009C9D2C /* HomeScreenView.swift */,
+				05E027492927DF6D009C9D2C /* CircularProgressView.swift */,
 				05E0274C2927DF6E009C9D2C /* StreaksView.swift */,
-				05E027522927DF9C009C9D2C /* ExercisePlanDetailView.swift */,
 				05E027512927DF9C009C9D2C /* ExercisePlanView.swift */,
+				05E027522927DF9C009C9D2C /* ExercisePlanDetailView.swift */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
@@ -431,6 +431,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -464,6 +465,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
