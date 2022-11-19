@@ -20,7 +20,7 @@ struct ExerciseScreenView: View {
                 .scaledToFit()
                 .frame(alignment: .center)
                 .cornerRadius(10)
-                .padding(EdgeInsets(top: 10, leading: 25, bottom: 300, trailing: 25))
+                .padding(EdgeInsets(top: 50, leading: 0, bottom: 100, trailing: 0))
             
             TimerView()
                 .padding()
