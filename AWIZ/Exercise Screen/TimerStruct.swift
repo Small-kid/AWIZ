@@ -13,11 +13,9 @@ extension TimerView {
         @Published var isActive = false
         @Published var showingAlert = false
         @Published var time: String = "5:00"
-        @Published var minutes: Float = 5.0 {
-            didSet {
-                self.time = "\(Int(minutes)):00"
-            }
-        }
+        @Published var minutes = 5.0
+        
+    
         
         
         var initialTime = 0
@@ -25,18 +23,18 @@ extension TimerView {
         var pauseDate = Date()
         var pauseInterval = 0.0
         
-        func start(minutes: Float) {
-            self.initialTime = 0
+        func start() {
+            self.initialTime = 5
             self.reset()
             self.endDate = Date()
-            self.endDate = Calendar.current.date(byAdding: .minute, value: 5, to: endDate)!
+            self.endDate = Calendar.current.date(byAdding: .minute, value: self.initialTime, to: endDate)!
             self.isActive = true
         }
         
         func reset() {
             self.isActive = false
             self.pauseInterval = 0.0
-            self.minutes = Float(initialTime)
+            self.minutes = Double(initialTime)
             self.time = "\(Int(minutes)):00"
         }
         
@@ -69,7 +67,7 @@ extension TimerView {
             let minutes = calendar.component(.minute, from: date)
             let seconds = calendar.component(.second, from: date)
             
-            self.time = String(format:"%d:%02d", minutes, seconds)
+            self.time = String(format:"%02d:%d", minutes, seconds)
         }
     }
 }

@@ -5,53 +5,61 @@
 //  Created by Wong Jun heng on 18/11/22.
 ////  With reference from Indetly on Youtube
 
-
+import Foundation
 import SwiftUI
 
 struct TimerView: View {
-    @ObservedObject var vm = ViewModel()
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
-    let width: Double = 250
+    @State var countdownTimer = 300
+    @State var timerRunning = false
+    let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
+    
+    func format(result: Int) -> String {
+        let value = String(format:"%d:%02d", countdownTimer)
+        return value
+    }
+    
+    
     
     var body: some View {
         VStack {
-            
-            Text("Timer: \(vm.time)")
-                .font(.system(size: 50, weight: .medium, design: .rounded))
-                .alert("Timer done!", isPresented: $vm.showingAlert) {
-                    Button("Continue", role: .cancel) {
-                        
-                    }
-                }
+            Text("Time: \(format(result: countdownTimer))")
                 .padding()
+                .onReceive(timer) { _ in
+                    if countdownTimer > 0 && timerRunning {
+                        countdownTimer -= 1
+                    } else {
+                        timerRunning = false
+                    }
+                    
+                }
+                .font(.system(size: 30))
             
-            HStack(spacing:50) {
-                Button(vm.isActive ? "Reset" : "Start") {
-                    vm.start(minutes: Float(vm.minutes))
+            HStack(spacing:30) {
+                Button(timerRunning ? "Reset" : "Start") {
+                    timerRunning = true
+                    countdownTimer = 300
                 }
                 .padding()
                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                 .foregroundColor(.black)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
-                //.disabled(vm.isPaused == true)
                 
-                Button(vm.isActive ? "Pause" : "Resume") {
-                    vm.pause()
+                Button(timerRunning ? "Pause" : "Resume") {
+                    if timerRunning == true {
+                        timerRunning = false
+                    } else {
+                        timerRunning = true
+                    }
+                    
                 }
                 .padding()
                 .foregroundColor(.black)
-                .background(vm.isActive ? .red : .green)
+                .background(.red)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
-                
             }
-            .frame(width: width)
         }
-        .onReceive(timer) { _ in
-            vm.updateCountdown()
-        }
-        
     }
 }
 
