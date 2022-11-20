@@ -38,8 +38,6 @@ struct TimerView: View {
                 
                 Button(vm.isActive ? "Pause" : "Resume") {
                     vm.pause()
-                    //vm.isActive = false
-                    //self.timer.upstream.connect().cancel()
                 }
                 .padding()
                 .foregroundColor(.black)

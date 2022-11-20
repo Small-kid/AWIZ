@@ -17,7 +17,7 @@ struct ExercisePlanDetailView: View {
                 VStack (alignment: .leading) {
                     
                     Text(exercisePlan.title)
-                        .font(.system(size: 30, weight: .bold))
+                        .font(.system(size: 35, weight: .bold))
                         .padding(EdgeInsets(top: 100, leading: 20, bottom: 0, trailing: 0))
                     
                     Text(exercisePlan.details)
@@ -28,24 +28,24 @@ struct ExercisePlanDetailView: View {
                         Section (header: Text("1st Exercise")){
                             
                             Text("\(exercisePlan.exercise.title) (\(exercisePlan.exercise.duration) mins)")
-                                .font(.system(size: 20, weight: .regular))
+                                .font(.system(size: 25, weight: .regular))
                         }
                         
                         Section (header: Text("2nd Exercise")) {
                             Text("\(exercisePlan.exercise2.title) (\(exercisePlan.exercise2.duration) mins)")
-                                .font(.system(size: 20, weight: .regular))
+                                .font(.system(size: 25, weight: .regular))
                             //     .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 135))
                         }
                         
                         Section (header: Text("3rd Exercise")) {
                             
                             Text("\(exercisePlan.exercise3.title) (\(exercisePlan.exercise3.duration) mins)")
-                                .font(.system(size: 20, weight: .regular))
+                                .font(.system(size: 25, weight: .regular))
                         }
                         
                         Section (header: Text("4th Exercise")) {
                             Text("\(exercisePlan.exercise4.title) (\(exercisePlan.exercise4.duration) mins)")
-                                .font(.system(size: 20, weight: .regular))
+                                .font(.system(size: 25, weight: .regular))
                         }
                     }
                     NavigationLink(destination: ExerciseScreenView(exercisePlan: exercisePlan))
@@ -58,7 +58,7 @@ struct ExercisePlanDetailView: View {
                     }
                     
                     .padding(EdgeInsets(top: -150, leading: 130, bottom: 0, trailing: 0))
-                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
                     
                     
                 }

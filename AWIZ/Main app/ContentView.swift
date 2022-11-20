@@ -38,16 +38,16 @@ struct ContentView: View {
                      exercise4: Exercise(title: "Jog on the Spot", duration: 10, steps: "", video: AVPlayer(url:  Bundle.main.url(forResource: "JogOnTheSpot" , withExtension: "MOV")!)))
     ]
     var body: some View {
-        TabView {
+        //TabView {
             HomeView(exerciseTrack: 20, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-            ExerciseView()
-                .tabItem {
-                    Label("Exercises", systemImage: "figure.walk.circle.fill")
-                }
-        }
+//            ExerciseView()
+//                .tabItem {
+//                    Label("Exercises", systemImage: "figure.walk.circle.fill")
+//                }
+//        }
     }
 }
 
