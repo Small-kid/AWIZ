@@ -26,7 +26,7 @@ struct TimerView: View {
                 .padding()
             
             HStack(spacing:50) {
-                Button("Start") {
+                Button(vm.isActive ? "Reset" : "Start") {
                     vm.start(minutes: Float(vm.minutes))
                 }
                 .padding()
@@ -34,7 +34,7 @@ struct TimerView: View {
                 .foregroundColor(.black)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
-                .disabled(vm.isActive)
+                //.disabled(vm.isPaused == true)
                 
                 Button(vm.isActive ? "Pause" : "Resume") {
                     vm.pause()
