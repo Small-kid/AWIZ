@@ -9,21 +9,20 @@
 import SwiftUI
 
 struct TimerView: View {
-    var timerEnd = 0
+    
+    @State var isAlertpresented = false
     @State var countdownTimer = 300
     @State var timerRunning = false
     @State var isPaused = false
     @State var isActive = false
-    @State var showingAlert = false
     let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     
     func format(seconds: Int) -> String { String(format:"%d:%02d", seconds / 60, seconds % 60) }
     
     func reset() {
         countdownTimer = 300
-        timerRunning = true
+        timerRunning = false
     }
-    
     
     
     var body: some View {
@@ -39,10 +38,19 @@ struct TimerView: View {
                     
                 }
                 .font(.system(size: 30))
+                .alert("Timer done!", isPresented: $isAlertpresented) {
+                    Button("Continue", role: .cancel) {
+                        
+                    }
+                }
             
             HStack(spacing:30) {
                 Button(timerRunning ? "Reset" : "Start") {
-                    reset()
+                    if timerRunning == true {
+                        reset()
+                    } else {
+                        timerRunning = true
+                    }
                 }
                 .padding()
                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
@@ -63,10 +71,12 @@ struct TimerView: View {
                 .background(.red)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                
+            }
             }
         }
     }
-}
+
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {

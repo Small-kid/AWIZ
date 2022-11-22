@@ -10,6 +10,7 @@ import SwiftUI
 struct ExercisePlanDetailView: View {
     
     var exercisePlan: ExercisePlan
+    @State var countdownTimer = 300
     
     var body: some View {
         GeometryReader { geometry in
@@ -53,7 +54,7 @@ struct ExercisePlanDetailView: View {
                                 .font(.system(size: 25, weight: .regular))
                         }
                     }
-                    NavigationLink(destination: ExerciseScreenView(exercisePlan: exercisePlan))
+                    NavigationLink(destination: ExerciseScreenView(countdownTimer: $countdownTimer, exercisePlan: exercisePlan))
                     {
                         Text("Start exercise")
                             .padding()
