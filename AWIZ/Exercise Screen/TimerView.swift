@@ -5,24 +5,30 @@
 //  Created by Wong Jun heng on 18/11/22.
 ////  With reference from Indetly on Youtube
 
-import Foundation
+
 import SwiftUI
 
 struct TimerView: View {
+    var timerEnd = 0
     @State var countdownTimer = 300
     @State var timerRunning = false
+    @State var isPaused = false
+    @State var isActive = false
+    @State var showingAlert = false
     let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
     
-    func format(result: Int) -> String {
-        let value = String(format:"%d:%02d", countdownTimer)
-        return value
+    func format(seconds: Int) -> String { String(format:"%d:%02d", seconds / 60, seconds % 60) }
+    
+    func reset() {
+        countdownTimer = 300
+        timerRunning = true
     }
     
     
     
     var body: some View {
         VStack {
-            Text("Time: \(format(result: countdownTimer))")
+            Text("Time: \(format(seconds: countdownTimer))")
                 .padding()
                 .onReceive(timer) { _ in
                     if countdownTimer > 0 && timerRunning {
@@ -36,8 +42,7 @@ struct TimerView: View {
             
             HStack(spacing:30) {
                 Button(timerRunning ? "Reset" : "Start") {
-                    timerRunning = true
-                    countdownTimer = 300
+                    reset()
                 }
                 .padding()
                 .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
