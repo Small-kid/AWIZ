@@ -15,7 +15,7 @@ struct StreaksView: View {
         VStack (alignment: .leading) {
             Rectangle()
                 .cornerRadius(20)
-                .frame(width: 340, height: 100)
+                .frame(width: 380, height: 100)
                 .shadow(radius: 5)
                 .foregroundColor(.white)
             
@@ -31,7 +31,7 @@ struct StreaksView: View {
             
             ProgressView(value: 10, total: 25)
                 .padding()
-                .frame(width: 340)
+                .frame(width: 370)
                 .scaleEffect(x:1, y: 4)
                 .tint((Color(red: 184/255, green: 243/255, blue: 255/255)))
                 .cornerRadius(20)

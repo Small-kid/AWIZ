@@ -4,7 +4,7 @@
 //
 //  Created by Wong Jun heng on 22/10/22.
 //
-
+import AVKit
 import SwiftUI
 
 struct HomeView: View {
@@ -32,11 +32,10 @@ struct HomeView: View {
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
                                 .offset(x: 0, y: 20)
                             
-                            CircularProgressView(progress: CGFloat(percent))
+                            CircularProgressView(progress: CGFloat(percent), exerciseTrack: $exerciseTrack)
                                 .frame(width: 150, height: 150)
                                 .offset(x: -95, y: -240)
                                 .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
-                            
                             Text("\(ridzero(result:percent*100))%")
                                 .font(.system(size: 30, weight: .bold, design: .rounded))
                                 .offset(x:-92, y:-345)
@@ -90,6 +89,12 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "idk", exercise: Exercise(title: "ufje", duration: 5, steps: ""), exercise2: Exercise(title: "jfjfj", duration: 5, steps: ""), exercise3: Exercise(title: "JEu", duration: 10, steps: ""), exercise4: Exercise(title: "fjjf", duration: 5, steps: ""))]))
+        HomeView(exerciseTrack: 9,currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+                                                                                                               exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "MOV")!)),
+                                                                                                               exercise2: Exercise(title: "Toe Touches", duration: 5, steps: "Sit with your legs closed and toes pointing up. Keep your knees straight while stretching your arms forward to touch your toes. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "MOV")!)),
+                                                                                                               exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "MOV")!)),
+                                                                                                               exercise4: Exercise(title: "Elbow Stretch", duration: 5, steps: "Lift your left arm up while pushing it towards your chest, with your elbow pointing forward. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ElbowStretch" , withExtension: "MOV")!)),
+                                                                                                               exercise5: Exercise(title: "Calf Raises", duration: 5, steps: "Raise your heels off the floor and return to the starting position, by slowly lowering your heels. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "CalfRaises" , withExtension: "MOV")!))
+                                                                                                              )]))
     }
 }

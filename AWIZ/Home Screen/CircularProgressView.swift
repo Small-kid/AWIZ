@@ -9,8 +9,12 @@ import SwiftUI
 
 struct CircularProgressView: View {
     
-    var progress: CGFloat
-    
+   var progress: CGFloat
+    func ridzero(result: Double) -> String {
+        let value = String(format: "%g", result)
+        return value
+    }
+    @Binding var exerciseTrack: Double
     var body: some View {
         ZStack {
             Circle()
@@ -22,12 +26,13 @@ struct CircularProgressView: View {
                 .stroke(style: .init(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color(red: 220/255, green: 247/255, blue: 99/255))
                 .rotationEffect(Angle(degrees: 270))
+        
         }
     }
 }
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularProgressView(progress: 0.25)
+        CircularProgressView(progress: 0.25, exerciseTrack: .constant(20.0))
     }
 }
