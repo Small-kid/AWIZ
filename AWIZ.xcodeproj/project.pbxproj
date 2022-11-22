@@ -11,6 +11,7 @@
 		05208DE729038C55003CAECF /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE629038C55003CAECF /* FriendView.swift */; };
 		05208DEB29038C73003CAECF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEA29038C73003CAECF /* SettingsView.swift */; };
 		0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 0585A42E29272716007FD8A6 /* ToeTouches.MOV */; };
+		058CEAE9292D2D29007986CF /* ElbowStretch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 05261BC1292D278900AF125C /* ElbowStretch.mp4 */; };
 		058DD8B1292D044C006A3583 /* ExerciseScreen2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B0292D044C006A3583 /* ExerciseScreen2View.swift */; };
 		058DD8B3292D0AA1006A3583 /* ExerciseScreen3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */; };
 		058DD8B5292D0B03006A3583 /* ExerciseScreen4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B4292D0B03006A3583 /* ExerciseScreen4View.swift */; };
@@ -286,6 +287,7 @@
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
 				05E0275B2927E12C009C9D2C /* ArmCircles.MOV in Resources */,
 				05E027602927E16E009C9D2C /* SitUp.MOV in Resources */,
+				058CEAE9292D2D29007986CF /* ElbowStretch.mp4 in Resources */,
 				05E0275F2927E16E009C9D2C /* CalfRaises.MOV in Resources */,
 				05E027632927E1A7009C9D2C /* HighKneeMarch.MOV in Resources */,
 				05E027642927E1A7009C9D2C /* TricepStretch.MOV in Resources */,
