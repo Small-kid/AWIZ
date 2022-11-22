@@ -10,7 +10,6 @@
 		05208DE429038C44003CAECF /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE329038C44003CAECF /* ExerciseView.swift */; };
 		05208DE729038C55003CAECF /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE629038C55003CAECF /* FriendView.swift */; };
 		05208DEB29038C73003CAECF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEA29038C73003CAECF /* SettingsView.swift */; };
-		05219D5729272E0E00160772 /* ElbowStretch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05219D5629272E0E00160772 /* ElbowStretch.MOV */; };
 		0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 0585A42E29272716007FD8A6 /* ToeTouches.MOV */; };
 		058DD8B1292D044C006A3583 /* ExerciseScreen2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B0292D044C006A3583 /* ExerciseScreen2View.swift */; };
 		058DD8B3292D0AA1006A3583 /* ExerciseScreen3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */; };
@@ -44,7 +43,7 @@
 		05208DE329038C44003CAECF /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		05208DE629038C55003CAECF /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		05208DEA29038C73003CAECF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		05219D5629272E0E00160772 /* ElbowStretch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ElbowStretch.MOV; sourceTree = "<group>"; };
+		05261BC1292D278900AF125C /* ElbowStretch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ElbowStretch.mp4; sourceTree = "<group>"; };
 		0585A42E29272716007FD8A6 /* ToeTouches.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = ToeTouches.MOV; sourceTree = "<group>"; };
 		058DD8B0292D044C006A3583 /* ExerciseScreen2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen2View.swift; sourceTree = "<group>"; };
 		058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen3View.swift; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		0532B146292864A10080E653 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				05261BC1292D278900AF125C /* ElbowStretch.mp4 */,
 				05E027622927E1A7009C9D2C /* TricepStretch.MOV */,
 				05E027612927E1A6009C9D2C /* HighKneeMarch.MOV */,
 				05E0275E2927E16E009C9D2C /* SitUp.MOV */,
@@ -144,7 +144,6 @@
 				05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */,
 				05E027662927E1C3009C9D2C /* WallPushUp.MOV */,
 				05E027592927E129009C9D2C /* ArmCircles.MOV */,
-				05219D5629272E0E00160772 /* ElbowStretch.MOV */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -285,7 +284,6 @@
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
 				05E0276B2927E214009C9D2C /* Launch Screen.storyboard in Resources */,
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
-				05219D5729272E0E00160772 /* ElbowStretch.MOV in Resources */,
 				05E0275B2927E12C009C9D2C /* ArmCircles.MOV in Resources */,
 				05E027602927E16E009C9D2C /* SitUp.MOV in Resources */,
 				05E0275F2927E16E009C9D2C /* CalfRaises.MOV in Resources */,

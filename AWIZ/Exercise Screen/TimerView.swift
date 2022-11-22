@@ -11,7 +11,7 @@ import SwiftUI
 struct TimerView: View {
     
     @State var isAlertpresented = false
-    @State var countdownTimer = 10
+    @State var countdownTimer = 300
     @State var timerRunning = false
     @State var isPaused = false
     @State var isActive = false
