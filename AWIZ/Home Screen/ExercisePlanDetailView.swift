@@ -54,7 +54,7 @@ struct ExercisePlanDetailView: View {
                                 .font(.system(size: 25, weight: .regular))
                         }
                     }
-                    NavigationLink(destination: ExerciseScreenView(countdownTimer: $countdownTimer, exercisePlan: exercisePlan))
+                    NavigationLink(destination: ExerciseScreenView( exercisePlan: exercisePlan))
                     {
                         Text("Start exercise")
                             .padding()

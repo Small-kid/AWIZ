@@ -11,7 +11,7 @@ import SwiftUI
 struct TimerView: View {
     
     @State var isAlertpresented = false
-    @State var countdownTimer = 300
+    @State var countdownTimer = 10
     @State var timerRunning = false
     @State var isPaused = false
     @State var isActive = false
@@ -27,55 +27,57 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
-            Text("Time: \(format(seconds: countdownTimer))")
-                .padding()
-                .onReceive(timer) { _ in
-                    if countdownTimer > 0 && timerRunning {
-                        countdownTimer -= 1
-                    } else {
-                        timerRunning = false
-                    }
-                    
-                }
-                .font(.system(size: 30))
-                .alert("Timer done!", isPresented: $isAlertpresented) {
-                    Button("Continue", role: .cancel) {
+                Text("Time: \(format(seconds: countdownTimer))")
+                    .padding()
+                    .onReceive(timer) { _ in
+                        if countdownTimer > 0 && timerRunning {
+                            countdownTimer -= 1
+                        } else {
+                            timerRunning = false
+                            if countdownTimer <= 0, timerRunning == false {
+                                isAlertpresented = true
+                                reset()
+                            }
+                        }
                         
                     }
-                }
-            
-            HStack(spacing:30) {
-                Button(timerRunning ? "Reset" : "Start") {
-                    if timerRunning == true {
-                        reset()
-                    } else {
-                        timerRunning = true
-                    }
-                }
-                .padding()
-                .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                .foregroundColor(.black)
-                .cornerRadius(10)
-                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                    .font(.system(size: 30))
+                    .alert("Timer done! Press the button below to go to the next exercise", isPresented: $isAlertpresented) {}
                 
-                Button(timerRunning ? "Pause" : "Resume") {
-                    if timerRunning == true {
-                        timerRunning = false
-                    } else {
-                        timerRunning = true
+                HStack(spacing:30) {
+                    Button(timerRunning ? "Reset" : "Start") {
+                        if timerRunning == true {
+                            reset()
+                        } else {
+                            timerRunning = true
+                        }
                     }
+                    .padding()
+                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                    
+                    Button(timerRunning ? "Pause" : "Resume") {
+                        if timerRunning == true {
+                            timerRunning = false
+                        } else {
+                            timerRunning = true
+                        }
+                        
+                    }
+                    .padding()
+                    .foregroundColor(.black)
+                    .background(.red)
+                    .cornerRadius(10)
+                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                     
                 }
-                .padding()
-                .foregroundColor(.black)
-                .background(.red)
-                .cornerRadius(10)
-                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                 
-            }
             }
         }
     }
+
 
 
 struct TimerView_Previews: PreviewProvider {
