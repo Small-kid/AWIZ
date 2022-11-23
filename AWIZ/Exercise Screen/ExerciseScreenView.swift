@@ -9,53 +9,59 @@ import SwiftUI
 import AVKit
 
 struct ExerciseScreenView: View {
-
+    
     var countdownTimer = 300
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
     @Binding var navigationPath: NavigationPath
-
+    
     var body: some View {
         VStack {
-            
-            Text(exercisePlan.exercise.title)
-                .font(.system(size: 35, weight: .medium))
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
-            VideoPlayer(player: exercisePlan.exercise.video)
-                .scaledToFit()
-                .frame(alignment: .center)
-                .cornerRadius(10)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
             Form {
-                Section (header: Text("Steps:")){
-                    Text(exercisePlan.exercise.steps)
-                        .font(.system(size: 20, weight: .regular))
-                        .padding()
+                Section(header: Text("Exercise")) {
+                    Text(exercisePlan.exercise.title)
+                        .font(.system(size: 35, weight: .medium))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                
+                Section(header: Text("Video example")) {
+                    VideoPlayer(player: exercisePlan.exercise.video)
+                        .scaledToFit()
                         .frame(alignment: .center)
+                        .cornerRadius(10)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                    Section(header: Text("Steps:")){
+                        Text(exercisePlan.exercise.steps)
+                            .font(.system(size: 20, weight: .regular))
+                            .padding()
+                            .frame(alignment: .center)
+                    }
+                }
+                         
+                    
+                    
+                    
+                    TimerView()
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 35, trailing: 0))
+                    
+                    Button {
+                        navigationPath.append("ExerciseScreen2View")
+                    } label: {
+                        Text("Next exercise")
+                            .padding()
+                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                            .foregroundColor(.black)
+                            .cornerRadius(10)
+                            .navigationBarBackButtonHidden()
+                    }
+                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 50, trailing: 10))
+                    
                 }
             }
-
-                      
-            
-            TimerView()
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 35, trailing: 0))
-            
-            Button {
-                navigationPath.append("ExerciseScreen2View")
-            } label: {
-                Text("Next exercise")
-                    .padding()
-                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                    .foregroundColor(.black)
-                    .cornerRadius(10)
-                    .navigationBarBackButtonHidden()
-            }
-            
         }
-    }
-}
+                         
+
 struct ExerciseScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ExerciseScreenView(exercisePlan: ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",

@@ -18,18 +18,21 @@ struct ExerciseScreen3View: View {
     var body: some View {
         VStack {
             
-            Text(exercisePlan.exercise3.title)
-                .font(.system(size: 35, weight: .medium))
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
-            VideoPlayer(player: exercisePlan.exercise3.video)
-                .scaledToFit()
-                .frame(alignment: .center)
-                .cornerRadius(10)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
             Form {
-                Section (header: Text("Steps:")){
+                Section(header: Text("Exercise")) {
+                    Text(exercisePlan.exercise3.title)
+                        .font(.system(size: 35, weight: .medium))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                
+                Section(header: Text("Video example")) {
+                    VideoPlayer(player: exercisePlan.exercise3.video)
+                        .scaledToFit()
+                        .frame(alignment: .center)
+                        .cornerRadius(10)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                Section(header: Text("Steps:")){
                     Text(exercisePlan.exercise3.steps)
                         .font(.system(size: 20, weight: .regular))
                         .padding()
@@ -52,6 +55,7 @@ struct ExerciseScreen3View: View {
                     .cornerRadius(10)
                     .navigationBarBackButtonHidden()
             }
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 50, trailing: 10))
             
         }
     }

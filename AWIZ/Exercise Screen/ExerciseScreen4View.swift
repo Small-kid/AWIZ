@@ -18,24 +18,28 @@ struct ExerciseScreen4View: View {
     var body: some View {
         VStack {
             
-            Text(exercisePlan.exercise4.title)
-                .font(.system(size: 35, weight: .medium))
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
-            VideoPlayer(player: exercisePlan.exercise4.video)
-                .scaledToFit()
-                .frame(alignment: .center)
-                .cornerRadius(10)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            
             Form {
-                Section (header: Text("Steps:")){
-                    Text(exercisePlan.exercise4.steps)
-                        .font(.system(size: 20, weight: .regular))
-                        .padding()
-                        .frame(alignment: .center)
+                Section(header: Text("Exercise")) {
+                    Text(exercisePlan.exercise4.title)
+                        .font(.system(size: 35, weight: .medium))
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }
-            }
+                
+                Section(header: Text("Video example")) {
+                    VideoPlayer(player: exercisePlan.exercise4.video)
+                        .scaledToFit()
+                        .frame(alignment: .center)
+                        .cornerRadius(10)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }
+                    Section(header: Text("Steps:")){
+                        Text(exercisePlan.exercise4.steps)
+                            .font(.system(size: 20, weight: .regular))
+                            .padding()
+                            .frame(alignment: .center)
+                    }
+                }
+
 
             
             
@@ -52,6 +56,7 @@ struct ExerciseScreen4View: View {
                     .cornerRadius(10)
                     .navigationBarBackButtonHidden()
             }
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 50, trailing: 10))
         }
     }
 }
