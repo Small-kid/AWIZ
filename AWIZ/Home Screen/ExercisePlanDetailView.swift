@@ -11,6 +11,7 @@ struct ExercisePlanDetailView: View {
     
     var exercisePlan: ExercisePlan
     @State var countdownTimer = 300
+    @Binding var navigationPath: NavigationPath
     
     var body: some View {
         GeometryReader { geometry in
@@ -54,7 +55,7 @@ struct ExercisePlanDetailView: View {
                                 .font(.system(size: 25, weight: .regular))
                         }
                     }
-                    NavigationLink(destination: ExerciseScreenView( exercisePlan: exercisePlan))
+                    NavigationLink(destination: ExerciseScreenView( exercisePlan: exercisePlan, navigationPath: $navigationPath))
                     {
                         Text("Start exercise")
                             .padding()
@@ -89,7 +90,7 @@ struct ExercisePlanDetailView_Previews: PreviewProvider {
                 exercise3: Exercise(title: "Wall Push Ups", duration: 5, steps: "Place hands on a wall shoulder-width apart and at chest level then step back with both feet.Bend your elbows and lower your upper body towards the wall. Next, push yourself back up into the starting position (We recommend doing 5 reps before taking a 10 second rest)", video: AVPlayer(url:  Bundle.main.url(forResource: "WallPushUp" , withExtension: "MOV")!)),
                     exercise4: Exercise(title: "Sit Ups", duration: 5, steps: "", video: AVPlayer(url:  Bundle.main.url(forResource: "SitUp" , withExtension: "mp4")!)),
                 exercise5: Exercise(title: "Jog on the Spot", duration: 5, steps: "Lift your right arm and left foot at the same time and raise your knee as high as your hips. Then switch to the opposite foot, quickly lifting your right foot to hip height and repeat.", video: AVPlayer(url:  Bundle.main.url(forResource: "JogOnTheSpot" , withExtension: "MOV")!))
-                                                        ))
+                                                        ), navigationPath: .constant(NavigationPath()))
     }
     
 }

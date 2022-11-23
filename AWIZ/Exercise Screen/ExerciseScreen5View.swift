@@ -11,8 +11,10 @@ import AVKit
 struct ExerciseScreen5View: View {
     
     var countdownTimer = 300
+    @Environment(\.dismiss) var dismiss
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
+    @Binding var navigationPath: NavigationPath
     
     var body: some View {
         VStack {
@@ -27,27 +29,32 @@ struct ExerciseScreen5View: View {
                 .cornerRadius(10)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             
-            Text(exercisePlan.exercise5.steps)
-                .font(.system(size: 20, weight: .regular))
-                .padding()
-                .frame(alignment: .center)
-            
+            Form {
+                Section (header: Text("Steps:")){
+                    Text(exercisePlan.exercise5.steps)
+                        .font(.system(size: 20, weight: .regular))
+                        .padding()
+                        .frame(alignment: .center)
+                }
+            }
             
             TimerView()
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 35, trailing: 0))
             
-            NavigationLink(destination: ContentView())
-            {
-                Text("Return to Home Screen")
+            Button {
+                navigationPath = NavigationPath()
+            } label: {
+                Text("Return to home screen")
                     .padding()
                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                     .foregroundColor(.black)
                     .cornerRadius(10)
+                    .navigationBarBackButtonHidden()
+                
             }
-            
         }
+        
     }
-    
 }
 struct ExerciseScreen5View_Previews: PreviewProvider {
     static var previews: some View {
@@ -57,7 +64,7 @@ struct ExerciseScreen5View_Previews: PreviewProvider {
            exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "MOV")!)),
           exercise4: Exercise(title: "Elbow Stretch", duration: 5, steps: "Lift your left arm up while pushing it towards your chest, with your elbow pointing forward. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ElbowStretch" , withExtension: "mp4")!)),
         exercise5: Exercise(title: "Calf Raises", duration: 5, steps: "Raise your heels off the floor and return to the starting position, by slowly lowering your heels. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "CalfRaises" , withExtension: "MOV")!))
-                                                      ))
+                                                      ), navigationPath: .constant(NavigationPath()))
     }
 }
 

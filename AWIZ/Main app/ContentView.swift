@@ -9,6 +9,7 @@ import SwiftUI
 import AVKit
 
 struct ContentView: View {
+    @State var navigationPath: NavigationPath = NavigationPath()
     @State var exercisePlans = [
         ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
                      exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep).", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "MOV")!)),
@@ -43,16 +44,18 @@ struct ContentView: View {
                     )
     ]
     var body: some View {
-        TabView {
-        HomeView(exerciseTrack: 5, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
-            .tabItem {
-                Label("Home", systemImage: "house.fill")
-            }
-                   ExerciseView()
-                        .tabItem {
+        NavigationStack(path: $navigationPath) {
+            TabView {
+                HomeView(navigationPath: $navigationPath, exerciseTrack: 5, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
+                    .tabItem {
+                        Label("Home", systemImage: "house.fill")
+                    }
+                ExerciseView()
+                    .tabItem {
                         Label("Exercises", systemImage: "figure.walk.circle.fill")
-                        }
-                }
+                    }
+            }
+        }
     }
 }
 
