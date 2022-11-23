@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExercisePlanView: View {
     
+    @Binding var timer: TimerStruct
     @Binding var navigationPath: NavigationPath
     @State var isSheetPresented = false
     @Binding var exercisePlans: [ExercisePlan]
@@ -38,17 +39,17 @@ struct ExercisePlanView: View {
                     .navigationDestination(for: String.self) { name in
                         switch name{
                         case "ExercisePlanDetailView":
-                            ExercisePlanDetailView( exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExercisePlanDetailView( timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreenView":
-                            ExerciseScreenView(exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreenView(timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen2View":
-                            ExerciseScreen2View(exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreen2View(timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen3View":
-                            ExerciseScreen3View(exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreen3View(timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen4View":
-                            ExerciseScreen4View(exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreen4View(timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen5View":
-                            ExerciseScreen5View(exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreen5View(timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         default:
                             EmptyView()
                         }
@@ -64,7 +65,7 @@ struct ExercisePlanView: View {
 
 struct ExercisePlanView_Previews: PreviewProvider {
     static var previews: some View {
-        ExercisePlanView(navigationPath: .constant(NavigationPath()), exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+        ExercisePlanView(timer: .constant(TimerStruct()), navigationPath: .constant(NavigationPath()), exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
                                                                             exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "MOV")!)),
                                                                                                 exercise2: Exercise(title: "Toe Touches", duration: 5, steps: "Sit with your legs closed and toes pointing up. Keep your knees straight while stretching your arms forward to touch your toes. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "MOV")!)),
                                                                                                  exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "MOV")!)),

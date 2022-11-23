@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CircularProgressView: View {
     
+    @Binding var timer: TimerStruct
    var progress: CGFloat
     func ridzero(result: Double) -> String {
         let value = String(format: "%g", result)
         return value
     }
-    @Binding var exerciseTrack: Double
     var body: some View {
         ZStack {
             Circle()
@@ -33,6 +33,6 @@ struct CircularProgressView: View {
 
 struct CircularProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularProgressView(progress: 0.25, exerciseTrack: .constant(20.0))
+        CircularProgressView(timer: .constant(TimerStruct()), progress: 0.25)
     }
 }

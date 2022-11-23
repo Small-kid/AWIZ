@@ -9,6 +9,7 @@ import SwiftUI
 import AVKit
 
 struct ContentView: View {
+    @State var timer = TimerStruct()
     @State var navigationPath: NavigationPath = NavigationPath()
     @State var exercisePlans = [
         ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
@@ -46,7 +47,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             TabView {
-                HomeView(navigationPath: $navigationPath, exerciseTrack: 5, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
+                HomeView( timer: $timer, navigationPath: $navigationPath, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
                     .tabItem {
                         Label("Home", systemImage: "house.fill")
                     }

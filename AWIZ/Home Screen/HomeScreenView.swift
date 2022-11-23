@@ -9,9 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @Binding var timer: TimerStruct
     @State var isSheetPresented = false
     @Binding var navigationPath: NavigationPath
-    @State var exerciseTrack: Double
     @State var currentStreak: Int
     @State var highestStreak: Int
     @Binding var exercisePlans: [ExercisePlan]
@@ -27,12 +27,12 @@ struct HomeView: View {
                 ScrollView {
                     ZStack {
                         VStack {
-                            let percent = Double(exerciseTrack/25)
+                            let percent = Double(timer.exerciseTime/1500)
                             Text("Welcome back to ElderlyFit")
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
                                 .offset(x: 0, y: 20)
                             
-                            CircularProgressView(progress: CGFloat(percent), exerciseTrack: $exerciseTrack)
+                            CircularProgressView(timer: $timer, progress: CGFloat(percent))
                                 .frame(width: 150, height: 150)
                                 .offset(x: -95, y: -240)
                                 .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
@@ -40,7 +40,7 @@ struct HomeView: View {
                                 .font(.system(size: 30, weight: .bold, design: .rounded))
                                 .offset(x:-92, y:-345)
                             
-                            Text("\(ridzero(result: exerciseTrack)) mins of exercise completed today")
+                            Text("\(ridzero(result: timer.exerciseTime)) mins of exercise completed today")
                                 .frame(width: 200, height: 50)
                                 .font(.system(size: 20, design: .rounded))
                                 .offset(x:100, y:-445)
@@ -70,7 +70,7 @@ struct HomeView: View {
                                 .zIndex(1.0)
                             
                             
-                            ExercisePlanView( navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                            ExercisePlanView( timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
                                 .offset(x: 15, y: -425)
                                 .zIndex(-1.0)
                                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
@@ -89,7 +89,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(navigationPath: .constant(NavigationPath()), exerciseTrack: 9,currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+        HomeView(timer: .constant(TimerStruct()), navigationPath: .constant(NavigationPath()), currentStreak: 10, highestStreak: 40, exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
         exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "MOV")!)),
         exercise2: Exercise(title: "Toe Touches", duration: 5, steps: "Sit with your legs closed and toes pointing up. Keep your knees straight while stretching your arms forward to touch your toes. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "MOV")!)),
         exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "MOV")!)),
