@@ -15,7 +15,10 @@ struct ExerciseScreen4View: View {
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
     @Binding var navigationPath: NavigationPath
-    
+    func reset() {
+        timerStruct.countdownTimer = 300
+        timerStruct.timerRunning = false
+    }
     var body: some View {
         VStack {
             
@@ -49,7 +52,7 @@ struct ExerciseScreen4View: View {
             
             Button {
                 navigationPath.append("ExerciseScreen5View")
-                timerStruct.isActive = false
+                reset()
             } label: {
                 Text("Next exercise")
                     .padding()

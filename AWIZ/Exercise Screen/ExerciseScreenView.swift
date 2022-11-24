@@ -16,6 +16,11 @@ struct ExerciseScreenView: View {
     var exercisePlan: ExercisePlan
     @Binding var navigationPath: NavigationPath
     
+    func reset() {
+        timerStruct.countdownTimer = 300
+        timerStruct.timerRunning = false
+    }
+    
     var body: some View {
         VStack {
             Form {
@@ -48,7 +53,7 @@ struct ExerciseScreenView: View {
                     
                     Button {
                         navigationPath.append("ExerciseScreen2View")
-                        timerStruct.isActive = false
+                        reset()
                     } label: {
                         Text("Next exercise")
                             .padding()
