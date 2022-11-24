@@ -18,6 +18,7 @@
 		058DD8B3292D0AA1006A3583 /* ExerciseScreen3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */; };
 		058DD8B5292D0B03006A3583 /* ExerciseScreen4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B4292D0B03006A3583 /* ExerciseScreen4View.swift */; };
 		058DD8B7292D0B66006A3583 /* ExerciseScreen5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B6292D0B66006A3583 /* ExerciseScreen5View.swift */; };
+		05AD794F292F327E00F4AEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AD794E292F327E00F4AEAC /* LaunchScreen.storyboard */; };
 		05E027482927DF42009C9D2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027472927DF41009C9D2C /* ContentView.swift */; };
 		05E0274D2927DF6E009C9D2C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E027492927DF6D009C9D2C /* CircularProgressView.swift */; };
 		05E0274E2927DF6E009C9D2C /* ExerciseStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */; };
@@ -35,7 +36,6 @@
 		05E027642927E1A7009C9D2C /* TricepStretch.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027622927E1A7009C9D2C /* TricepStretch.MOV */; };
 		05E027672927E1C3009C9D2C /* JogOnTheSpot.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */; };
 		05E027682927E1C3009C9D2C /* WallPushUp.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 05E027662927E1C3009C9D2C /* WallPushUp.MOV */; };
-		05E0276B2927E214009C9D2C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05E0276A2927E214009C9D2C /* Launch Screen.storyboard */; };
 		05E0276E2927E225009C9D2C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E0276D2927E225009C9D2C /* OnboardingView.swift */; };
 		CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3A50829037D0E00F4E36A /* AWIZApp.swift */; };
 		CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3A50C29037D1600F4E36A /* Assets.xcassets */; };
@@ -54,6 +54,7 @@
 		058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen3View.swift; sourceTree = "<group>"; };
 		058DD8B4292D0B03006A3583 /* ExerciseScreen4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen4View.swift; sourceTree = "<group>"; };
 		058DD8B6292D0B66006A3583 /* ExerciseScreen5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen5View.swift; sourceTree = "<group>"; };
+		05AD794E292F327E00F4AEAC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05E027472927DF41009C9D2C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		05E027492927DF6D009C9D2C /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseStructs.swift; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		05E027622927E1A7009C9D2C /* TricepStretch.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = TricepStretch.MOV; sourceTree = "<group>"; };
 		05E027652927E1C2009C9D2C /* JogOnTheSpot.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = JogOnTheSpot.MOV; sourceTree = "<group>"; };
 		05E027662927E1C3009C9D2C /* WallPushUp.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = WallPushUp.MOV; sourceTree = "<group>"; };
-		05E0276A2927E214009C9D2C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		05E0276D2927E225009C9D2C /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		CEB3A50529037D0E00F4E36A /* AWIZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWIZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3A50829037D0E00F4E36A /* AWIZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWIZApp.swift; sourceTree = "<group>"; };
@@ -169,10 +169,10 @@
 			path = "Exercise Screen";
 			sourceTree = "<group>";
 		};
-		05E027692927E204009C9D2C /* Launch Screen */ = {
+		05AD794D292F326500F4AEAC /* Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
-				05E0276A2927E214009C9D2C /* Launch Screen.storyboard */,
+				05AD794E292F327E00F4AEAC /* LaunchScreen.storyboard */,
 			);
 			path = "Launch Screen";
 			sourceTree = "<group>";
@@ -204,8 +204,8 @@
 		CEB3A50729037D0E00F4E36A /* AWIZ */ = {
 			isa = PBXGroup;
 			children = (
+				05AD794D292F326500F4AEAC /* Launch Screen */,
 				05E0276C2927E217009C9D2C /* Onboarding */,
-				05E027692927E204009C9D2C /* Launch Screen */,
 				050D0E0129160B6F00D99FBF /* Main app */,
 				050D0DF8291578B700D99FBF /* Home Screen */,
 				055506B82924A9410029A1D0 /* Exercise Screen */,
@@ -289,10 +289,10 @@
 				05E0275C2927E12C009C9D2C /* Lunges.MOV in Resources */,
 				0585A42F29272716007FD8A6 /* ToeTouches.MOV in Resources */,
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
-				05E0276B2927E214009C9D2C /* Launch Screen.storyboard in Resources */,
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
 				05E0275B2927E12C009C9D2C /* ArmCircles.MOV in Resources */,
 				05E027602927E16E009C9D2C /* SitUp.MOV in Resources */,
+				05AD794F292F327E00F4AEAC /* LaunchScreen.storyboard in Resources */,
 				058CEAE9292D2D29007986CF /* ElbowStretch.mp4 in Resources */,
 				05E0275F2927E16E009C9D2C /* CalfRaises.MOV in Resources */,
 				05E027632927E1A7009C9D2C /* HighKneeMarch.MOV in Resources */,
@@ -465,7 +465,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -502,7 +502,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

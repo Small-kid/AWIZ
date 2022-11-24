@@ -60,7 +60,11 @@ struct ExerciseScreen5View: View {
             .navigationBarBackButtonHidden()
             .alert("Are you sure you want to complete this exercise plan for today?", isPresented: $presentAlert) {
                 Button("Proceed") {
-                    timerStruct.exerciseTime = 1500
+                    if timerStruct.exerciseTime <= 1500 {
+                        timerStruct.exerciseTime = 1500
+                    } else if timerStruct.exerciseTime > 1500 {
+                        timerStruct.exerciseTime += 1500
+                    }
                     navigationPath = NavigationPath()
                     timerStruct.isCompleted.toggle()
                     if timerStruct.isCompleted == true {
