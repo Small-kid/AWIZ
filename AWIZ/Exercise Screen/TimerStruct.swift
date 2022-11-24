@@ -15,4 +15,8 @@ struct TimerStruct {
      var timerRunning = false
      var isPaused = false
      var isActive = false
+    var isCompleted = false
 }
+
+
+

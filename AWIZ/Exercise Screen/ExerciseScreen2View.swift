@@ -43,7 +43,7 @@ struct ExerciseScreen2View: View {
             
             
             TimerView(streaks: $streaks, timerStruct: $timerStruct)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             
             
             Button {
@@ -56,7 +56,7 @@ struct ExerciseScreen2View: View {
                     .cornerRadius(10)
                     .navigationBarBackButtonHidden()
             }
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 50, trailing: 10))
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             
         }
     }

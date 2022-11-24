@@ -9,5 +9,5 @@ import Foundation
 
 struct Streaks {
     var currentStreak = 0
-    var highestStreak = 1
+    var highestStreak = 0
 }

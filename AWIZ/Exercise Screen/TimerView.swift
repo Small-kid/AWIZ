@@ -49,7 +49,7 @@ struct TimerView: View {
                     }
                 }
                 .padding()
-                .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                .background(.green)
                 .foregroundColor(.black)
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))

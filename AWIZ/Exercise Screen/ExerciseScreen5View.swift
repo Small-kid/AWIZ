@@ -21,6 +21,15 @@ struct ExerciseScreen5View: View {
         VStack {
             
             Form {
+                
+//                Button {
+//                    navigationPath = NavigationPath()
+//                } label: {
+//                    Label("", systemImage: "house")
+//                        .font(.system(size: 30))
+//
+//                }
+                
                 Section(header: Text("Exercise")) {
                     Text(exercisePlan.exercise5.title)
                         .font(.system(size: 35, weight: .medium))
@@ -42,12 +51,17 @@ struct ExerciseScreen5View: View {
                     }
                 }
             TimerView(streaks: $streaks, timerStruct: $timerStruct)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 35, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             
             Button {
                 navigationPath = NavigationPath()
+                timerStruct.isCompleted.toggle()
+                if timerStruct.isCompleted == true {
+                    streaks.currentStreak += 1
+                    streaks.highestStreak += 1
+                }
             } label: {
-                Text("Return to home screen")
+                Text("Mark exercise as complete")
                     .padding()
                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                     .foregroundColor(.black)
@@ -55,7 +69,8 @@ struct ExerciseScreen5View: View {
                     .navigationBarBackButtonHidden()
                 
             }
-            .padding(EdgeInsets(top: 0, leading: 10, bottom: 50, trailing: 10))
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+            
         }
         
     }
