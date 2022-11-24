@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ExercisePlanDetailView: View {
     
+    @Binding var streak: Streaks
     @Binding var timer: TimerStruct
     var exercisePlan: ExercisePlan
     @State var countdownTimer = 300
@@ -58,7 +59,7 @@ struct ExercisePlanDetailView: View {
                         }
                     }
                         
-                    NavigationLink(destination: ExerciseScreenView( timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
+                    NavigationLink(destination: ExerciseScreenView( streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
                         {
                             Text("Start exercise")
                                 .padding()
@@ -88,7 +89,7 @@ struct ExercisePlanDetailView: View {
 struct ExercisePlanDetailView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ExercisePlanDetailView(timer: .constant(TimerStruct()), exercisePlan:ExercisePlan(title: "Exercise Plan 4", details: "Choose this plan for a more advanced workout (**Warning**: Only recommended for elderly who regulary exercise/are very active)",
+        ExercisePlanDetailView(streak: .constant(Streaks()), timer: .constant(TimerStruct()), exercisePlan:ExercisePlan(title: "Exercise Plan 4", details: "Choose this plan for a more advanced workout (**Warning**: Only recommended for elderly who regulary exercise/are very active)",
             exercise: Exercise(title: "High Knee March", duration: 5, steps: "From a standing start, with your arms bent at ninety degrees by your sides, start running on the spot, lifting your knees up to waist height and repeating the motion", video: AVPlayer(url:  Bundle.main.url(forResource: "HighKneeMarch" , withExtension: "MOV")!)),
                 exercise2: Exercise(title: "Calf Raises", duration: 5, steps: "Raise your heels off the floor and return to the starting position, by slowly lowering your heels. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "CalfRaises" , withExtension: "MOV")!)),
                 exercise3: Exercise(title: "Wall Push Ups", duration: 5, steps: "Place hands on a wall shoulder-width apart and at chest level then step back with both feet.Bend your elbows and lower your upper body towards the wall. Next, push yourself back up into the starting position (We recommend doing 5 reps before taking a 10 second rest)", video: AVPlayer(url:  Bundle.main.url(forResource: "WallPushUp" , withExtension: "MOV")!)),

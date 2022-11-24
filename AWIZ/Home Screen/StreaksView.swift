@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct StreaksView: View {
-    @State var currentStreak: Int
-    @State var highestStreak: Int
+    @Binding var timer: TimerStruct
+    @Binding var streak: Streaks
+    
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -19,17 +20,17 @@ struct StreaksView: View {
                 .shadow(radius: 5)
                 .foregroundColor(.white)
             
-            Text("Current Streak: \(currentStreak) days")
+            Text("Current Streak: \(streak.currentStreak) days")
                 .font(.system(size: 20))
                 .offset(x: 20, y: -100)
                 
             
-            Text("Highest Streak: \(highestStreak) days")
+            Text("Highest Streak: \(streak.highestStreak) days")
                 .font(.system(size: 20))
                 .offset(x: 20, y: -95)
                 
             
-            ProgressView(value: 10, total: 25)
+            ProgressView(value: CGFloat(streak.currentStreak), total: CGFloat(streak.highestStreak))
                 .padding()
                 .frame(width: 370)
                 .scaleEffect(x:1, y: 4)
@@ -41,8 +42,9 @@ struct StreaksView: View {
     }
 }
 
+
 struct StreaksView_Previews: PreviewProvider {
     static var previews: some View {
-        StreaksView(currentStreak: 10, highestStreak: 40)
+        StreaksView(timer: .constant(TimerStruct()), streak: .constant(Streaks()))
     }
 }

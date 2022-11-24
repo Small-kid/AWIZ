@@ -9,6 +9,7 @@ import SwiftUI
 import AVKit
 
 struct ExerciseScreen4View: View {
+    @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
     var countdownTimer = 300
     @State var player = AVPlayer()
@@ -43,7 +44,7 @@ struct ExerciseScreen4View: View {
 
             
             
-            TimerView(timerStruct: $timerStruct)
+            TimerView(streaks: $streaks, timerStruct: $timerStruct)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 35, trailing: 0))
             
             Button {
@@ -62,7 +63,7 @@ struct ExerciseScreen4View: View {
 }
 struct ExerciseScreen4View_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseScreen4View(timerStruct: .constant(TimerStruct()), exercisePlan: ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+        ExerciseScreen4View(streaks: .constant(Streaks()), timerStruct: .constant(TimerStruct()), exercisePlan: ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
             exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "MOV")!)),
                 exercise2: Exercise(title: "Toe Touches", duration: 5, steps: "Sit with your legs closed and toes pointing up. Keep your knees straight while stretching your arms forward to touch your toes. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "MOV")!)),
                 exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "MOV")!)),

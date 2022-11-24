@@ -8,7 +8,9 @@
 import SwiftUI
 import AVKit
 
+@available(iOS 16.0, *)
 struct ContentView: View {
+    @State var streaks = Streaks()
     @State var timer = TimerStruct()
     @State var navigationPath: NavigationPath = NavigationPath()
     @State var exercisePlans = [
@@ -47,7 +49,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack(path: $navigationPath) {
             TabView {
-                HomeView( timer: $timer, navigationPath: $navigationPath, currentStreak: 10, highestStreak: 35, exercisePlans: $exercisePlans)
+                HomeView( streak: $streaks, timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
                     .tabItem {
                         Label("Home", systemImage: "house.fill")
                     }
