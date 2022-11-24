@@ -39,7 +39,6 @@ struct ExercisePlanDetailView: View {
                         Section (header: Text("2nd Exercise")) {
                             Text("\(exercisePlan.exercise2.title) (\(exercisePlan.exercise2.duration) mins)")
                                 .font(.system(size: 25, weight: .regular))
-                            //     .padding(EdgeInsets(top: 80, leading: 0, bottom: 0, trailing: 135))
                         }
                         
                         Section (header: Text("3rd Exercise")) {

@@ -21,8 +21,9 @@ struct ExercisePlanView: View {
         ScrollView(.horizontal) {
             LazyHGrid(rows: [row]) {
                 ForEach(exercisePlans) { exercisePlan in
-                    Button {
-                        navigationPath.append("ExercisePlanDetailView")
+                    NavigationLink {
+                        ExercisePlanDetailView(streak: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                     } label: {
                         Label("", systemImage: "figure.cooldown")
                             .font(.system(size: 30))
