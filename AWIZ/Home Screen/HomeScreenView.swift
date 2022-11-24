@@ -29,12 +29,15 @@ struct HomeView: View {
             GeometryReader { geometry in
                 ScrollView {
                     ZStack {
+//                        Color.accentColor
+//                            .edgesIgnoringSafeArea(.all)
                         VStack {
+                            
                             let percent = Double(timer.exerciseTime/1500)
                             Text("Welcome back to ElderlyFit")
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
                                 .offset(x: 0, y: 20)
-                            
+
                             CircularProgressView(timer: $timer, progress: CGFloat(percent))
                                 .frame(width: 150, height: 150)
                                 .offset(x: -95, y: -240)
@@ -46,35 +49,36 @@ struct HomeView: View {
                             Text("\(round(result: timer.exerciseTime/60)) mins of exercise completed today")
                                 .frame(width: 200, height: 50)
                                 .font(.system(size: 20, design: .rounded))
-                                .offset(x:100, y:-445)
+                                .offset(x:100, y:-410)
                             
                             
-                            Button {
-                                
-                                print("Placeholder")
-                                
-                            } label: {
-                                Text("Start last exercise")
-                            }
-                            .padding()
-                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                            .foregroundColor(.black)
-                            .cornerRadius(10)
-                            .offset(x: 92, y: -430)
-                            .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+//                            Button {
+//
+//                                print("Placeholder")
+//
+//                            } label: {
+//                                Text("Start last exercise")
+//                            }
+//                            .padding()
+//                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+//                            .foregroundColor(.black)
+//                            .cornerRadius(10)
+//                            .offset(x: 92, y: -430)
+//                            .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                             
                             StreaksView(timer: $timer, streak: $streak)
-                                .offset(x:0, y: -365)
+                                .offset(x:0, y: -330)
+                                .padding()
                             
                             Text("Choose your exercise plan:")
                                 .bold()
                                 .font(.system(size: 25))
-                                .offset(x: -30, y: -440)
+                                .offset(x: -30, y: -420)
                                 .zIndex(1.0)
                             
                             
                             ExercisePlanView( streaks: $streak, timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
-                                .offset(x: 15, y: -425)
+                                .offset(x: 15, y: -405)
                                 .zIndex(-1.0)
                                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
                             
@@ -83,6 +87,7 @@ struct HomeView: View {
                         }
                         .frame(width: geometry.size.width)
                         .edgesIgnoringSafeArea(.all)
+                        
                     }
                 }
             }

@@ -18,6 +18,7 @@ struct ExercisePlan: Identifiable {
     var exercise3: Exercise
     var exercise4: Exercise
     var exercise5: Exercise
+    var isLastExercise = false
 }
 
 struct Exercise {
