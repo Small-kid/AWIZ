@@ -22,11 +22,13 @@ struct StreaksView: View {
             
             Text("Current Streak: \(streak.currentStreak) days")
                 .font(.system(size: 20))
+                .foregroundColor(Color("textColour"))
                 .offset(x: 20, y: -100)
                 
             
             Text("Highest Streak: \(streak.highestStreak) days")
                 .font(.system(size: 20))
+                .foregroundColor(Color("textColour"))
                 .offset(x: 20, y: -95)
                 
             
