@@ -56,6 +56,7 @@ struct ExerciseScreen3View: View {
                     .cornerRadius(10)
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+            .navigationBarBackButtonHidden()
             
         }
     }

@@ -9,10 +9,11 @@ import SwiftUI
 import AVKit
 
 struct ExerciseScreen5View: View {
+    
+    @State var presentAlert = false
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
     var countdownTimer = 300
-    @Environment(\.dismiss) var dismiss
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
     @Binding var navigationPath: NavigationPath
@@ -21,14 +22,6 @@ struct ExerciseScreen5View: View {
         VStack {
             
             Form {
-                
-//                Button {
-//                    navigationPath = NavigationPath()
-//                } label: {
-//                    Label("", systemImage: "house")
-//                        .font(.system(size: 30))
-//
-//                }
                 
                 Section(header: Text("5th Exercise (Scroll down for exercise steps)")) {
                     Text(exercisePlan.exercise5.title)
@@ -54,12 +47,7 @@ struct ExerciseScreen5View: View {
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             
             Button {
-                navigationPath = NavigationPath()
-                timerStruct.isCompleted.toggle()
-                if timerStruct.isCompleted == true {
-                    streaks.currentStreak += 1
-                    streaks.highestStreak += 1
-                }
+                presentAlert = true
             } label: {
                 Text("Mark exercise as complete")
                     .padding()
@@ -69,11 +57,26 @@ struct ExerciseScreen5View: View {
                 
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+            .navigationBarBackButtonHidden()
+            .alert("Are you sure you want to complete this exercise plan for today?", isPresented: $presentAlert) {
+                Button("Proceed") {
+                    timerStruct.exerciseTime = 1500
+                    navigationPath = NavigationPath()
+                    timerStruct.isCompleted.toggle()
+                    if timerStruct.isCompleted == true {
+                        streaks.currentStreak += 1
+                        streaks.highestStreak += 1
+                    }
+                }
+                    Button("Cancel", role: .cancel){}
+                }
+            }
+
             
         }
         
     }
-}
+
 struct ExerciseScreen5View_Previews: PreviewProvider {
     static var previews: some View {
         ExerciseScreen5View(streaks: .constant(Streaks()), timerStruct: .constant(TimerStruct()), exercisePlan: ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
