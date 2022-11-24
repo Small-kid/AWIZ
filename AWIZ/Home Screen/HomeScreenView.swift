@@ -29,8 +29,6 @@ struct HomeView: View {
             GeometryReader { geometry in
                 ScrollView {
                     ZStack {
-//                        Color.accentColor
-//                            .edgesIgnoringSafeArea(.all)
                         VStack {
                             
                             let percent = Double(timer.exerciseTime/1500)
@@ -51,20 +49,6 @@ struct HomeView: View {
                                 .font(.system(size: 20, design: .rounded))
                                 .offset(x:100, y:-410)
                             
-                            
-//                            Button {
-//
-//                                print("Placeholder")
-//
-//                            } label: {
-//                                Text("Start last exercise")
-//                            }
-//                            .padding()
-//                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-//                            .foregroundColor(.black)
-//                            .cornerRadius(10)
-//                            .offset(x: 92, y: -430)
-//                            .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                             
                             StreaksView(timer: $timer, streak: $streak)
                                 .offset(x:0, y: -330)
@@ -89,6 +73,7 @@ struct HomeView: View {
                         .edgesIgnoringSafeArea(.all)
                         
                     }
+                    //.background(Color("appBackground"))
                 }
             }
         }

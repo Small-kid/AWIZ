@@ -49,6 +49,7 @@ struct ExerciseScreen4View: View {
             
             Button {
                 navigationPath.append("ExerciseScreen5View")
+                timerStruct.isActive = false
             } label: {
                 Text("Next exercise")
                     .padding()

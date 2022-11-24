@@ -67,6 +67,7 @@ struct ExerciseScreen5View: View {
                     }
                     navigationPath = NavigationPath()
                     timerStruct.isCompleted.toggle()
+                    timerStruct.isActive = false
                     if timerStruct.isCompleted == true {
                         streaks.currentStreak += 1
                         streaks.highestStreak += 1
