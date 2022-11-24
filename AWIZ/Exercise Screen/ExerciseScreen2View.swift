@@ -19,7 +19,7 @@ struct ExerciseScreen2View: View {
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Exercise")) {
+                Section(header: Text("2nd Exercise (Scroll down for exercise steps)")) {
                     Text(exercisePlan.exercise2.title)
                         .font(.system(size: 35, weight: .medium))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
@@ -54,7 +54,6 @@ struct ExerciseScreen2View: View {
                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                     .foregroundColor(.black)
                     .cornerRadius(10)
-                    .navigationBarBackButtonHidden()
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             

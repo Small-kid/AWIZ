@@ -19,7 +19,7 @@ struct ExerciseScreenView: View {
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Exercise")) {
+                Section(header: Text("1st Exercise (Scroll down for exercise steps)")) {
                     Text(exercisePlan.exercise.title)
                         .font(.system(size: 35, weight: .medium))
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
