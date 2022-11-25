@@ -53,7 +53,6 @@ struct ExerciseScreenView: View {
                     
                     Button {
                         navigationPath.append("ExerciseScreen2View")
-                        reset()
                     } label: {
                         Text("Next exercise")
                             .padding()

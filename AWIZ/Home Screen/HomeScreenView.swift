@@ -29,14 +29,14 @@ struct HomeView: View {
             GeometryReader { geometry in
                 ScrollView {
                     ZStack {
-//                        Color("appBackground").edgesIgnoringSafeArea(.all)
+                        //                        Color("appBackground").edgesIgnoringSafeArea(.all)
                         VStack {
                             
                             let percent = Double(timer.exerciseTime/1500)
                             Text("Welcome back to ElderlyFit")
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
                                 .offset(x: 0, y: 20)
-
+                            
                             CircularProgressView(timer: $timer, progress: CGFloat(percent))
                                 .frame(width: 150, height: 150)
                                 .offset(x: -95, y: -240)
@@ -72,8 +72,8 @@ struct HomeView: View {
                         .edgesIgnoringSafeArea(.all)
                         
                     }
-//                    .background(Color("appBackground"))
-//                    .edgesIgnoringSafeArea(.all)
+                    //                    .background(Color("appBackground"))
+                    //                    .edgesIgnoringSafeArea(.all)
                 }
             }
         }
