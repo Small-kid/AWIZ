@@ -29,6 +29,7 @@ struct HomeView: View {
             GeometryReader { geometry in
                 ScrollView {
                     ZStack {
+//                        Color("appBackground").edgesIgnoringSafeArea(.all)
                         VStack {
                             
                             let percent = Double(timer.exerciseTime/1500)

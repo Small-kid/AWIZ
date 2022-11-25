@@ -11,7 +11,7 @@ struct TimerView: View {
     
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
-    let timer = Timer.publish(every: 1, tolerance: 0.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     func format(seconds: Int) -> String { String(format:"%d:%02d", seconds / 60, seconds % 60) }
     
@@ -25,7 +25,7 @@ struct TimerView: View {
             Text("Time: \(format(seconds: timerStruct.countdownTimer))")
                 .padding()
                 .onReceive(timer) { _ in
-                    if timerStruct.countdownTimer > 0 && timerStruct.timerRunning {
+                    if timerStruct.countdownTimer > 0 && timerStruct.timerRunning == true {
                         timerStruct.countdownTimer -= 1
                         timerStruct.exerciseTime += 1.0
                     } else {
@@ -44,7 +44,7 @@ struct TimerView: View {
                 Button(timerStruct.timerRunning ? "Reset" : "Start") {
                     if timerStruct.timerRunning == true {
                         reset()
-                    } else {
+                    } else if timerStruct.timerRunning == false {
                         timerStruct.timerRunning = true
                     }
                 }
@@ -57,7 +57,7 @@ struct TimerView: View {
                 Button(timerStruct.timerRunning ? "Pause" : "Resume") {
                     if timerStruct.timerRunning == true {
                         timerStruct.timerRunning = false
-                    } else {
+                    } else if timerStruct.timerRunning == false {
                         timerStruct.timerRunning = true
                     }
                     

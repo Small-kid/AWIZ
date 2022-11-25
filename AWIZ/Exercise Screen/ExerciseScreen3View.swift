@@ -11,7 +11,6 @@ import AVKit
 struct ExerciseScreen3View: View {
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
-    var countdownTimer = 300
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
     @Binding var navigationPath: NavigationPath
