@@ -46,19 +46,17 @@ struct ExerciseScreen2View: View {
             
             
             
-//            Button {
-//                navigationPath.append("ExerciseScreen3View")
-//                reset()
-//            } label: {
-//                Text("Next exercise")
-//                    .padding()
-//                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-//                    .foregroundColor(.black)
-//                    .cornerRadius(10)
-//            }
-//            .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
-//            .navigationBarBackButtonHidden()
-            
+            Button {
+                navigationPath.append("ExerciseScreen3View")
+            } label: {
+                Text("Next exercise")
+                    .padding()
+                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                    .navigationBarBackButtonHidden()
+            }
+            .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
         }
     }
 }

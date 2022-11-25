@@ -70,38 +70,6 @@ struct TimerView: View {
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
                 
-                Button {
-                    presentAlert = true
-                } label: {
-                    Text("Mark exercise as complete")
-                        .padding()
-                        .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                        .foregroundColor(.black)
-                        .cornerRadius(10)
-                    
-                }
-                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
-                .navigationBarBackButtonHidden()
-                .alert("Warning:Mark entire exercise plan as complete?", isPresented: $presentAlert) {
-                    Button("Proceed") {
-                        if timerStruct.exerciseTime <= 1500 {
-                            timerStruct.exerciseTime = 1500
-                        } else if timerStruct.exerciseTime > 1500 {
-                            timerStruct.exerciseTime += 1500
-                        }
-                        navigationPath = NavigationPath()
-                        timerStruct.isCompleted.toggle()
-                        timerStruct.isActive = false
-                        if timerStruct.isCompleted == true {
-                            streaks.currentStreak += 1
-                            streaks.highestStreak += 1
-                        }
-                    }
-                        Button("Cancel", role: .cancel){}
-                    Button("Don't complete exercise plan") {
-                        navigationPath = NavigationPath()
-                    }
-                    }
             }
             
         }

@@ -56,9 +56,9 @@ struct ExercisePlanDetailView: View {
                             Text("\(exercisePlan.exercise5.title) (\(exercisePlan.exercise5.duration) mins)")
                                 .font(.system(size: 25, weight: .regular))
                         }
-                    }
                         
-                    NavigationLink(destination: ExerciseScreen(streaks: $streak, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
+                        
+                        NavigationLink(destination: ExerciseScreenView(streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
                         {
                             Text("Start exercise")
                                 .padding()
@@ -66,11 +66,16 @@ struct ExercisePlanDetailView: View {
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
                         }
-                        
-                        .padding(EdgeInsets(top: -150, leading: 130, bottom: 0, trailing: 0))
+                        .padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 0))
                         .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
+                    }
                     
-                        
+                    Button {
+                        navigationPath.append("ExerciseScreenView")
+                    } label: {
+                        Text("")
+                    }
+                    .opacity(0)
                         
                     }
                     .frame(width: geometry.size.width)

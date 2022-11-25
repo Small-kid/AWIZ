@@ -52,13 +52,15 @@ struct ExercisePlanView: View {
                             ExerciseScreen4View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen5View":
                             ExerciseScreen5View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                        case "ExerciseScreen":
+                            ExerciseScreen(streaks: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                        case"TimerView":
+                            TimerView(streaks: $streaks, timerStruct: $timer)
                         default:
                             EmptyView()
                         }
                     }
                 }
-                
-                
             }
         }
     }

@@ -9,6 +9,7 @@ import AVKit
 import SwiftUI
 
 struct ExerciseScreen: View {
+    @State var presentAlert = false
     @Binding var streaks: Streaks
     @Binding var timer: TimerStruct
     var countdownTimer = 300
@@ -42,6 +43,39 @@ struct ExerciseScreen: View {
             .tabViewStyle(PageTabViewStyle())
             
             TimerView(streaks: $streaks, timerStruct: $timer)
+            
+            Button {
+                presentAlert = true
+            } label: {
+                Text("Mark exercise as complete")
+                    .padding()
+                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                    .foregroundColor(.black)
+                    .cornerRadius(10)
+                
+            }
+            .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
+            .navigationBarBackButtonHidden()
+            .alert("Warning: Mark entire exercise plan as complete?", isPresented: $presentAlert) {
+                Button("Proceed") {
+                    if timer.exerciseTime <= 1500 {
+                        timer.exerciseTime = 1500
+                    } else if timer.exerciseTime > 1500 {
+                        timer.exerciseTime += 1500
+                    }
+                    navigationPath = NavigationPath()
+                    timer.isCompleted.toggle()
+                    timer.isActive = false
+                    if timer.isCompleted == true {
+                        streaks.currentStreak += 1
+                        streaks.highestStreak += 1
+                    }
+                }
+                    Button("Cancel", role: .cancel){}
+                Button("Don't complete exercise plan") {
+                    navigationPath = NavigationPath()
+                }
+                }
         }
     }
 }
