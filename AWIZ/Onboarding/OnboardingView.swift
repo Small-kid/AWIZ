@@ -9,7 +9,18 @@ import SwiftUI
 
 struct OnboardingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            OnboardingPage1()
+            
+            OnboardingPage2()
+
+            OnboardingPage3()
+            
+            OnboardingPage4()
+            
+            OnboardingPage5()
+        }
+        .tabViewStyle(PageTabViewStyle())
     }
 }
 
