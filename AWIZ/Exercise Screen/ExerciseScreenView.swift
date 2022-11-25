@@ -15,7 +15,6 @@ struct ExerciseScreenView: View {
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
     @Binding var navigationPath: NavigationPath
-    
     func reset() {
         timerStruct.countdownTimer = 300
         timerStruct.timerRunning = false
@@ -47,21 +46,17 @@ struct ExerciseScreenView: View {
                          
                     
                     
-                    
-            TimerView(streaks: $streaks, timerStruct: $timerStruct)
-                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
-                    
-                    Button {
-                        navigationPath.append("ExerciseScreen2View")
-                    } label: {
-                        Text("Next exercise")
-                            .padding()
-                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                            .foregroundColor(.black)
-                            .cornerRadius(10)
-                            .navigationBarBackButtonHidden()
-                    }
-                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+//                    Button {
+//                        navigationPath.append("ExerciseScreen2View")
+//                    } label: {
+//                        Text("Next exercise")
+//                            .padding()
+//                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+//                            .foregroundColor(.black)
+//                            .cornerRadius(10)
+//                            .navigationBarBackButtonHidden()
+//                    }
+//                    .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
                     
                 }
             }

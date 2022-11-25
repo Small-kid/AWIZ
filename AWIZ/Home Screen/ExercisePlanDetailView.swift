@@ -58,7 +58,7 @@ struct ExercisePlanDetailView: View {
                         }
                     }
                         
-                    NavigationLink(destination: ExerciseScreenView( streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
+                    NavigationLink(destination: ExerciseScreen(streaks: $streak, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
                         {
                             Text("Start exercise")
                                 .padding()

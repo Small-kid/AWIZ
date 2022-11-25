@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TimerView: View {
     
+    @State var presentAlert = false
+    @State var navigationPath = NavigationPath()
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -38,7 +40,7 @@ struct TimerView: View {
                     
                 }
                 .font(.system(size: 30))
-                .alert("Timer done! Press the button below to go to the next exercise", isPresented: $timerStruct.isAlertpresented) {}
+                .alert("Timer done! Move on to the next exercise by swiping right!", isPresented: $timerStruct.isAlertpresented) {}
             
             HStack(spacing:30) {
                 Button(timerStruct.timerRunning ? "Reset" : "Start") {
@@ -68,6 +70,38 @@ struct TimerView: View {
                 .cornerRadius(10)
                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                 
+                Button {
+                    presentAlert = true
+                } label: {
+                    Text("Mark exercise as complete")
+                        .padding()
+                        .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                    
+                }
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+                .navigationBarBackButtonHidden()
+                .alert("Warning:Mark entire exercise plan as complete?", isPresented: $presentAlert) {
+                    Button("Proceed") {
+                        if timerStruct.exerciseTime <= 1500 {
+                            timerStruct.exerciseTime = 1500
+                        } else if timerStruct.exerciseTime > 1500 {
+                            timerStruct.exerciseTime += 1500
+                        }
+                        navigationPath = NavigationPath()
+                        timerStruct.isCompleted.toggle()
+                        timerStruct.isActive = false
+                        if timerStruct.isCompleted == true {
+                            streaks.currentStreak += 1
+                            streaks.highestStreak += 1
+                        }
+                    }
+                        Button("Cancel", role: .cancel){}
+                    Button("Don't complete exercise plan") {
+                        navigationPath = NavigationPath()
+                    }
+                    }
             }
             
         }

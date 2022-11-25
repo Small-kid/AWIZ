@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct features {
-    var f1 = "Last exercise button"
+struct improvement {
+    var f1 = "Go to last exercise button"
     var f2 = "Support for dark mode"
     var f3 = "exercise quotes from api"
     var f4 = "background colour for app in appBackground asset file"
@@ -18,5 +18,7 @@ struct features {
     var f8 = "friends screen"
     var f9 = "Settings"
     var f10 = "Emergency button"
+    var f11 = "Better exercise screen"
+    var f12 = "Sound when timer ends to notify elderly"
 }
 
