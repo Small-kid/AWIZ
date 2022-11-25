@@ -22,7 +22,7 @@ struct ExercisePlanView: View {
             LazyHGrid(rows: [row]) {
                 ForEach(exercisePlans) { exercisePlan in
                     NavigationLink {
-                        ExercisePlanDetailView(streak: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                        ExercisePlanDetailView(streak: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans)
                             .frame(maxWidth: .infinity, maxHeight: .infinity)
                     } label: {
                         Label("", systemImage: "figure.cooldown")
@@ -41,9 +41,9 @@ struct ExercisePlanView: View {
                     .navigationDestination(for: String.self) { name in
                         switch name{
                         case "ExercisePlanDetailView":
-                            ExercisePlanDetailView( streak: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExercisePlanDetailView( streak: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans)
                         case "ExerciseScreenView":
-                            ExerciseScreenView(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreenView(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans)
                         case "ExerciseScreen2View":
                             ExerciseScreen2View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen3View":
@@ -53,7 +53,7 @@ struct ExercisePlanView: View {
                         case "ExerciseScreen5View":
                             ExerciseScreen5View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
                         case "ExerciseScreen":
-                            ExerciseScreen(streaks: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
+                            ExerciseScreen(streaks: $streaks, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans)
                         case"TimerView":
                             TimerView(streaks: $streaks, timerStruct: $timer)
                         default:

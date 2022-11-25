@@ -14,6 +14,7 @@ struct ExercisePlanDetailView: View {
     var exercisePlan: ExercisePlan
     @State var countdownTimer = 300
     @Binding var navigationPath: NavigationPath
+    var exercisePlans: [ExercisePlan]
     
     var body: some View {
         GeometryReader { geometry in
@@ -58,7 +59,7 @@ struct ExercisePlanDetailView: View {
                         }
                         
                         
-                        NavigationLink(destination: ExerciseScreenView(streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
+                        NavigationLink(destination: ExerciseScreenView(streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans))
                         {
                             Text("Start exercise")
                                 .font(.system(size: 20, weight: .medium))
@@ -93,13 +94,19 @@ struct ExercisePlanDetailView: View {
 struct ExercisePlanDetailView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ExercisePlanDetailView(streak: .constant(Streaks()), timer: .constant(TimerStruct()), exercisePlan:ExercisePlan(title: "Exercise Plan 4", details: "Choose this plan for a more advanced workout (**Warning**: Only recommended for elderly who regulary exercise/are very active)",
+        ExercisePlanDetailView(streak: .constant(Streaks()), timer: .constant(TimerStruct()), exercisePlan: ExercisePlan(title: "Exercise Plan 4", details: "Choose this plan for a more advanced workout (**Warning**: Only recommended for elderly who regulary exercise/are very active)",
             exercise: Exercise(title: "High Knee March", duration: 5, steps: "From a standing start, with your arms bent at ninety degrees by your sides, start running on the spot, lifting your knees up to waist height and repeating the motion", video: AVPlayer(url:  Bundle.main.url(forResource: "HighKneeMarch" , withExtension: "mp4")!)),
                 exercise2: Exercise(title: "Calf Raises", duration: 5, steps: "Raise your heels off the floor and return to the starting position, by slowly lowering your heels. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "CalfRaises" , withExtension: "mp4")!)),
                 exercise3: Exercise(title: "Wall Push Ups", duration: 5, steps: "Place hands on a wall shoulder-width apart and at chest level then step back with both feet.Bend your elbows and lower your upper body towards the wall. Next, push yourself back up into the starting position (We recommend doing 5 reps before taking a 10 second rest)", video: AVPlayer(url:  Bundle.main.url(forResource: "WallPushUp" , withExtension: "mp4")!)),
                     exercise4: Exercise(title: "Sit Ups", duration: 5, steps: "", video: AVPlayer(url:  Bundle.main.url(forResource: "SitUp" , withExtension: "mp4")!)),
                 exercise5: Exercise(title: "Jog on the Spot", duration: 5, steps: "Lift your right arm and left foot at the same time and raise your knee as high as your hips. Then switch to the opposite foot, quickly lifting your right foot to hip height and repeat.", video: AVPlayer(url:  Bundle.main.url(forResource: "JogOnTheSpot" , withExtension: "mp4")!))
-                                                        ), navigationPath: .constant(NavigationPath()))
+                                                                                                                       ), navigationPath: .constant(NavigationPath()), exercisePlans: [ExercisePlan(title: "Exercise Plan 4", details: "Choose this plan for a more advanced workout (**Warning**: Only recommended for elderly who regulary exercise/are very active)",
+                                                                                                                                                                                                    exercise: Exercise(title: "High Knee March", duration: 5, steps: "From a standing start, with your arms bent at ninety degrees by your sides, start running on the spot, lifting your knees up to waist height and repeating the motion", video: AVPlayer(url:  Bundle.main.url(forResource: "HighKneeMarch" , withExtension: "mp4")!)),
+                                                                                                                                                                                                        exercise2: Exercise(title: "Calf Raises", duration: 5, steps: "Raise your heels off the floor and return to the starting position, by slowly lowering your heels. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "CalfRaises" , withExtension: "mp4")!)),
+                                                                                                                                                                                                        exercise3: Exercise(title: "Wall Push Ups", duration: 5, steps: "Place hands on a wall shoulder-width apart and at chest level then step back with both feet.Bend your elbows and lower your upper body towards the wall. Next, push yourself back up into the starting position (We recommend doing 5 reps before taking a 10 second rest)", video: AVPlayer(url:  Bundle.main.url(forResource: "WallPushUp" , withExtension: "mp4")!)),
+                                                                                                                                                                                                            exercise4: Exercise(title: "Sit Ups", duration: 5, steps: "", video: AVPlayer(url:  Bundle.main.url(forResource: "SitUp" , withExtension: "mp4")!)),
+                                                                                                                                                                                                        exercise5: Exercise(title: "Jog on the Spot", duration: 5, steps: "Lift your right arm and left foot at the same time and raise your knee as high as your hips. Then switch to the opposite foot, quickly lifting your right foot to hip height and repeat.", video: AVPlayer(url:  Bundle.main.url(forResource: "JogOnTheSpot" , withExtension: "mp4")!))
+                                                                                                                                                                                                                                                                                                               )])
     }
     
 }

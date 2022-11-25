@@ -43,12 +43,14 @@ struct ExerciseScreen3View: View {
                 }
             }
 
-                      
+            TimerView(streaks: $streaks, timerStruct: $timerStruct)
+                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
             
         
             
             Button {
                 navigationPath.append("ExerciseScreen4View")
+                reset()
             } label: {
                 Text("Next exercise")
                     .padding()
