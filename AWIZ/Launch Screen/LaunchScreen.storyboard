@@ -18,16 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <rect key="frame" x="0.0" y="832" width="393" height="0.0"/>
+                                <rect key="frame" x="0.0" y="778" width="393" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ElderlyImages" translatesAutoresizingMaskIntoConstraints="NO" id="1me-5Q-vgY">
-                                <rect key="frame" x="75" y="351" width="243" height="56"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ElderlyImages" translatesAutoresizingMaskIntoConstraints="NO" id="1me-5Q-vgY">
+                                <rect key="frame" x="75" y="321" width="243" height="56"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ElderlyFit" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="0.0" y="333" width="393" height="186"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ElderlyFit" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
+                                <rect key="frame" x="0.0" y="306" width="393" height="186"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="186" id="8Wa-Ex-eW9"/>
                                     <constraint firstAttribute="width" constant="393" id="PdY-lR-TZc"/>
@@ -49,7 +49,7 @@
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="274" id="N2A-LU-95l"/>
                             <constraint firstItem="1me-5Q-vgY" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="75" id="Opr-KV-qcw"/>
                             <constraint firstItem="1me-5Q-vgY" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="292" id="Qf4-AH-7Rp"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="20" symbolic="YES" id="SfN-ll-jLj"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstItem="GJd-Yh-RWb" firstAttribute="trailing" secondItem="obG-Y5-kRd" secondAttribute="trailing" id="pK7-Zt-8CC"/>
                         </constraints>
                     </view>

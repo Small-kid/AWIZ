@@ -58,7 +58,7 @@ struct ExerciseScreen5View: View {
             }
             .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
             .navigationBarBackButtonHidden()
-            .alert("Are you sure you want to complete this exercise plan for today?", isPresented: $presentAlert) {
+            .alert("Complete exercise plan for today?", isPresented: $presentAlert) {
                 Button("Proceed") {
                     if timerStruct.exerciseTime <= 1500 {
                         timerStruct.exerciseTime = 1500
@@ -74,6 +74,9 @@ struct ExerciseScreen5View: View {
                     }
                 }
                     Button("Cancel", role: .cancel){}
+                Button("Don't complete exercise plan") {
+                    navigationPath = NavigationPath()
+                }
                 }
             }
 

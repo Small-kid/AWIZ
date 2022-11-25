@@ -66,14 +66,13 @@ struct HomeView: View {
                                 .zIndex(-1.0)
                                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
                             
-                            //.frame(maxWidth: .infinity, maxHeight: .infinity)
-                            
                         }
                         .frame(width: geometry.size.width)
                         .edgesIgnoringSafeArea(.all)
                         
                     }
-                    //.background(Color("appBackground"))
+//                    .background(Color("appBackground"))
+//                    .edgesIgnoringSafeArea(.all)
                 }
             }
         }
