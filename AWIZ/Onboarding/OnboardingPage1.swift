@@ -9,13 +9,17 @@ import SwiftUI
 
 struct OnboardingPage1: View {
     var body: some View {
-        VStack {
-            Text("Welcome to ElderlyFit!")
-                .font(.largeTitle)
-                .frame(alignment: .center)
-            
-            Text("Swipe left to continue")
-                .font(.headline)
+        ZStack {
+            Color("Onboarding")
+            .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("Welcome to ElderlyFit!")
+                    .font(.largeTitle)
+                    .frame(alignment: .center)
+                
+                Text("Swipe left to continue")
+                    .font(.headline)
+            }
         }
     }
 }

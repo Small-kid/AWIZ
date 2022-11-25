@@ -31,6 +31,7 @@ struct HomeView: View {
                     ZStack {
                         //                        Color("appBackground").edgesIgnoringSafeArea(.all)
                         VStack {
+//                            Color("appBackground").edgesIgnoringSafeArea(.all)
                             
                             Button {
                                 navigationPath.append("ExercisePlanDetailView")

@@ -9,9 +9,13 @@ import SwiftUI
 
 struct OnboardingPage2: View {
     var body: some View {
-        Text("Let's get you started with a short tutorial of the app")
-            .font(.title)
-            .frame(alignment: .center)
+        ZStack {
+            Color("Onboarding")
+                .edgesIgnoringSafeArea(.all)
+            Text("Let's get you started with a short tutorial of the app")
+                .font(.title)
+                .frame(alignment: .center)
+        }
     }
 }
 

@@ -42,9 +42,9 @@ struct ExerciseScreen: View {
                     }
             }
             .tabViewStyle(PageTabViewStyle())
-            
+
             TimerView(streaks: $streaks, timerStruct: $timer)
-            
+
             Button {
                 presentAlert = true
             } label: {
@@ -53,7 +53,7 @@ struct ExerciseScreen: View {
                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                     .foregroundColor(.black)
                     .cornerRadius(10)
-                
+
             }
             .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
             .navigationBarBackButtonHidden()

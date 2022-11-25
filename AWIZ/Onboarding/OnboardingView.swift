@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var isOnboardingShown: Bool
     var body: some View {
         TabView {
             OnboardingPage1()
@@ -26,6 +27,6 @@ struct OnboardingView: View {
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingView(isOnboardingShown: .constant(true))
     }
 }

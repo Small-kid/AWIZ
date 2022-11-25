@@ -184,6 +184,13 @@
 			path = "Exercise Screen";
 			sourceTree = "<group>";
 		};
+		057E506F29312E5200AE5AD4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		05AA2289292FCCD2000CAD1A /* Notes */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +216,7 @@
 				057E506729312C8F00AE5AD4 /* OnboardingPage3.swift */,
 				057E506929312C9900AE5AD4 /* OnboardingPage4.swift */,
 				057E506B29312CA700AE5AD4 /* OnboardingPage5.swift */,
+				057E506F29312E5200AE5AD4 /* Images */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
