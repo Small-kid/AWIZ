@@ -54,7 +54,7 @@ struct TimerView: View {
                 .background(.green)
                 .foregroundColor(.black)
                 .cornerRadius(10)
-                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
                 
                 Button(timerStruct.timerRunning ? "Pause" : "Resume") {
                     if timerStruct.timerRunning == true {
@@ -68,7 +68,7 @@ struct TimerView: View {
                 .foregroundColor(.black)
                 .background(.red)
                 .cornerRadius(10)
-                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
                 
                 Button {
                     presentAlert = true
@@ -80,7 +80,7 @@ struct TimerView: View {
                         .cornerRadius(10)
                     
                 }
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
                 .navigationBarBackButtonHidden()
                 .alert("Warning:Mark entire exercise plan as complete?", isPresented: $presentAlert) {
                     Button("Proceed") {
