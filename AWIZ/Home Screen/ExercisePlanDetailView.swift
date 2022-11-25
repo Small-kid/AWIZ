@@ -61,10 +61,10 @@ struct ExercisePlanDetailView: View {
                         NavigationLink(destination: ExerciseScreenView(streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath))
                         {
                             Text("Start exercise")
-                                .padding()
-                                .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                                .font(.system(size: 20, weight: .medium))
+                                .foregroundColor((Color(red: 184/255, green: 243/255, blue: 255/255)))
                                 .foregroundColor(.black)
-                                .cornerRadius(10)
+                                //.cornerRadius(10)
                         }
                         .padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 0))
                         .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
