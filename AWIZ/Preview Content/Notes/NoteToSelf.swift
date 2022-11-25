@@ -20,5 +20,6 @@ struct improvement {
     var f10 = "Emergency button"
     var f11 = "Better exercise screen"
     var f12 = "Sound when timer ends to notify elderly"
+    var f13 = "Video autoplay"
 }
 

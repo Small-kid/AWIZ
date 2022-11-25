@@ -63,8 +63,7 @@ struct ExercisePlanDetailView: View {
                         {
                             Text("Start exercise")
                                 .font(.system(size: 20, weight: .medium))
-                                .foregroundColor((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("DetailViewColour"))
                                 //.cornerRadius(10)
                         }
                         .padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 0))

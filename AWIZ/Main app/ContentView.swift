@@ -60,6 +60,9 @@ struct ContentView: View {
                     }
             }
         }
+        .fullScreenCover(isPresented: $isOnboardingShown) {
+            OnboardingView()
+        }
     }
 }
 

@@ -13,7 +13,7 @@ struct TimerView: View {
     @State var navigationPath = NavigationPath()
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1,tolerance: 0.5, on: .main, in: .common).autoconnect()
     
     func format(seconds: Int) -> String { String(format:"%d:%02d", seconds / 60, seconds % 60) }
     
@@ -40,7 +40,7 @@ struct TimerView: View {
                     
                 }
                 .font(.system(size: 30))
-                .alert("Timer done! Move on to the next exercise by swiping right!", isPresented: $timerStruct.isAlertpresented) {}
+                .alert("Timer done! Move on to the next exercise by pressing the button below!", isPresented: $timerStruct.isAlertpresented) {}
             
             HStack(spacing:30) {
                 Button(timerStruct.timerRunning ? "Reset" : "Start") {
