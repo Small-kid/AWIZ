@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Streaks {
+struct Streaks: Codable, Identifiable {
+    var id = UUID()
     var currentStreak = 0
     var highestStreak = 1
 }

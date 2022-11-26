@@ -9,8 +9,10 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @ObservedObject var streaks: StreaksManager
+    @ObservedObject var timer: TimerStructManager
     @Binding var streak: Streaks
-    @Binding var timer: TimerStruct
+    @Binding var timerStruct: TimerStruct
     @State var isSheetPresented = false
     @Binding var navigationPath: NavigationPath
     @Binding var exercisePlans: [ExercisePlan]
@@ -29,23 +31,14 @@ struct HomeView: View {
             GeometryReader { geometry in
                 ScrollView {
                     ZStack {
-                        //                        Color("appBackground").edgesIgnoringSafeArea(.all)
                         VStack {
-//                            Color("appBackground").edgesIgnoringSafeArea(.all)
                             
-                            Button {
-                                navigationPath.append("ExercisePlanDetailView")
-                            } label: {
-                                Text("")
-                            }
-                            .opacity(0)
-                            
-                            let percent = Double(timer.exerciseTime/1500)
+                            let percent = Double($timer.exerciseTime/1500)
                             Text("Welcome back to ElderlyFit")
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
                                 .offset(x: 0, y: 20)
                             
-                            CircularProgressView(timer: $timer, progress: CGFloat(percent))
+                            CircularProgressView(timer: $timerStruct, progress: CGFloat(percent))
                                 .frame(width: 150, height: 150)
                                 .offset(x: -95, y: -240)
                                 .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
@@ -53,7 +46,7 @@ struct HomeView: View {
                                 .font(.system(size: 30, weight: .bold, design: .rounded))
                                 .offset(x:-92, y:-345)
                             
-                            Text("\(round(result: timer.exerciseTime/60)) mins of exercise completed today")
+                            Text("\(round(result: $timer.exerciseTime/60)) mins of exercise completed today")
                                 .frame(width: 200, height: 50)
                                 .font(.system(size: 20, design: .rounded))
                                 .offset(x:100, y:-440)
@@ -73,7 +66,7 @@ struct HomeView: View {
                             .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                             
                             
-                            StreaksView(timer: $timer, streak: $streak)
+                            StreaksView(timer: $timerStruct, streak: $streak, streaks: streaks)
                                 .offset(x:0, y: -370)
                                 .padding()
                             
@@ -84,7 +77,7 @@ struct HomeView: View {
                                 .zIndex(1.0)
                             
                             
-                            ExercisePlanView( streaks: $streak, timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                            ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
                                 .offset(x: 15, y: -430)
                                 .zIndex(-1.0)
                                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
@@ -105,7 +98,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(streak: .constant(Streaks()), timer: .constant(TimerStruct()), navigationPath: .constant(NavigationPath()), exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+        HomeView(streaks: StreaksManager(), timer: TimerStructManager(), streak: .constant(Streaks()), timerStruct: .constant(TimerStruct()), navigationPath: .constant(NavigationPath()), exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
         exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "mp4")!)),
         exercise2: Exercise(title: "Toe Touches", duration: 5, steps: "Sit with your legs closed and toes pointing up. Keep your knees straight while stretching your arms forward to touch your toes. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "mp4")!)),
         exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "mp4")!)),

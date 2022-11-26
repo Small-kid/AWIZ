@@ -10,6 +10,7 @@ import SwiftUI
 struct StreaksView: View {
     @Binding var timer: TimerStruct
     @Binding var streak: Streaks
+    @ObservedObject var streaks: StreaksManager
     
     
     var body: some View {
@@ -20,13 +21,13 @@ struct StreaksView: View {
                 .shadow(radius: 5)
                 .foregroundColor(.white)
             
-            Text("Current Streak: \(streak.currentStreak) days")
+            Text("Current Streak: \($streaks.currentStreak) days")
                 .font(.system(size: 20))
                 .foregroundColor(Color("streaksColour"))
                 .offset(x: 20, y: -100)
                 
             
-            Text("Highest Streak: \(streak.highestStreak-1) days")
+            Text("Highest Streak: \($streaks.highestStreak-1) days")
                 .font(.system(size: 20))
                 .foregroundColor(Color("streaksColour"))
                 .offset(x: 20, y: -95)

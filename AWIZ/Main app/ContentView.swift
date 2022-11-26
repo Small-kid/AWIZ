@@ -10,6 +10,8 @@ import AVKit
 
 @available(iOS 16.0, *)
 struct ContentView: View {
+    @ObservedObject var streak = StreaksManager()
+    @ObservedObject var timerManager = TimerStructManager()
     @AppStorage("isOnboardingShown") var isOnboardingShown: Bool = true
     @State var streaks = Streaks()
     @State var timer = TimerStruct()
@@ -51,7 +53,7 @@ struct ContentView: View {
         NavigationView {
             NavigationStack(path: $navigationPath) {
                 TabView {
-                    HomeView( streak: $streaks, timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                    HomeView(streaks: streak, timer: timerManager, streak: $streaks, timerStruct: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
                         .tabItem {
                             Label("Home", systemImage: "house.fill")
                         }
