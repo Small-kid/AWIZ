@@ -20,6 +20,7 @@ struct OnboardingPage1: View {
                 Text("Swipe left to continue")
                     .font(.headline)
             }
+            .multilineTextAlignment(.center)
         }
     }
 }

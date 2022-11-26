@@ -18,6 +18,7 @@ struct OnboardingPage5_5: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
         }
+        .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(20)
         .background(

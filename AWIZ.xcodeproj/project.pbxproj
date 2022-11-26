@@ -13,12 +13,16 @@
 		05448427292E7A3100C200EC /* TimerStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05448426292E7A3100C200EC /* TimerStruct.swift */; };
 		054847BB292F06A800AD07B1 /* StreaksStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054847BA292F06A800AD07B1 /* StreaksStruct.swift */; };
 		054E014E2930FC2600371D72 /* ExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054E014D2930FC2600371D72 /* ExerciseScreen.swift */; };
-		056EEC0E2931EC6B00F80B9D /* TutorialGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 056EEC0D2931EC6B00F80B9D /* TutorialGif.gif */; };
 		056EEC102931ECA300F80B9D /* OnboardingPage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC0F2931ECA300F80B9D /* OnboardingPage6.swift */; };
 		056EEC122931F1F900F80B9D /* OnboardingPage5.5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC112931F1F900F80B9D /* OnboardingPage5.5.swift */; };
 		056EEC142931F29B00F80B9D /* OnboardingPage7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC132931F29B00F80B9D /* OnboardingPage7.swift */; };
 		056EEC162931F34900F80B9D /* OnboardingPage8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC152931F34900F80B9D /* OnboardingPage8.swift */; };
 		056EEC182931F3A900F80B9D /* TimerStructManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC172931F3A900F80B9D /* TimerStructManager.swift */; };
+		056EEC1A2931F47800F80B9D /* OnboardingPage9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC192931F47800F80B9D /* OnboardingPage9.swift */; };
+		056EEC1C2931F48400F80B9D /* OnboardingPage10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC1B2931F48400F80B9D /* OnboardingPage10.swift */; };
+		056EEC1E2931F48D00F80B9D /* OnboardingPage11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC1D2931F48D00F80B9D /* OnboardingPage11.swift */; };
+		056EEC202931F49900F80B9D /* OnboardingPage12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC1F2931F49800F80B9D /* OnboardingPage12.swift */; };
+		056EEC222931F5DD00F80B9D /* TutorialVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 056EEC212931F5DD00F80B9D /* TutorialVideo.mp4 */; };
 		057E506429312B5200AE5AD4 /* OnboardingPage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E506329312B5100AE5AD4 /* OnboardingPage1.swift */; };
 		057E506629312C7300AE5AD4 /* OnboardingPage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E506529312C7300AE5AD4 /* OnboardingPage2.swift */; };
 		057E506829312C8F00AE5AD4 /* OnboardingPage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057E506729312C8F00AE5AD4 /* OnboardingPage3.swift */; };
@@ -63,12 +67,16 @@
 		05448426292E7A3100C200EC /* TimerStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStruct.swift; sourceTree = "<group>"; };
 		054847BA292F06A800AD07B1 /* StreaksStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksStruct.swift; sourceTree = "<group>"; };
 		054E014D2930FC2600371D72 /* ExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen.swift; sourceTree = "<group>"; };
-		056EEC0D2931EC6B00F80B9D /* TutorialGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = TutorialGif.gif; sourceTree = "<group>"; };
 		056EEC0F2931ECA300F80B9D /* OnboardingPage6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage6.swift; sourceTree = "<group>"; };
 		056EEC112931F1F900F80B9D /* OnboardingPage5.5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage5.5.swift; sourceTree = "<group>"; };
 		056EEC132931F29B00F80B9D /* OnboardingPage7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage7.swift; sourceTree = "<group>"; };
 		056EEC152931F34900F80B9D /* OnboardingPage8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage8.swift; sourceTree = "<group>"; };
 		056EEC172931F3A900F80B9D /* TimerStructManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStructManager.swift; sourceTree = "<group>"; };
+		056EEC192931F47800F80B9D /* OnboardingPage9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage9.swift; sourceTree = "<group>"; };
+		056EEC1B2931F48400F80B9D /* OnboardingPage10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage10.swift; sourceTree = "<group>"; };
+		056EEC1D2931F48D00F80B9D /* OnboardingPage11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage11.swift; sourceTree = "<group>"; };
+		056EEC1F2931F49800F80B9D /* OnboardingPage12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage12.swift; sourceTree = "<group>"; };
+		056EEC212931F5DD00F80B9D /* TutorialVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TutorialVideo.mp4; sourceTree = "<group>"; };
 		057E506329312B5100AE5AD4 /* OnboardingPage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage1.swift; sourceTree = "<group>"; };
 		057E506529312C7300AE5AD4 /* OnboardingPage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage2.swift; sourceTree = "<group>"; };
 		057E506729312C8F00AE5AD4 /* OnboardingPage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage3.swift; sourceTree = "<group>"; };
@@ -166,7 +174,7 @@
 		0532B146292864A10080E653 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				056EEC0D2931EC6B00F80B9D /* TutorialGif.gif */,
+				056EEC212931F5DD00F80B9D /* TutorialVideo.mp4 */,
 				05261BC1292D278900AF125C /* ElbowStretch.mp4 */,
 				05B692742930C253009196E7 /* TricepStretch.mp4 */,
 				05B692762930C274009196E7 /* HighKneeMarch.mp4 */,
@@ -234,6 +242,10 @@
 				056EEC0F2931ECA300F80B9D /* OnboardingPage6.swift */,
 				056EEC132931F29B00F80B9D /* OnboardingPage7.swift */,
 				056EEC152931F34900F80B9D /* OnboardingPage8.swift */,
+				056EEC192931F47800F80B9D /* OnboardingPage9.swift */,
+				056EEC1B2931F48400F80B9D /* OnboardingPage10.swift */,
+				056EEC1D2931F48D00F80B9D /* OnboardingPage11.swift */,
+				056EEC1F2931F49800F80B9D /* OnboardingPage12.swift */,
 				057E506F29312E5200AE5AD4 /* Images */,
 			);
 			path = Onboarding;
@@ -346,8 +358,8 @@
 				CEB3A51029037D1600F4E36A /* Preview Assets.xcassets in Resources */,
 				05B6927B2930C359009196E7 /* CalfRaises.mp4 in Resources */,
 				CEB3A50D29037D1600F4E36A /* Assets.xcassets in Resources */,
+				056EEC222931F5DD00F80B9D /* TutorialVideo.mp4 in Resources */,
 				05AD794F292F327E00F4AEAC /* LaunchScreen.storyboard in Resources */,
-				056EEC0E2931EC6B00F80B9D /* TutorialGif.gif in Resources */,
 				05B6927F2930C3CA009196E7 /* JogOnTheSpot.mp4 in Resources */,
 				05B692852930C445009196E7 /* ArmCircles.mp4 in Resources */,
 				058CEAE9292D2D29007986CF /* ElbowStretch.mp4 in Resources */,
@@ -370,10 +382,13 @@
 				058DD8B5292D0B03006A3583 /* ExerciseScreen4View.swift in Sources */,
 				05208DE429038C44003CAECF /* ExerciseView.swift in Sources */,
 				058DD8B7292D0B66006A3583 /* ExerciseScreen5View.swift in Sources */,
+				056EEC1E2931F48D00F80B9D /* OnboardingPage11.swift in Sources */,
 				056EEC102931ECA300F80B9D /* OnboardingPage6.swift in Sources */,
+				056EEC1A2931F47800F80B9D /* OnboardingPage9.swift in Sources */,
 				05448427292E7A3100C200EC /* TimerStruct.swift in Sources */,
 				054E014E2930FC2600371D72 /* ExerciseScreen.swift in Sources */,
 				056EEC122931F1F900F80B9D /* OnboardingPage5.5.swift in Sources */,
+				056EEC202931F49900F80B9D /* OnboardingPage12.swift in Sources */,
 				05E0274D2927DF6E009C9D2C /* CircularProgressView.swift in Sources */,
 				05E027582927E0DA009C9D2C /* ExerciseScreenView.swift in Sources */,
 				057E506629312C7300AE5AD4 /* OnboardingPage2.swift in Sources */,
@@ -393,6 +408,7 @@
 				CEB3A50929037D0E00F4E36A /* AWIZApp.swift in Sources */,
 				05E027532927DF9C009C9D2C /* ExercisePlanView.swift in Sources */,
 				058DD8B1292D044C006A3583 /* ExerciseScreen2View.swift in Sources */,
+				056EEC1C2931F48400F80B9D /* OnboardingPage10.swift in Sources */,
 				056EEC162931F34900F80B9D /* OnboardingPage8.swift in Sources */,
 				05E0276E2927E225009C9D2C /* OnboardingView.swift in Sources */,
 				057E506829312C8F00AE5AD4 /* OnboardingPage3.swift in Sources */,

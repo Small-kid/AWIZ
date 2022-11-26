@@ -16,6 +16,7 @@ struct OnboardingPage2: View {
                 .font(.title)
                 .frame(alignment: .center)
         }
+        .multilineTextAlignment(.center)
     }
 }
 
