@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingPage1: View {
+    @Binding var isOnboardingShown: Bool
     var body: some View {
         ZStack {
             Color("Onboarding")
@@ -16,9 +17,12 @@ struct OnboardingPage1: View {
                 Text("Welcome to ElderlyFit!")
                     .font(.largeTitle)
                     .frame(alignment: .center)
+                Text("Let's get you started with a short tutorial of the app")
+                    .font(.headline)
+                    .frame(alignment: .center)
                 
                 Text("Swipe left to continue")
-                    .font(.headline)
+                    .font(.subheadline)
             }
             .multilineTextAlignment(.center)
         }
@@ -27,6 +31,6 @@ struct OnboardingPage1: View {
 
 struct OnboardingPage1_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPage1()
+        OnboardingPage1(isOnboardingShown: .constant(false))
     }
 }

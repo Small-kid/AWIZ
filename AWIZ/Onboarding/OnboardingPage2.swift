@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingPage2: View {
+    @Binding var isOnboardingShown: Bool
     var body: some View {
         ZStack {
             Color("Onboarding")
@@ -22,6 +23,6 @@ struct OnboardingPage2: View {
 
 struct OnboardingPage2_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPage2()
+        OnboardingPage2(isOnboardingShown: .constant(false))
     }
 }

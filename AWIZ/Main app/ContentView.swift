@@ -10,7 +10,7 @@ import AVKit
 
 @available(iOS 16.0, *)
 struct ContentView: View {
-    @State var isOnboardingShown = false
+    @AppStorage("isOnboardingShown") var isOnboardingShown: Bool = true
     @State var streaks = Streaks()
     @State var timer = TimerStruct()
     @State var navigationPath: NavigationPath = NavigationPath()

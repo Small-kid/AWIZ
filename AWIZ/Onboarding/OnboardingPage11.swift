@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct OnboardingPage11: View {
+    @Binding var isOnboardingShown: Bool
     var body: some View {
         VStack {
             Image("Alert")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300)
-            Text("Once you are done with the exercise plan, press the button [Mark exercise plan as complete] to mark the exercise plan as complete and return to the home screen")
+            Text("If you want to exit to the home screen but don't want to mark the exercise plan as complete, press the [Don't complete exercise plan] button.")
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
             
@@ -31,6 +32,6 @@ struct OnboardingPage11: View {
 
 struct OnboardingPage11_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPage11()
+        OnboardingPage11(isOnboardingShown: .constant(false))
     }
 }

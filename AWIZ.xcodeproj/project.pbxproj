@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051EA4CE2931F97B0079A992 /* OnboardingPage13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051EA4CD2931F97B0079A992 /* OnboardingPage13.swift */; };
+		051EA4D02931F98B0079A992 /* OnboardingPage14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051EA4CF2931F98B0079A992 /* OnboardingPage14.swift */; };
 		05208DE429038C44003CAECF /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE329038C44003CAECF /* ExerciseView.swift */; };
 		05208DE729038C55003CAECF /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DE629038C55003CAECF /* FriendView.swift */; };
 		05208DEB29038C73003CAECF /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05208DEA29038C73003CAECF /* SettingsView.swift */; };
@@ -60,6 +62,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		051EA4CD2931F97B0079A992 /* OnboardingPage13.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage13.swift; sourceTree = "<group>"; };
+		051EA4CF2931F98B0079A992 /* OnboardingPage14.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage14.swift; sourceTree = "<group>"; };
 		05208DE329038C44003CAECF /* ExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseView.swift; sourceTree = "<group>"; };
 		05208DE629038C55003CAECF /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
 		05208DEA29038C73003CAECF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -246,6 +250,8 @@
 				056EEC1B2931F48400F80B9D /* OnboardingPage10.swift */,
 				056EEC1D2931F48D00F80B9D /* OnboardingPage11.swift */,
 				056EEC1F2931F49800F80B9D /* OnboardingPage12.swift */,
+				051EA4CD2931F97B0079A992 /* OnboardingPage13.swift */,
+				051EA4CF2931F98B0079A992 /* OnboardingPage14.swift */,
 				057E506F29312E5200AE5AD4 /* Images */,
 			);
 			path = Onboarding;
@@ -380,7 +386,9 @@
 				05E027542927DF9C009C9D2C /* ExercisePlanDetailView.swift in Sources */,
 				05E027502927DF6E009C9D2C /* StreaksView.swift in Sources */,
 				058DD8B5292D0B03006A3583 /* ExerciseScreen4View.swift in Sources */,
+				051EA4CE2931F97B0079A992 /* OnboardingPage13.swift in Sources */,
 				05208DE429038C44003CAECF /* ExerciseView.swift in Sources */,
+				051EA4D02931F98B0079A992 /* OnboardingPage14.swift in Sources */,
 				058DD8B7292D0B66006A3583 /* ExerciseScreen5View.swift in Sources */,
 				056EEC1E2931F48D00F80B9D /* OnboardingPage11.swift in Sources */,
 				056EEC102931ECA300F80B9D /* OnboardingPage6.swift in Sources */,

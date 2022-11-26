@@ -11,22 +11,25 @@ struct OnboardingView: View {
     @Binding var isOnboardingShown: Bool
     var body: some View {
         TabView {
-            OnboardingPage1()
+            OnboardingPage1(isOnboardingShown: $isOnboardingShown)
             
-            OnboardingPage2()
-
-            OnboardingPage3()
+            OnboardingPage3(isOnboardingShown: $isOnboardingShown)
             
-            OnboardingPage4()
+            OnboardingPage4(isOnboardingShown: $isOnboardingShown)
             
-            OnboardingPage5()
+            OnboardingPage5(isOnboardingShown: $isOnboardingShown)
             
-            OnboardingPage5_5()
+            OnboardingPage6(isOnboardingShown: $isOnboardingShown)
             
-            OnboardingPage6()
+            OnboardingPage8(isOnboardingShown: $isOnboardingShown)
             
-            OnboardingPage7()
+            OnboardingPage9(isOnboardingShown: $isOnboardingShown)
             
+            OnboardingPage10(isOnboardingShown: $isOnboardingShown)
+            
+            OnboardingPage13(isOnboardingShown: $isOnboardingShown)
+            
+            OnboardingPage14(isOnboardingShown: $isOnboardingShown)
         }
         .tabViewStyle(PageTabViewStyle())
     }

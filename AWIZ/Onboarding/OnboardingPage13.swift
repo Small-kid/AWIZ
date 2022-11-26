@@ -1,21 +1,22 @@
 //
-//  OnboardingPage12.swift
+//  OnboardingPage13.swift
 //  AWIZ
 //
 //  Created by Wong Jun heng on 26/11/22.
 //
-
+import AVKit
 import SwiftUI
 
-struct OnboardingPage12: View {
+struct OnboardingPage13: View {
     @Binding var isOnboardingShown: Bool
+    @State var player = AVPlayer()
     var body: some View {
         VStack {
-            Image("CompleteHomescreen")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 300)
-            Text("Now that you have completed the exercise plan, your home screen should look like this.")
+            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "TutorialVideo" , withExtension: "mp4")!))
+                .scaledToFit()
+                .edgesIgnoringSafeArea(.all)
+            
+            Text("Here is a short video tutorial going through how one would use the app.")
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
             
@@ -26,13 +27,11 @@ struct OnboardingPage12: View {
         .background(
             Color("Onboarding")
                 .edgesIgnoringSafeArea(.all))
-        
     }
-    
 }
 
-struct OnboardingPage12_Previews: PreviewProvider {
+struct OnboardingPage13_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPage12(isOnboardingShown: .constant(false))
+        OnboardingPage13(isOnboardingShown: .constant(false))
     }
 }

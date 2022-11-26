@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingPage10: View {
+    @Binding var isOnboardingShown: Bool
     var body: some View {
         VStack {
             Image("HomeButton")
@@ -30,6 +31,6 @@ struct OnboardingPage10: View {
 
 struct OnboardingPage10_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPage10()
+        OnboardingPage10(isOnboardingShown: .constant(false))
     }
 }
