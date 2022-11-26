@@ -9,13 +9,23 @@ import SwiftUI
 
 struct OnboardingPage5: View {
     var body: some View {
-        ZStack {
-            Color("Onboarding")
-                .edgesIgnoringSafeArea(.all)
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Image("HomeScreen")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300)
+            Text("Scroll right to see the selction of exercise plans and click on the yellow box to get started ")
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 21, weight: .medium))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(20)
+        .background(
+            Color.gray
+                .edgesIgnoringSafeArea(.all))
         }
     }
-}
+
 
 struct OnboardingPage5_Previews: PreviewProvider {
     static var previews: some View {

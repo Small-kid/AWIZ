@@ -9,21 +9,21 @@ import SwiftUI
 
 struct OnboardingPage3: View {
     var body: some View {
-        ZStack {
-            Color("Onboarding")
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Color("Onboarding")
-                    .edgesIgnoringSafeArea(.all)
-                Image("HomeScreen")
-                    .resizable()
-                    .frame(width: 300, height: 600)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 200, trailing: 0))
-                
-                Text("This is your home screen where you can see how much progress you have made throughout the day as well as a streaks bar to keep track of how many days straight you have been exercising.")
-                    .frame(alignment: .center)
-            }
+        VStack {
+            Image("HomeScreen")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300)
+            Text("This is your home screen where you can see how much progress you have made throughout the day as well as a streaks bar to keep track of how many days straight you have been exercising.")
+                .fixedSize(horizontal: false, vertical: true)
+                .font(.system(size: 21, weight: .medium))
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(20)
+        .background(
+            Color.gray
+                .edgesIgnoringSafeArea(.all)
+        )
     }
 }
 struct OnboardingPage3_Previews: PreviewProvider {
