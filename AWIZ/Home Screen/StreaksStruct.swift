@@ -12,3 +12,4 @@ struct Streaks: Codable, Identifiable {
     var currentStreak = 0
     var highestStreak = 1
 }
+

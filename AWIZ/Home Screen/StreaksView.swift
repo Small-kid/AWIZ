@@ -21,13 +21,13 @@ struct StreaksView: View {
                 .shadow(radius: 5)
                 .foregroundColor(.white)
             
-            Text("Current Streak: \($streaks.currentStreak) days")
+            Text("Current Streak: \(streak.currentStreak) days")
                 .font(.system(size: 20))
                 .foregroundColor(Color("streaksColour"))
                 .offset(x: 20, y: -100)
                 
             
-            Text("Highest Streak: \($streaks.highestStreak-1) days")
+            Text("Highest Streak: \(streak.highestStreak-1) days")
                 .font(.system(size: 20))
                 .foregroundColor(Color("streaksColour"))
                 .offset(x: 20, y: -95)
@@ -48,6 +48,6 @@ struct StreaksView: View {
 
 struct StreaksView_Previews: PreviewProvider {
     static var previews: some View {
-        StreaksView(timer: .constant(TimerStruct()), streak: .constant(Streaks()))
+        StreaksView(timer: .constant(TimerStruct()), streak: .constant(Streaks()), streaks: StreaksManager())
     }
 }

@@ -33,7 +33,7 @@ struct HomeView: View {
                     ZStack {
                         VStack {
                             
-                            let percent = Double($timer.exerciseTime/1500)
+                            let percent = Double(timerStruct.exerciseTime/1500)
                             Text("Welcome back to ElderlyFit")
                                 .font(.system(size: 25,weight: .medium, design: .rounded))
                                 .offset(x: 0, y: 20)
@@ -46,7 +46,7 @@ struct HomeView: View {
                                 .font(.system(size: 30, weight: .bold, design: .rounded))
                                 .offset(x:-92, y:-345)
                             
-                            Text("\(round(result: $timer.exerciseTime/60)) mins of exercise completed today")
+                            Text("\(round(result: timerStruct.exerciseTime/60)) mins of exercise completed today")
                                 .frame(width: 200, height: 50)
                                 .font(.system(size: 20, design: .rounded))
                                 .offset(x:100, y:-440)

@@ -2,6 +2,7 @@
 import Foundation
 import SwiftUI
 
+
 class TimerStructManager: ObservableObject {
     @Published var timerStructs: [TimerStruct] = [] {
         didSet {
