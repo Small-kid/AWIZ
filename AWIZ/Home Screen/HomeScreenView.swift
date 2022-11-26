@@ -25,7 +25,7 @@ struct HomeView: View {
     }
     
     var body: some View {
-        NavigationView {
+        //NavigationView {
             GeometryReader { geometry in
                 ScrollView {
                     ZStack {
@@ -101,7 +101,7 @@ struct HomeView: View {
         }
         //.navigationTitle("Home")
     }
-}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

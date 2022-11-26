@@ -10,6 +10,7 @@ import AVKit
 
 struct ExerciseScreen5View: View {
     
+    @Environment(\.presentationMode) var presentationMode
     @State var presentAlert = false
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
@@ -43,40 +44,41 @@ struct ExerciseScreen5View: View {
                             .frame(alignment: .center)
                     }
                 }
-            TimerView(streaks: $streaks, timerStruct: $timerStruct)
-                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
-            Button {
-                           presentAlert = true
-                       } label: {
-                           Text("Mark exercise as complete")
-                               .padding()
-                               .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                               .foregroundColor(.black)
-                               .cornerRadius(10)
-                           
-                       }
-                       .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
-                       .navigationBarBackButtonHidden()
-                       .alert("Complete exercise plan for today?", isPresented: $presentAlert) {
-                           Button("Proceed") {
-                               if timerStruct.exerciseTime <= 1500 {
-                                   timerStruct.exerciseTime = 1500
-                               } else if timerStruct.exerciseTime > 1500 {
-                                   timerStruct.exerciseTime += 1500
-                               }
-                               navigationPath = NavigationPath()
-                               timerStruct.isCompleted.toggle()
-                               timerStruct.isActive = false
-                               if timerStruct.isCompleted == true {
-                                   streaks.currentStreak += 1
-                                   streaks.highestStreak += 1
-                               }
-                           }
-                               Button("Cancel", role: .cancel){}
-                           Button("Don't complete exercise plan") {
-                               navigationPath = NavigationPath()
-                           }
-                           }
+//            TimerView(streaks: $streaks, timerStruct: $timerStruct)
+//                                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 15, trailing: 0))
+//            Button {
+//                           presentAlert = true
+//                       } label: {
+//                           Text("Mark exercise as complete")
+//                               .padding()
+//                               .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+//                               .foregroundColor(.black)
+//                               .cornerRadius(10)
+//                           
+//                       }
+//                       .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 10))
+//                       .navigationBarBackButtonHidden()
+//                       .alert("Complete exercise plan for today?", isPresented: $presentAlert) {
+//                           Button("Proceed") {
+//                               if timerStruct.exerciseTime <= 1500 {
+//                                   timerStruct.exerciseTime = 1500
+//                               } else if timerStruct.exerciseTime > 1500 {
+//                                   timerStruct.exerciseTime += 1500
+//                               }
+//                               presentationMode.wrappedValue.dismiss()
+////                               navigationPath = NavigationPath()
+//                               timerStruct.isCompleted.toggle()
+//                               timerStruct.isActive = false
+//                               if timerStruct.isCompleted == true {
+//                                   streaks.currentStreak += 1
+//                                   streaks.highestStreak += 1
+//                               }
+//                           }
+//                               Button("Cancel", role: .cancel){}
+//                           Button("Don't complete exercise plan") {
+//                               navigationPath = NavigationPath()
+//                           }
+//                           }
                        }            }
 
             

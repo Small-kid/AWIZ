@@ -9,6 +9,7 @@ import AVKit
 import SwiftUI
 
 struct ExerciseScreen: View {
+    @Environment(\.presentationMode) var presentationMode
     @State var presentAlert = false
     @Binding var streaks: Streaks
     @Binding var timer: TimerStruct
@@ -21,25 +22,15 @@ struct ExerciseScreen: View {
         VStack {
             TabView {
                 ExerciseScreenView(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
+
                 ExerciseScreen2View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
+                
                 ExerciseScreen3View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
+
                 ExerciseScreen4View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
+
                 ExerciseScreen5View(streaks: $streaks, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
+                
             }
             .tabViewStyle(PageTabViewStyle())
 
@@ -48,7 +39,7 @@ struct ExerciseScreen: View {
             Button {
                 presentAlert = true
             } label: {
-                Text("Mark exercise as complete")
+                Text("Mark exercise plan as complete")
                     .padding()
                     .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
                     .foregroundColor(.black)
@@ -64,7 +55,8 @@ struct ExerciseScreen: View {
                     } else if timer.exerciseTime > 1500 {
                         timer.exerciseTime += 1500
                     }
-                    navigationPath = NavigationPath()
+                    presentationMode.wrappedValue.dismiss()
+                    //navigationPath = NavigationPath()
                     timer.isCompleted.toggle()
                     timer.isActive = false
                     if timer.isCompleted == true {
@@ -74,7 +66,7 @@ struct ExerciseScreen: View {
                 }
                     Button("Cancel", role: .cancel){}
                 Button("Don't complete exercise plan") {
-                    navigationPath = NavigationPath()
+                    presentationMode.wrappedValue.dismiss()
                 }
                 }
         }

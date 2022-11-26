@@ -20,6 +20,13 @@ struct OnboardingView: View {
             OnboardingPage4()
             
             OnboardingPage5()
+            
+            OnboardingPage5_5()
+            
+            OnboardingPage6()
+            
+            OnboardingPage7()
+            
         }
         .tabViewStyle(PageTabViewStyle())
     }

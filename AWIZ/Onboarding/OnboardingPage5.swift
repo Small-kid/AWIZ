@@ -21,7 +21,7 @@ struct OnboardingPage5: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(20)
         .background(
-            Color.gray
+            Color("Onboarding")
                 .edgesIgnoringSafeArea(.all))
         }
     }

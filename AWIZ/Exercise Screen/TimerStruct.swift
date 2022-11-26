@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct TimerStruct {
+struct TimerStruct: Codable, Identifiable {
+    var id = UUID()
     var exerciseTime = 0.0
      var isAlertpresented = false
      var countdownTimer = 300

@@ -48,20 +48,22 @@ struct ContentView: View {
                     )
     ]
     var body: some View {
-        NavigationStack(path: $navigationPath) {
-            TabView {
-                HomeView( streak: $streaks, timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
-                    .tabItem {
-                        Label("Home", systemImage: "house.fill")
-                    }
-                ExerciseView()
-                    .tabItem {
-                        Label("Exercises", systemImage: "figure.walk.circle.fill")
-                    }
+        NavigationView {
+            NavigationStack(path: $navigationPath) {
+                TabView {
+                    HomeView( streak: $streaks, timer: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                        .tabItem {
+                            Label("Home", systemImage: "house.fill")
+                        }
+                    ExerciseView()
+                        .tabItem {
+                            Label("Exercises", systemImage: "figure.walk.circle.fill")
+                        }
+                }
             }
-        }
-        .fullScreenCover(isPresented: $isOnboardingShown) {
-            OnboardingView(isOnboardingShown: $isOnboardingShown)
+            .fullScreenCover(isPresented: $isOnboardingShown) {
+                OnboardingView(isOnboardingShown: $isOnboardingShown)
+            }
         }
     }
 }

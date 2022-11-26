@@ -1,5 +1,5 @@
 //
-//  OnboardingPage3.swift
+//  OnboardingPage6.swift
 //  AWIZ
 //
 //  Created by Wong Jun heng on 26/11/22.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct OnboardingPage3: View {
+struct OnboardingPage6: View {
     var body: some View {
         VStack {
-            Image("HomeScreen")
+            Image("DetailView")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300)
-            Text("This is your home screen where you can see how much progress you have made throughout the day as well as a streaks bar to keep track of how many days straight you have been exercising.")
+            Text("When you click on an exercise plan, it will show you more details of the plan like the type of exercises, duration and description for the exercise plan. ")
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
         }
@@ -22,12 +22,12 @@ struct OnboardingPage3: View {
         .padding(20)
         .background(
             Color("Onboarding")
-                .edgesIgnoringSafeArea(.all)
-        )
+                .edgesIgnoringSafeArea(.all))
+        }
     }
-}
-struct OnboardingPage3_Previews: PreviewProvider {
+
+struct OnboardingPage6_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingPage3()
+        OnboardingPage6()
     }
 }

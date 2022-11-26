@@ -21,15 +21,15 @@ struct ExercisePlanDetailView: View {
             ZStack {
                 VStack (alignment: .leading) {
                     
-                        
-                        Text(exercisePlan.title)
-                            .font(.system(size: 35, weight: .bold))
-                            .padding(EdgeInsets(top: 100, leading: 20, bottom: 0, trailing: 0))
-                        
-                        Text(exercisePlan.details)
-                            .font(.system(size: 20, weight: .light))
-                            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
-                        
+                    
+                    Text(exercisePlan.title)
+                        .font(.system(size: 35, weight: .bold))
+                        .padding(EdgeInsets(top: 100, leading: 20, bottom: 0, trailing: 0))
+                    
+                    Text(exercisePlan.details)
+                        .font(.system(size: 20, weight: .light))
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+                    
                     Form {
                         Section (header: Text("1st Exercise")){
                             
@@ -57,26 +57,19 @@ struct ExercisePlanDetailView: View {
                             Text("\(exercisePlan.exercise5.title) (\(exercisePlan.exercise5.duration) mins)")
                                 .font(.system(size: 25, weight: .regular))
                         }
-                        
-                        
-                        NavigationLink(destination: ExerciseScreenView(streaks: $streak, timerStruct: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans))
-                        {
-                            Text("Start exercise")
-                                .font(.system(size: 20, weight: .medium))
-                                .foregroundColor(Color("DetailViewColour"))
-                                //.cornerRadius(10)
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 0))
-                        .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
-                    }
                     
-                    Button {
-                        navigationPath.append("ExerciseScreenView")
-                    } label: {
-                        Text("")
+                
+                    
+                    NavigationLink(destination: ExerciseScreen(streaks: $streak, timer: $timer, exercisePlan: exercisePlan, navigationPath: $navigationPath, exercisePlans: exercisePlans))
+                    {
+                        Text("Start exercise")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(Color("DetailViewColour"))
                     }
-                    .opacity(0)
-                        
+                    .padding(EdgeInsets(top: 0, leading: 100, bottom: 0, trailing: 0))
+                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
+                }
+                    
                     }
                     .frame(width: geometry.size.width)
                     .edgesIgnoringSafeArea(.all)
