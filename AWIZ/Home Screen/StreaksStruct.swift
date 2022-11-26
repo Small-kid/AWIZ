@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Streaks: Codable, Identifiable {
     var id = UUID()

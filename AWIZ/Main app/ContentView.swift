@@ -10,8 +10,8 @@ import AVKit
 
 @available(iOS 16.0, *)
 struct ContentView: View {
-    @ObservedObject var streak = StreaksManager()
-    @ObservedObject var timerManager = TimerStructManager()
+    @StateObject var streak = StreaksManager()
+    @StateObject var timerManager = TimerStructManager()
     @AppStorage("isOnboardingShown") var isOnboardingShown: Bool = true
     @State var streaks = Streaks()
     @State var timer = TimerStruct()

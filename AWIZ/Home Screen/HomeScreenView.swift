@@ -33,59 +33,60 @@ struct HomeView: View {
                     ZStack {
                         VStack {
                             
-                            let percent = Double(timerStruct.exerciseTime/1500)
-                            Text("Welcome back to ElderlyFit")
-                                .font(.system(size: 25,weight: .medium, design: .rounded))
-                                .offset(x: 0, y: 20)
-                            
-                            CircularProgressView(timer: $timerStruct, progress: CGFloat(percent))
-                                .frame(width: 150, height: 150)
-                                .offset(x: -95, y: -240)
-                                .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
-                            Text("\(round(result:percent*100))%")
-                                .font(.system(size: 30, weight: .bold, design: .rounded))
-                                .offset(x:-92, y:-345)
-                            
-                            Text("\(round(result: timerStruct.exerciseTime/60)) mins of exercise completed today")
-                                .frame(width: 200, height: 50)
-                                .font(.system(size: 20, design: .rounded))
-                                .offset(x:100, y:-440)
-                            
-                            Button {
+                                let percent = Double(timerStruct.exerciseTime/1500)
+                                Text("Welcome back to ElderlyFit")
+                                    .font(.system(size: 25,weight: .medium, design: .rounded))
+                                    .offset(x: 0, y: 20)
                                 
-                                navigationPath.append("ExercisePlanDetailView")
+                                CircularProgressView(timer: $timerStruct, progress: CGFloat(percent))
+                                    .frame(width: 150, height: 150)
+                                    .offset(x: -95, y: -240)
+                                    .padding(EdgeInsets(top: 280, leading: 0, bottom: 0, trailing: 0))
+                                Text("\(round(result:percent*100))%")
+                                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                                    .offset(x:-92, y:-345)
                                 
-                            } label: {
-                                Text("Start exercise")
-                            }
-                            .padding()
-                            .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                            .foregroundColor(.black)
-                            .cornerRadius(10)
-                            .offset(x: 92, y: -430)
-                            .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
-                            
-                            
-                            StreaksView(timer: $timerStruct, streak: $streak, streaks: streaks)
-                                .offset(x:0, y: -370)
+                                Text("\(round(result: timerStruct.exerciseTime/60)) mins of exercise completed today")
+                                    .frame(width: 200, height: 50)
+                                    .font(.system(size: 20, design: .rounded))
+                                    .offset(x:100, y:-440)
+                                
+                                Button {
+                                    
+                                    navigationPath.append("ExercisePlanDetailView")
+                                    
+                                } label: {
+                                    Text("Start exercise")
+                                }
                                 .padding()
-                            
-                            Text("Choose your exercise plan:")
-                                .bold()
-                                .font(.system(size: 25))
-                                .offset(x: -30, y: -450)
-                                .zIndex(1.0)
-                            
-                            
-                            ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
-                                .offset(x: 15, y: -430)
-                                .zIndex(-1.0)
-                                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
+                                .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                                .foregroundColor(.black)
+                                .cornerRadius(10)
+                                .offset(x: 92, y: -430)
+                                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                                
+                                
+                                StreaksView(timer: $timerStruct, streak: $streak, streaks: streaks)
+                                    .offset(x:0, y: -370)
+                                    .padding()
+                                
+                                Text("Choose your exercise plan:")
+                                    .bold()
+                                    .font(.system(size: 25))
+                                    .offset(x: -30, y: -450)
+                                    .zIndex(1.0)
+                                
+                                
+                                ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                                    .offset(x: 15, y: -430)
+                                    .zIndex(-1.0)
+                                    .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
+                                
+                            }
+                            .frame(width: geometry.size.width)
+                            .edgesIgnoringSafeArea(.all)
                             
                         }
-                        .frame(width: geometry.size.width)
-                        .edgesIgnoringSafeArea(.all)
-                        
                     }
                     //                    .background(Color("appBackground"))
                     //                    .edgesIgnoringSafeArea(.all)
@@ -93,7 +94,7 @@ struct HomeView: View {
             }
         }
         //.navigationTitle("Home")
-    }
+    
 
 
 struct HomeView_Previews: PreviewProvider {
