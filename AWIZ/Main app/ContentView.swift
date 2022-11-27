@@ -53,7 +53,7 @@ struct ContentView: View {
         NavigationView {
             NavigationStack(path: $navigationPath) {
                 TabView {
-                    HomeView(streaks: streak, timer: timerManager, streak: $streaks, timerStruct: $timer, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                    HomeView(streaks: streak, timer: timerManager, streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
                         .tabItem {
                             Label("Home", systemImage: "house.fill")
                         }

@@ -34,7 +34,7 @@ struct HomeView: View {
                     ZStack {
                         VStack {
                             
-                            let percent = Double($timer.exerciseTime/1500)
+                            let percent = Double(timerStruct.exerciseTime/1500)
                                 Text("Welcome back to ElderlyFit")
                                     .font(.system(size: 25,weight: .medium, design: .rounded))
                                     .offset(x: 0, y: 20)
