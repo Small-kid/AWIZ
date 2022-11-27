@@ -22,6 +22,11 @@ struct TimerView: View {
         timerStruct.countdownTimer = 300
         timerStruct.timerRunning = false
     }
+    func resetData() {
+        exerciseTime = 0
+    }
+    
+    
     
     var body: some View {
         VStack {

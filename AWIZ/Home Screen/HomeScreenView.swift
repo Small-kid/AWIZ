@@ -4,7 +4,9 @@
 //
 //  Created by Wong Jun heng on 22/10/22.
 //
+
 import AVKit
+import Foundation
 import SwiftUI
 
 struct HomeView: View {
@@ -17,6 +19,7 @@ struct HomeView: View {
     @Binding var navigationPath: NavigationPath
     
     @State var isSheetPresented = false
+    let dateChange = UIApplication.significantTimeChangeNotification
     
     func ridzero(result: Double) -> String {
         let value = String(format: "%g", result)
@@ -26,6 +29,19 @@ struct HomeView: View {
         let value = String(format: "%.1f", result)
         return value
     }
+    
+    let beginingOfDay = NSCalendar.current.startOfDay(for: NSDate() as Date)
+    
+    func resetExerciseTime(){
+        
+        let dateComparisionResult:ComparisonResult = NSDate().compare(beginingOfDay)
+
+        if dateComparisionResult == ComparisonResult.orderedDescending || dateComparisionResult == ComparisonResult.orderedSame{
+        exerciseTime = 0.0
+    }
+}
+
+
     
     var body: some View {
             GeometryReader { geometry in
