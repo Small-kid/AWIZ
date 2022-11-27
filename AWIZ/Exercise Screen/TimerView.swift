@@ -10,6 +10,7 @@ import SwiftUI
 struct TimerView: View {
     
     @State var presentAlert = false
+    @AppStorage("exerciseTime") var exerciseTime = 0.0
     @State var navigationPath = NavigationPath()
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
@@ -29,7 +30,7 @@ struct TimerView: View {
                 .onReceive(timer) { _ in
                     if timerStruct.countdownTimer > 0 && timerStruct.timerRunning == true {
                         timerStruct.countdownTimer -= 1
-                        timerStruct.exerciseTime += 1.0
+                        exerciseTime += 1.0
                     } else {
                         timerStruct.timerRunning = false
                         if timerStruct.countdownTimer <= 0, timerStruct.timerRunning == false {

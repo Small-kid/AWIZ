@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct StreaksView: View {
+    
+    @AppStorage("currentStreak") var currentStreak = 0
+    @AppStorage("highestStreak") var highestStreak = 1
     @Binding var timer: TimerStruct
     @Binding var streak: Streaks
     @ObservedObject var streaks: StreaksManager
@@ -21,19 +24,19 @@ struct StreaksView: View {
                 .shadow(radius: 5)
                 .foregroundColor(.white)
             
-            Text("Current Streak: \(streak.currentStreak) days")
+            Text("Current Streak: \(currentStreak) days")
                 .font(.system(size: 20))
                 .foregroundColor(Color("streaksColour"))
                 .offset(x: 20, y: -100)
                 
             
-            Text("Highest Streak: \(streak.highestStreak-1) days")
+            Text("Highest Streak: \(highestStreak-1) days")
                 .font(.system(size: 20))
                 .foregroundColor(Color("streaksColour"))
                 .offset(x: 20, y: -95)
                 
             
-            ProgressView(value: CGFloat(streak.currentStreak), total: CGFloat(streak.highestStreak))
+            ProgressView(value: CGFloat(currentStreak), total: CGFloat(highestStreak))
                 .padding()
                 .frame(width: 370)
                 .scaleEffect(x:1, y: 4)

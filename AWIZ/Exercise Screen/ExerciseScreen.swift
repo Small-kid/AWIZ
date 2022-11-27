@@ -9,6 +9,10 @@ import AVKit
 import SwiftUI
 
 struct ExerciseScreen: View {
+    
+    @AppStorage("exerciseTime") var exerciseTime = 0.0
+    @AppStorage("currentStreak") var currentStreak = 0
+    @AppStorage("highestStreak") var highestStreak = 1
     @Environment(\.presentationMode) var presentationMode
     @State var presentAlert = false
     @Binding var streaks: Streaks
@@ -50,18 +54,18 @@ struct ExerciseScreen: View {
             .navigationBarBackButtonHidden()
             .alert("Warning: Mark entire exercise plan as complete?", isPresented: $presentAlert) {
                 Button("Proceed") {
-                    if timer.exerciseTime <= 1500 {
-                        timer.exerciseTime = 1500
-                    } else if timer.exerciseTime > 1500 {
-                        timer.exerciseTime += 1500
+                    if exerciseTime <= 1500 {
+                        exerciseTime = 1500
+                    } else if exerciseTime > 1500 {
+                        exerciseTime += 1500
                     }
                     presentationMode.wrappedValue.dismiss()
                     //navigationPath = NavigationPath()
                     timer.isCompleted.toggle()
                     timer.isActive = false
                     if timer.isCompleted == true {
-                        streaks.currentStreak += 1
-                        streaks.highestStreak += 1
+                        currentStreak += 1
+                        highestStreak += 1
                     }
                 }
                     Button("Cancel", role: .cancel){}
