@@ -10,6 +10,9 @@ import AVKit
 
 @available(iOS 16.0, *)
 struct ContentView: View {
+    
+    @Environment(\.scenePhase) var scenePhase
+    @AppStorage("exerciseTime") var exerciseTime = 0.0
     @AppStorage("isOnboardingShown") var isOnboardingShown: Bool = true
     @State var streaks = Streaks()
     @State var timer = TimerStruct()
@@ -47,11 +50,39 @@ struct ContentView: View {
                      exercise5: Exercise(title: "Jog on the Spot", duration: 5, steps: "Lift your right arm and left foot at the same time and raise your knee as high as your hips. Then switch to the opposite foot, quickly lifting your right foot to hip height and repeat.", video: AVPlayer(url:  Bundle.main.url(forResource: "JogOnTheSpot" , withExtension: "mp4")!))
                     )
     ]
+    
+    func isNewDay() -> Bool {
+        let defaults = UserDefaults.standard
+        let now = Date.now
+        if let savedDate = defaults.object(forKey: "currentDate") as? Date,
+           Calendar.current.compare(savedDate, to: now, toGranularity: .day) == .orderedSame {
+            return false
+        }
+        defaults.set(now, forKey: "currentDate")
+        return true
+    }
+    
+    func resetTime() {
+        exerciseTime = 0.0
+    }
+    
     var body: some View {
         NavigationView {
             NavigationStack(path: $navigationPath) {
                 //TabView {
                     HomeView(streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
+                    .onAppear() {
+                        if isNewDay() == true {
+                            resetTime()
+                        }
+                    }
+                    .onChange(of: scenePhase) { newPhase in
+                                    
+                                    if newPhase == .active {
+                                        resetTime()
+                                    }
+                                    
+                                }
 //                        .tabItem {
 //                            Label("Home", systemImage: "house.fill")
 //                        }
