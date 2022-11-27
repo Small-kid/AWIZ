@@ -10,8 +10,6 @@ import SwiftUI
 struct HomeView: View {
     
     @AppStorage("exerciseTime") var exerciseTime = 0.0
-    @ObservedObject var streaks: StreaksManager
-    @ObservedObject var timer: TimerStructManager
     
     @Binding var streak: Streaks
     @Binding var timerStruct: TimerStruct
@@ -68,7 +66,7 @@ struct HomeView: View {
                                 .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
                                 
                                 
-                                StreaksView(timer: $timerStruct, streak: $streak, streaks: streaks)
+                                StreaksView(timer: $timerStruct, streak: $streak)
                                     .offset(x:0, y: -370)
                                     .padding()
                                 
@@ -98,7 +96,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(streaks: StreaksManager(), timer: TimerStructManager(), streak: .constant(Streaks()), timerStruct: .constant(TimerStruct()), exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+        HomeView(streak: .constant(Streaks()), timerStruct: .constant(TimerStruct()), exercisePlans: .constant([ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
                                                                                                                                                                                      exercise: Exercise(title: "Tricep Stretch", duration: 5, steps: "Lift your left elbow straight up while bending your arm. Grab your left elbow with your right hand and pull your left elbow towards your head or slightly behind your head with light pressure. (We recommend doing 10 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "TricepStretch" , withExtension: "mp4")!)),
                                                                                                                                                                                      exercise2: Exercise(title: "Toe Touches", duration: 5, steps: "Sit with your legs closed and toes pointing up. Keep your knees straight while stretching your arms forward to touch your toes. (We recommend doing 20 seconds per rep)", video: AVPlayer(url:  Bundle.main.url(forResource: "ToeTouches" , withExtension: "mp4")!)),
                                                                                                                                                                                      exercise3: Exercise(title: "Arm Circles", duration: 5, steps: "Hold your arms straight out to your sides, then swing them forwards or backwards in circles. Try to keep your shoulders down while doing this exercise. (We recommend doing 20 seconds per rep then changing sides)", video: AVPlayer(url:  Bundle.main.url(forResource: "ArmCircles" , withExtension: "mp4")!)),

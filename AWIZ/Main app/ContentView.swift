@@ -10,8 +10,6 @@ import AVKit
 
 @available(iOS 16.0, *)
 struct ContentView: View {
-    @StateObject var streak = StreaksManager()
-    @StateObject var timerManager = TimerStructManager()
     @AppStorage("isOnboardingShown") var isOnboardingShown: Bool = true
     @State var streaks = Streaks()
     @State var timer = TimerStruct()
@@ -52,15 +50,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             NavigationStack(path: $navigationPath) {
-                TabView {
-                    HomeView(streaks: streak, timer: timerManager, streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
-                        .tabItem {
-                            Label("Home", systemImage: "house.fill")
-                        }
-                    ExerciseView()
-                        .tabItem {
-                            Label("Exercises", systemImage: "figure.walk.circle.fill")
-                        }
+                //TabView {
+                    HomeView(streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
+//                        .tabItem {
+//                            Label("Home", systemImage: "house.fill")
+//                        }
+//                    ExerciseView()
+//                        .tabItem {
+//                            Label("Exercises", systemImage: "figure.walk.circle.fill")
+//                        }
                 }
             }
             .fullScreenCover(isPresented: $isOnboardingShown) {
@@ -68,7 +66,7 @@ struct ContentView: View {
             }
         }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

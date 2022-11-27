@@ -15,12 +15,10 @@
 		05448427292E7A3100C200EC /* TimerStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05448426292E7A3100C200EC /* TimerStruct.swift */; };
 		054847BB292F06A800AD07B1 /* StreaksStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054847BA292F06A800AD07B1 /* StreaksStruct.swift */; };
 		054E014E2930FC2600371D72 /* ExerciseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054E014D2930FC2600371D72 /* ExerciseScreen.swift */; };
-		056D19B429320C5B00E801BE /* StreaksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D19B329320C5B00E801BE /* StreaksManager.swift */; };
 		056EEC102931ECA300F80B9D /* OnboardingPage6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC0F2931ECA300F80B9D /* OnboardingPage6.swift */; };
 		056EEC122931F1F900F80B9D /* OnboardingPage5.5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC112931F1F900F80B9D /* OnboardingPage5.5.swift */; };
 		056EEC142931F29B00F80B9D /* OnboardingPage7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC132931F29B00F80B9D /* OnboardingPage7.swift */; };
 		056EEC162931F34900F80B9D /* OnboardingPage8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC152931F34900F80B9D /* OnboardingPage8.swift */; };
-		056EEC182931F3A900F80B9D /* TimerStructManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC172931F3A900F80B9D /* TimerStructManager.swift */; };
 		056EEC1A2931F47800F80B9D /* OnboardingPage9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC192931F47800F80B9D /* OnboardingPage9.swift */; };
 		056EEC1C2931F48400F80B9D /* OnboardingPage10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC1B2931F48400F80B9D /* OnboardingPage10.swift */; };
 		056EEC1E2931F48D00F80B9D /* OnboardingPage11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056EEC1D2931F48D00F80B9D /* OnboardingPage11.swift */; };
@@ -36,7 +34,6 @@
 		058DD8B3292D0AA1006A3583 /* ExerciseScreen3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */; };
 		058DD8B5292D0B03006A3583 /* ExerciseScreen4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B4292D0B03006A3583 /* ExerciseScreen4View.swift */; };
 		058DD8B7292D0B66006A3583 /* ExerciseScreen5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058DD8B6292D0B66006A3583 /* ExerciseScreen5View.swift */; };
-		05AA228B292FCCE9000CAD1A /* NoteToSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA228A292FCCE9000CAD1A /* NoteToSelf.swift */; };
 		05AD794F292F327E00F4AEAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05AD794E292F327E00F4AEAC /* LaunchScreen.storyboard */; };
 		05B692752930C253009196E7 /* TricepStretch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 05B692742930C253009196E7 /* TricepStretch.mp4 */; };
 		05B692772930C274009196E7 /* HighKneeMarch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 05B692762930C274009196E7 /* HighKneeMarch.mp4 */; };
@@ -72,12 +69,10 @@
 		05448426292E7A3100C200EC /* TimerStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStruct.swift; sourceTree = "<group>"; };
 		054847BA292F06A800AD07B1 /* StreaksStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksStruct.swift; sourceTree = "<group>"; };
 		054E014D2930FC2600371D72 /* ExerciseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen.swift; sourceTree = "<group>"; };
-		056D19B329320C5B00E801BE /* StreaksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksManager.swift; sourceTree = "<group>"; };
 		056EEC0F2931ECA300F80B9D /* OnboardingPage6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage6.swift; sourceTree = "<group>"; };
 		056EEC112931F1F900F80B9D /* OnboardingPage5.5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage5.5.swift; sourceTree = "<group>"; };
 		056EEC132931F29B00F80B9D /* OnboardingPage7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage7.swift; sourceTree = "<group>"; };
 		056EEC152931F34900F80B9D /* OnboardingPage8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage8.swift; sourceTree = "<group>"; };
-		056EEC172931F3A900F80B9D /* TimerStructManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStructManager.swift; sourceTree = "<group>"; };
 		056EEC192931F47800F80B9D /* OnboardingPage9.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage9.swift; sourceTree = "<group>"; };
 		056EEC1B2931F48400F80B9D /* OnboardingPage10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage10.swift; sourceTree = "<group>"; };
 		056EEC1D2931F48D00F80B9D /* OnboardingPage11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage11.swift; sourceTree = "<group>"; };
@@ -92,7 +87,6 @@
 		058DD8B2292D0AA1006A3583 /* ExerciseScreen3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen3View.swift; sourceTree = "<group>"; };
 		058DD8B4292D0B03006A3583 /* ExerciseScreen4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen4View.swift; sourceTree = "<group>"; };
 		058DD8B6292D0B66006A3583 /* ExerciseScreen5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseScreen5View.swift; sourceTree = "<group>"; };
-		05AA228A292FCCE9000CAD1A /* NoteToSelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteToSelf.swift; sourceTree = "<group>"; };
 		05AD794E292F327E00F4AEAC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05B692742930C253009196E7 /* TricepStretch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TricepStretch.mp4; sourceTree = "<group>"; };
 		05B692762930C274009196E7 /* HighKneeMarch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = HighKneeMarch.mp4; sourceTree = "<group>"; };
@@ -211,28 +205,11 @@
 			path = "Exercise Screen";
 			sourceTree = "<group>";
 		};
-		056D19B5293211DD00E801BE /* Data Managers */ = {
-			isa = PBXGroup;
-			children = (
-				056EEC172931F3A900F80B9D /* TimerStructManager.swift */,
-				056D19B329320C5B00E801BE /* StreaksManager.swift */,
-			);
-			path = "Data Managers";
-			sourceTree = "<group>";
-		};
 		057E506F29312E5200AE5AD4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		05AA2289292FCCD2000CAD1A /* Notes */ = {
-			isa = PBXGroup;
-			children = (
-				05AA228A292FCCE9000CAD1A /* NoteToSelf.swift */,
-			);
-			path = Notes;
 			sourceTree = "<group>";
 		};
 		05AD794D292F326500F4AEAC /* Launch Screen */ = {
@@ -286,7 +263,6 @@
 		CEB3A50729037D0E00F4E36A /* AWIZ */ = {
 			isa = PBXGroup;
 			children = (
-				056D19B5293211DD00E801BE /* Data Managers */,
 				05AD794D292F326500F4AEAC /* Launch Screen */,
 				05E0276C2927E217009C9D2C /* Onboarding */,
 				050D0E0129160B6F00D99FBF /* Main app */,
@@ -304,7 +280,6 @@
 		CEB3A50E29037D1600F4E36A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				05AA2289292FCCD2000CAD1A /* Notes */,
 				CEB3A50F29037D1600F4E36A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -393,7 +368,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05AA228B292FCCE9000CAD1A /* NoteToSelf.swift in Sources */,
 				05E027542927DF9C009C9D2C /* ExercisePlanDetailView.swift in Sources */,
 				05E027502927DF6E009C9D2C /* StreaksView.swift in Sources */,
 				058DD8B5292D0B03006A3583 /* ExerciseScreen4View.swift in Sources */,
@@ -410,7 +384,6 @@
 				056EEC202931F49900F80B9D /* OnboardingPage12.swift in Sources */,
 				05E0274D2927DF6E009C9D2C /* CircularProgressView.swift in Sources */,
 				05E027582927E0DA009C9D2C /* ExerciseScreenView.swift in Sources */,
-				056D19B429320C5B00E801BE /* StreaksManager.swift in Sources */,
 				057E506629312C7300AE5AD4 /* OnboardingPage2.swift in Sources */,
 				054847BB292F06A800AD07B1 /* StreaksStruct.swift in Sources */,
 				05E0274E2927DF6E009C9D2C /* ExerciseStructs.swift in Sources */,
@@ -419,7 +392,6 @@
 				056EEC142931F29B00F80B9D /* OnboardingPage7.swift in Sources */,
 				057E506C29312CA700AE5AD4 /* OnboardingPage5.swift in Sources */,
 				05208DEB29038C73003CAECF /* SettingsView.swift in Sources */,
-				056EEC182931F3A900F80B9D /* TimerStructManager.swift in Sources */,
 				05208DE729038C55003CAECF /* FriendView.swift in Sources */,
 				058DD8B3292D0AA1006A3583 /* ExerciseScreen3View.swift in Sources */,
 				057E506A29312C9900AE5AD4 /* OnboardingPage4.swift in Sources */,

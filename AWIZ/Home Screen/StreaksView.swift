@@ -13,7 +13,6 @@ struct StreaksView: View {
     @AppStorage("highestStreak") var highestStreak = 1
     @Binding var timer: TimerStruct
     @Binding var streak: Streaks
-    @ObservedObject var streaks: StreaksManager
     
     
     var body: some View {
@@ -51,6 +50,6 @@ struct StreaksView: View {
 
 struct StreaksView_Previews: PreviewProvider {
     static var previews: some View {
-        StreaksView(timer: .constant(TimerStruct()), streak: .constant(Streaks()), streaks: StreaksManager())
+        StreaksView(timer: .constant(TimerStruct()), streak: .constant(Streaks()))
     }
 }
