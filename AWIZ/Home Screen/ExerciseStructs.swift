@@ -26,7 +26,8 @@ struct Exercise {
     var duration: Int
     var steps: String
     var video: AVPlayer
-    //var description: String?
 }
+
+let exercise1 = Exercise(title: "Elbow Stretch", duration: 5, steps: "Lift your left arm up while pushing it towards your chest, with your elbow pointing forward. (We recommend doing 10 seconds per rep).", video: AVPlayer(url:  Bundle.main.url(forResource: "ElbowStretch" , withExtension: "mp4")!) )
 
 
