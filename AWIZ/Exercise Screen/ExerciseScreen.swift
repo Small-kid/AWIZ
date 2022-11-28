@@ -39,6 +39,11 @@ struct ExerciseScreen: View {
             .tabViewStyle(PageTabViewStyle())
 
             TimerView(streaks: $streaks, timerStruct: $timer)
+                .onAppear() {
+                    if timer.timerRunning == true {
+                        player.play()
+                    }
+                }
 
             Button {
                 presentAlert = true

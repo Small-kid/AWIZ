@@ -35,13 +35,15 @@ struct ExerciseScreenView: View {
                 
                 Section(header: Text("Video example")) {
                     VideoPlayer(player: exercisePlan.exercise.video)
-                        .onAppear() {
-                            player.play()
-                        }
                         .scaledToFit()
                         .frame(alignment: .center)
                         .cornerRadius(10)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .onAppear() {
+                            if timerStruct.timerRunning == true {
+                                player.play()
+                            }
+                    }
                 }
                     Section(header: Text("Steps:")){
                         Text(exercisePlan.exercise.steps)
