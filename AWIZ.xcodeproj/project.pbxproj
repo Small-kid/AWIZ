@@ -205,13 +205,6 @@
 			path = "Exercise Screen";
 			sourceTree = "<group>";
 		};
-		057E506F29312E5200AE5AD4 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		05AD794D292F326500F4AEAC /* Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +232,6 @@
 				056EEC1F2931F49800F80B9D /* OnboardingPage12.swift */,
 				051EA4CD2931F97B0079A992 /* OnboardingPage13.swift */,
 				051EA4CF2931F98B0079A992 /* OnboardingPage14.swift */,
-				057E506F29312E5200AE5AD4 /* Images */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -531,7 +523,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AWIZ/Preview Content\"";
 				DEVELOPMENT_TEAM = 3A3587FWLZ;
 				ENABLE_PREVIEWS = YES;
@@ -571,7 +563,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"AWIZ/Preview Content\"";
 				DEVELOPMENT_TEAM = 3A3587FWLZ;
 				ENABLE_PREVIEWS = YES;

@@ -60,7 +60,6 @@ struct ExerciseScreen: View {
                         exerciseTime += 1500
                     }
                     presentationMode.wrappedValue.dismiss()
-                    //navigationPath = NavigationPath()
                     timer.isCompleted.toggle()
                     timer.isActive = false
                     if timer.isCompleted == true {
