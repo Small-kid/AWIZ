@@ -23,7 +23,7 @@ struct OnboardingPage9: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
             
-            Text("Use the [Start] button below to start the timer")
+            Text("Use the [Start] button below to start the timer and click on the video itself to play the video.")
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
         }

@@ -15,7 +15,7 @@ struct OnboardingPage8: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300)
-            Text("Click the [Start Exercise] button below to start you exercise")
+            Text("Click the [Start Exercise] button below to start you exercise.")
                 .fixedSize(horizontal: false, vertical: true)
                 .font(.system(size: 21, weight: .medium))
         }
