@@ -66,6 +66,16 @@ struct ContentView: View {
         exerciseTime = 0.0
     }
     
+    func resetExerciseTime(){
+        
+        let dateComparisionResult:ComparisonResult = NSDate().compare(beginingOfDay)
+
+        if dateComparisionResult == ComparisonResult.orderedDescending || dateComparisionResult == ComparisonResult.orderedSame{
+        exerciseTime = 0.0
+    }
+}
+    let beginingOfDay = NSCalendar.current.startOfDay(for: NSDate() as Date)
+    
     var body: some View {
         NavigationView {
             NavigationStack(path: $navigationPath) {
@@ -73,7 +83,9 @@ struct ContentView: View {
                     HomeView(streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
                     .onAppear() {
                         if isNewDay() == true {
-                            resetTime()
+                            resetExerciseTime()
+                        } else if isNewDay() == false {
+                            
                         }
                     }
                     .onChange(of: scenePhase) { newPhase in

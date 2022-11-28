@@ -35,6 +35,15 @@ struct ExerciseScreenView: View {
                 
                 Section(header: Text("Video example")) {
                     VideoPlayer(player: exercisePlan.exercise.video)
+                        .onAppear{
+                              if player.currentItem == nil {
+                                  let item = exercisePlan.exercise.video
+                                    player.replaceCurrentItem(with: item)
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                                    player.play()
+                                })
+                            }
                         .scaledToFit()
                         .frame(alignment: .center)
                         .cornerRadius(10)

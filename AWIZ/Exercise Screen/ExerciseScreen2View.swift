@@ -30,6 +30,9 @@ struct ExerciseScreen2View: View {
                 
                 Section(header: Text("Video example")) {
                     VideoPlayer(player: exercisePlan.exercise2.video)
+                        .onAppear() {
+                            player.play()
+                        }
                         .scaledToFit()
                         .frame(alignment: .center)
                         .cornerRadius(10)

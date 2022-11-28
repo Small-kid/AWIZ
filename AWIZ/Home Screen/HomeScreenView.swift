@@ -54,7 +54,7 @@ struct HomeView: View {
 
     
     var body: some View {
-            GeometryReader { geometry in
+            //GeometryReader { geometry in
                 ScrollView {
                     ZStack {
                         VStack {
@@ -109,13 +109,12 @@ struct HomeView: View {
                                     .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 15)))
                                 
                             }
-                            .frame(width: geometry.size.width)
+                            //.frame(width: geometry.size.width)
                             .edgesIgnoringSafeArea(.all)
                             
                         }
                     }
                 }
-            }
         }
     
 

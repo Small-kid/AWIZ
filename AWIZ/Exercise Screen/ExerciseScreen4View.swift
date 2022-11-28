@@ -31,6 +31,9 @@ struct ExerciseScreen4View: View {
                 
                 Section(header: Text("Video example")) {
                     VideoPlayer(player: exercisePlan.exercise4.video)
+                        .onAppear() {
+                            player.play()
+                        }
                         .scaledToFit()
                         .frame(alignment: .center)
                         .cornerRadius(10)
