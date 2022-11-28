@@ -10,6 +10,9 @@ import AVKit
 
 struct ExerciseScreenView: View {
     
+    @AppStorage("exerciseTime") var exerciseTime = 0.0
+    @AppStorage("currentStreak") var currentStreak = 0
+    @AppStorage("highestStreak") var highestStreak = 1
     @State var index = 0
     @Binding var streaks: Streaks
     @Binding var timerStruct: TimerStruct
@@ -35,13 +38,15 @@ struct ExerciseScreenView: View {
                 
                 Section(header: Text("Video example")) {
                     VideoPlayer(player: exercisePlan.exercise.video)
-                        .onAppear() {
-                            player.play()
-                        }
                         .scaledToFit()
                         .frame(alignment: .center)
                         .cornerRadius(10)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .onAppear() {
+                            if timerStruct.timerRunning == true {
+                                player.play()
+                            }
+                    }
                 }
                     Section(header: Text("Steps:")){
                         Text(exercisePlan.exercise.steps)

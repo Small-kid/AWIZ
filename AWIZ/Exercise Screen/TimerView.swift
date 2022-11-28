@@ -5,10 +5,12 @@
 //  Created by Wong Jun heng on 18/11/22.
 ////  With reference from Indetly on Youtube
 
+import AVKit
 import SwiftUI
 
 struct TimerView: View {
     
+    @State var player = AVPlayer()
     @State var presentAlert = false
     @AppStorage("exerciseTime") var exerciseTime = 0.0
     @State var navigationPath = NavigationPath()
@@ -54,6 +56,7 @@ struct TimerView: View {
                         reset()
                     } else if timerStruct.timerRunning == false {
                         timerStruct.timerRunning = true
+                        player.play()
                     }
                 }
                 .padding()
