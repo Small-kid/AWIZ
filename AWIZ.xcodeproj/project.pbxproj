@@ -127,11 +127,9 @@
 		050D0DF8291578B700D99FBF /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */,
 				05E0274B2927DF6E009C9D2C /* HomeScreenView.swift */,
 				05E027492927DF6D009C9D2C /* CircularProgressView.swift */,
 				05E0274C2927DF6E009C9D2C /* StreaksView.swift */,
-				054847BA292F06A800AD07B1 /* StreaksStruct.swift */,
 				05E027512927DF9C009C9D2C /* ExercisePlanView.swift */,
 				05E027522927DF9C009C9D2C /* ExercisePlanDetailView.swift */,
 			);
@@ -189,11 +187,27 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		05409F9529351CFF00906388 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				05E0274A2927DF6E009C9D2C /* ExerciseStructs.swift */,
+				054847BA292F06A800AD07B1 /* StreaksStruct.swift */,
+				05448426292E7A3100C200EC /* TimerStruct.swift */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		05409F9629351D0F00906388 /* Data Mangers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Mangers";
+			sourceTree = "<group>";
+		};
 		055506B82924A9410029A1D0 /* Exercise Screen */ = {
 			isa = PBXGroup;
 			children = (
 				05E027552927DFE6009C9D2C /* TimerView.swift */,
-				05448426292E7A3100C200EC /* TimerStruct.swift */,
 				054E014D2930FC2600371D72 /* ExerciseScreen.swift */,
 				05E027572927E0DA009C9D2C /* ExerciseScreenView.swift */,
 				058DD8B0292D044C006A3583 /* ExerciseScreen2View.swift */,
@@ -255,6 +269,8 @@
 		CEB3A50729037D0E00F4E36A /* AWIZ */ = {
 			isa = PBXGroup;
 			children = (
+				05409F9629351D0F00906388 /* Data Mangers */,
+				05409F9529351CFF00906388 /* Data Structures */,
 				05AD794D292F326500F4AEAC /* Launch Screen */,
 				05E0276C2927E217009C9D2C /* Onboarding */,
 				050D0E0129160B6F00D99FBF /* Main app */,
