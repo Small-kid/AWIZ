@@ -92,18 +92,20 @@ struct HomeView: View {
             VStack {
                 
                 StreaksView(timer: $timerStruct, streak: $streak)
-                    .padding(EdgeInsets(top: -30, leading: 0, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: -150, trailing: 0))
+                
+   Spacer()
                 
                 Text("Choose your exercise plan:")
                     .bold()
                     .font(.system(size: 25))
                     .zIndex(1.0)
-                    .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 60))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 60))
                 
                 
                 ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
                     .zIndex(-1.0)
-                    .padding(EdgeInsets(top: -190, leading: 15, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: -10, leading: 15, bottom: 0, trailing: 0))
                 
                 Spacer()
             }
