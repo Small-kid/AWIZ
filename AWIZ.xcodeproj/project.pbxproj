@@ -197,13 +197,6 @@
 			path = "Data Structures";
 			sourceTree = "<group>";
 		};
-		05409F9629351D0F00906388 /* Data Mangers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Data Mangers";
-			sourceTree = "<group>";
-		};
 		055506B82924A9410029A1D0 /* Exercise Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +262,6 @@
 		CEB3A50729037D0E00F4E36A /* AWIZ */ = {
 			isa = PBXGroup;
 			children = (
-				05409F9629351D0F00906388 /* Data Mangers */,
 				05409F9529351CFF00906388 /* Data Structures */,
 				05AD794D292F326500F4AEAC /* Launch Screen */,
 				05E0276C2927E217009C9D2C /* Onboarding */,
