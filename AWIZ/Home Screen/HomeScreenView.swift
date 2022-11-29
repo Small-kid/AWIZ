@@ -84,7 +84,7 @@ struct HomeView: View {
                 .foregroundColor(.black)
                 .cornerRadius(10)
                 .frame(alignment: .center)
-                .padding(EdgeInsets(top: -60, leading: 0, bottom: 0, trailing: 40))
+                .padding(EdgeInsets(top: -60, leading: 0, bottom: 0, trailing: 30))
                 
                 //                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
             }
@@ -98,12 +98,12 @@ struct HomeView: View {
                     .bold()
                     .font(.system(size: 25))
                     .zIndex(1.0)
-                    .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 80))
+                    .padding(EdgeInsets(top: -75, leading: 0, bottom: 0, trailing: 60))
                 
                 
                 ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
                     .zIndex(-1.0)
-                    .padding(EdgeInsets(top: -230, leading: 15, bottom: 0, trailing: 0))
+                    .padding(EdgeInsets(top: -190, leading: 15, bottom: 0, trailing: 0))
                 
                 Spacer()
             }
