@@ -34,7 +34,7 @@ struct ExercisePlanView: View {
                             .foregroundColor(.black)
                             .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 11))
                     }
-                    .frame(width: 140, height: 130)
+                    .frame(width: 150, height: 140)
                     .padding()
                     .background((Color(red: 220/255, green: 247/255, blue: 99/255)))
                     .cornerRadius(10)

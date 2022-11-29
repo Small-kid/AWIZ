@@ -60,17 +60,16 @@ struct HomeView: View {
             
             let percent = Double(exerciseTime/1500)
             Text("Welcome back to ElderlyFit")
-                .font(.system(size: 25,weight: .medium, design: .rounded))
+                .font(.system(size: 30,weight: .medium, design: .rounded))
                 .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
             HStack {
                 CircularProgressView(timer: $timerStruct, progress: CGFloat(percent))
                     .frame(width: 150, height: 150)
-                    .padding(EdgeInsets(top: 15, leading: 60, bottom: 85, trailing: 0))
+                    .padding(EdgeInsets(top: 15, leading: 30, bottom: 85, trailing: 30))
                 VStack(spacing: 20) {
                 Text("\(round(result: exerciseTime/60)) mins of exercise completed today")
-                    .frame(width: 200, height: 50)
-                    .font(.system(size: 20, design: .rounded))
-                    .padding(EdgeInsets(top: -50, leading: 15, bottom: 60, trailing: 40))
+                    .font(.system(size: 24, design: .rounded))
+                    .padding(EdgeInsets(top: -60, leading: 0, bottom: 60, trailing: 30))
                 
                 Button {
                     
@@ -85,8 +84,7 @@ struct HomeView: View {
                 .cornerRadius(10)
                 .frame(alignment: .center)
                 .padding(EdgeInsets(top: -60, leading: 0, bottom: 0, trailing: 30))
-                
-                //                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 16)))
+                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 25)))
             }
         }
             VStack {
@@ -98,7 +96,7 @@ struct HomeView: View {
                 
                 Text("Choose your exercise plan:")
                     .bold()
-                    .font(.system(size: 25))
+                    .font(.system(size: 28))
                     .zIndex(1.0)
                     .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 60))
                 

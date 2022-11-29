@@ -19,29 +19,29 @@ struct StreaksView: View {
         VStack (alignment: .leading) {
             Rectangle()
                 .cornerRadius(20)
-                .frame(width: 380, height: 100)
+                .frame(width: 380, height: 125)
                 .shadow(radius: 5)
                 .foregroundColor(.white)
             
             Text("Current Streak: \(currentStreak) days")
-                .font(.system(size: 20))
+                .font(.system(size: 25))
                 .foregroundColor(Color("streaksColour"))
-                .offset(x: 20, y: -100)
+                .offset(x: 20, y: -120)
                 
             
             Text("Highest Streak: \(highestStreak-1) days")
-                .font(.system(size: 20))
+                .font(.system(size: 25))
                 .foregroundColor(Color("streaksColour"))
-                .offset(x: 20, y: -95)
+                .offset(x: 20, y: -120)
                 
             
             ProgressView(value: CGFloat(currentStreak), total: CGFloat(highestStreak))
                 .padding()
                 .frame(width: 370)
-                .scaleEffect(x:1, y: 4)
+                .scaleEffect(x:1, y: 6)
                 .tint((Color(red: 184/255, green: 243/255, blue: 255/255)))
                 .cornerRadius(20)
-                .offset(x: 0, y: -110)
+                .offset(x: 0, y: -130)
                 
         }
     }
