@@ -83,7 +83,7 @@ struct ContentView: View {
                     HomeView(streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
                     .onAppear() {
                         if isNewDay() == true {
-                            resetExerciseTime()
+                            resetTime()
                         } else if isNewDay() == false {
                             
                         }
