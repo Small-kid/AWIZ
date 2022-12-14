@@ -35,12 +35,12 @@ struct HomeView: View {
     func resetExerciseTime(){
         
         let dateComparisionResult:ComparisonResult = NSDate().compare(beginingOfDay)
-
+        
         if dateComparisionResult == ComparisonResult.orderedDescending || dateComparisionResult == ComparisonResult.orderedSame{
-        exerciseTime = 0.0
+            exerciseTime = 0.0
+        }
     }
-}
-
+    
     func isNewDay() -> Bool {
         let defaults = UserDefaults.standard
         let now = Date.now
@@ -51,68 +51,69 @@ struct HomeView: View {
         defaults.set(now, forKey: "currentDate")
         return true
     }
-
+    
     
     var body: some View {
-            //GeometryReader { geometry in
-                //ScrollView {
-        VStack {
-            
-            let percent = Double(exerciseTime/1500)
-            Text("Welcome back to ElderlyFit")
-                .font(.system(size: 30,weight: .medium, design: .rounded))
-                .padding(EdgeInsets(top: 70, leading: 0, bottom: 0, trailing: 0))
-            HStack {
-                CircularProgressView(timer: $timerStruct, progress: CGFloat(percent))
-                    .frame(width: 150, height: 150)
-                    .padding(EdgeInsets(top: 15, leading: 30, bottom: 85, trailing: 30))
-                VStack(spacing: 20) {
-                Text("\(round(result: exerciseTime/60)) mins of exercise completed today")
-                    .font(.system(size: 24, design: .rounded))
-                    .padding(EdgeInsets(top: -60, leading: 0, bottom: 60, trailing: 30))
-                
-                Button {
-                    
-                    navigationPath.append("ExercisePlanDetailView")
-                    
-                } label: {
-                    Text("Start exercise")
-                }
-                .padding()
-                .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                .foregroundColor(.black)
-                .cornerRadius(10)
-                .frame(alignment: .center)
-                .padding(EdgeInsets(top: -60, leading: 0, bottom: 0, trailing: 30))
-                .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 25)))
-            }
-        }
+        //GeometryReader { geometry in
+        ScrollView {
             VStack {
                 
-                StreaksView(timer: $timerStruct, streak: $streak)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: -150, trailing: 0))
-                
-   Spacer()
-                
-                Text("Choose your exercise plan:")
-                    .bold()
-                    .font(.system(size: 28))
-                    .zIndex(1.0)
-                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 60))
-                
-                
-                ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
-                    .zIndex(-1.0)
-                    .padding(EdgeInsets(top: -10, leading: 15, bottom: 0, trailing: 0))
-                
-                Spacer()
-            }
-        }
-                            //.frame(width: geometry.size.width)
-                            .edgesIgnoringSafeArea(.all)
+                let percent = Double(exerciseTime/1500)
+                Text("Welcome back to ElderlyFit")
+                    .font(.system(size: 30,weight: .medium, design: .rounded))
+                    .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
+                HStack {
+                    CircularProgressView(timer: $timerStruct, progress: CGFloat(percent))
+                        .frame(width: 130, height: 130)
+                        .padding(EdgeInsets(top: 15, leading: 20, bottom: 85, trailing: 20))
+                    VStack(spacing: 20) {
+                        Text("\(round(result: exerciseTime/60)) mins of exercise completed today")
+                            .font(.system(size: 24, design: .rounded))
+                            .padding(EdgeInsets(top: -60, leading: 0, bottom: 60, trailing: 0))
+                        
+                        Button {
                             
+                            navigationPath.append("ExercisePlanDetailView")
+                            
+                        } label: {
+                            Text("Start exercise")
                         }
+                        .padding()
+                        .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
+                        .foregroundColor(.black)
+                        .cornerRadius(10)
+                        .frame(alignment: .center)
+                        .padding(EdgeInsets(top: -60, leading: 0, bottom: 0, trailing: 23))
+                        .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 25)))
                     }
+                }
+                VStack {
+                    
+                    StreaksView(timer: $timerStruct, streak: $streak)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: -60, trailing: 0))
+                    
+                   Spacer()
+                    
+                    Text("Choose your exercise plan:")
+                        .bold()
+                        .font(.system(size: 28))
+                        .zIndex(1.0)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 40))
+                    
+                    
+                    ExercisePlanView( streaks: $streak, timer: $timerStruct, navigationPath: $navigationPath, exercisePlans: $exercisePlans)
+                        .zIndex(-1.0)
+                        .padding(EdgeInsets(top: -10, leading: 15, bottom: 0, trailing: 0))
+                    
+                    Spacer()
+                }
+            }
+            //.frame(width: geometry.size.width)
+            .edgesIgnoringSafeArea(.all)
+            
+        }
+    }
+}
                 
 
     

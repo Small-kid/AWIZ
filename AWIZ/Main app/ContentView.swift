@@ -83,18 +83,11 @@ struct ContentView: View {
                     HomeView(streak: $streaks, timerStruct: $timer, exercisePlans: $exercisePlans, navigationPath: $navigationPath)
                     .onAppear() {
                         if isNewDay() == true {
-                            resetExerciseTime()
+                            resetTime()
                         } else if isNewDay() == false {
                             
                         }
                     }
-                    .onChange(of: scenePhase) { newPhase in
-                                    
-                                    if newPhase == .active {
-                                        resetTime()
-                                    }
-                                    
-                                }
 //                        .tabItem {
 //                            Label("Home", systemImage: "house.fill")
 //                        }
