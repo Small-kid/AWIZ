@@ -88,13 +88,6 @@ struct ContentView: View {
                             
                         }
                     }
-                    .onChange(of: scenePhase) { newPhase in
-                                    
-                                    if newPhase == .active {
-                                        resetTime()
-                                    }
-                                    
-                                }
 //                        .tabItem {
 //                            Label("Home", systemImage: "house.fill")
 //                        }
