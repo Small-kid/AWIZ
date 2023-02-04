@@ -15,7 +15,7 @@ struct ExerciseScreenView: View {
     @AppStorage("highestStreak") var highestStreak = 1
     @State var index = 0
     @Binding var streaks: Streaks
-    weak @Binding var timerStruct: TimerStruct
+    @Binding var timerStruct: TimerStruct
     var countdownTimer = 300
     @State var player = AVPlayer()
     var exercisePlan: ExercisePlan
