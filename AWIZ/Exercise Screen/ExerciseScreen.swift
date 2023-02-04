@@ -45,14 +45,7 @@ struct ExerciseScreen: View {
                     }
                 }
 
-            Button {
-                presentAlert = true
-            } label: {
-                Text("Mark exercise plan as complete")
-                    .padding()
-                    .background((Color(red: 184/255, green: 243/255, blue: 255/255)))
-                    .foregroundColor(.black)
-                    .cornerRadius(10)
+            
 
             }
             .font(Font.system(size: UIFontMetrics.default.scaledValue(for: 20)))
@@ -79,7 +72,7 @@ struct ExerciseScreen: View {
                 }
         }
     }
-}
+
 
 struct ExerciseScreen_Previews: PreviewProvider {
     static var previews: some View {
