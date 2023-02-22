@@ -1,5 +1,5 @@
 //
-//  OnboardingPage8.swift
+//  OnboardingPage10.swift
 //  AWIZ
 //
 //  Created by Wong Jun heng on 26/11/22.
@@ -11,13 +11,14 @@ struct OnboardingPage8: View {
     @Binding var isOnboardingShown: Bool
     var body: some View {
         VStack {
-            Image("DetailView2")
+            Image("HomeButton")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
+                .cornerRadius(10)
                 .frame(width: 300)
-            Text("Click the [Start Exercise] button below to start you exercise.")
-                .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 21, weight: .medium))
+            Text("After finishing the exercises, press the blue [Mark exercise plan as complete] button to complete the exercise plan and return to the home page.")
+                .font(.system(size: 20, weight: .medium, design: .rounded))
+                .padding(.top)
         }
         .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

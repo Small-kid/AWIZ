@@ -1,31 +1,23 @@
 //
-//  OnboardingPage9.swift
+//  OnboardingPage13.swift
 //  AWIZ
 //
 //  Created by Wong Jun heng on 26/11/22.
 //
-
+import AVKit
 import SwiftUI
 
 struct OnboardingPage9: View {
     @Binding var isOnboardingShown: Bool
+    @State var player = AVPlayer()
     var body: some View {
         VStack {
-            Image("ExerciseScreen")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 300)
-            Text("This is the exercise page!")
-                .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 21, weight: .medium))
-            
-            Text("Scroll left to access the other exercise in the exercise plan")
-                .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 21, weight: .medium))
-            
-            Text("Use the [Start] button below to start the timer and click on the video itself to play the video.")
-                .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 21, weight: .medium))
+            VideoPlayer(player: AVPlayer(url:  Bundle.main.url(forResource: "TutorialVideo" , withExtension: "mp4")!))
+                .scaledToFit()
+                .cornerRadius(10)
+            Text("Here is a short video tutorial going through how one would use the app.")
+                .font(.system(size: 20, weight: .medium, design: .rounded))
+                .padding(.top)
         }
         .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

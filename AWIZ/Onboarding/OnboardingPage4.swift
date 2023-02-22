@@ -1,5 +1,5 @@
 //
-//  OnboardingPage4.swift
+//  OnboardingPage5.swift
 //  AWIZ
 //
 //  Created by Wong Jun heng on 26/11/22.
@@ -13,11 +13,12 @@ struct OnboardingPage4: View {
         VStack {
             Image("HomeScreen")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
+                .cornerRadius(10)
                 .frame(width: 300)
-            Text("Click on the [Start Exercise] button at the top to select the default exercise plan. Or go down to the bottom to choose you own exercise plan by selecting the corresponding yellow box. ")
-                .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 21, weight: .medium))
+            Text("Scroll to the right to explore various exercise plans and click the green box to start exercising.")
+                .font(.system(size: 20, weight: .medium, design: .rounded))
+                .padding(.top)
         }
         .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -25,9 +26,8 @@ struct OnboardingPage4: View {
         .background(
             Color("Onboarding")
                 .edgesIgnoringSafeArea(.all))
-        }
     }
-
+}
 
 struct OnboardingPage4_Previews: PreviewProvider {
     static var previews: some View {

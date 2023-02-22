@@ -1,5 +1,5 @@
 //
-//  OnboardingPage6.swift
+//  OnboardingPage8.swift
 //  AWIZ
 //
 //  Created by Wong Jun heng on 26/11/22.
@@ -11,13 +11,14 @@ struct OnboardingPage6: View {
     @Binding var isOnboardingShown: Bool
     var body: some View {
         VStack {
-            Image("DetailView")
+            Image("DetailView2")
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
+                .cornerRadius(10)
                 .frame(width: 300)
-            Text("When you click on an exercise plan, it will show you more details of the plan like the type of exercises, duration and description for the exercise plan. ")
-                .fixedSize(horizontal: false, vertical: true)
-                .font(.system(size: 21, weight: .medium))
+            Text("Press the [Start exercise] button below to begin your exercise.")
+                .font(.system(size: 20, weight: .medium, design: .rounded))
+                .padding(.top)
         }
         .multilineTextAlignment(.center)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -25,8 +26,8 @@ struct OnboardingPage6: View {
         .background(
             Color("Onboarding")
                 .edgesIgnoringSafeArea(.all))
-        }
     }
+}
 
 struct OnboardingPage6_Previews: PreviewProvider {
     static var previews: some View {

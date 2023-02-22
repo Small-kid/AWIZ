@@ -13,6 +13,8 @@ struct OnboardingView: View {
         TabView {
             OnboardingPage1(isOnboardingShown: $isOnboardingShown)
             
+            OnboardingPage2(isOnboardingShown: $isOnboardingShown)
+            
             OnboardingPage3(isOnboardingShown: $isOnboardingShown)
             
             OnboardingPage4(isOnboardingShown: $isOnboardingShown)
@@ -21,15 +23,13 @@ struct OnboardingView: View {
             
             OnboardingPage6(isOnboardingShown: $isOnboardingShown)
             
+            OnboardingPage7(isOnboardingShown: $isOnboardingShown)
+            
             OnboardingPage8(isOnboardingShown: $isOnboardingShown)
             
             OnboardingPage9(isOnboardingShown: $isOnboardingShown)
             
             OnboardingPage10(isOnboardingShown: $isOnboardingShown)
-            
-            OnboardingPage13(isOnboardingShown: $isOnboardingShown)
-            
-            OnboardingPage14(isOnboardingShown: $isOnboardingShown)
         }
         .tabViewStyle(PageTabViewStyle())
     }

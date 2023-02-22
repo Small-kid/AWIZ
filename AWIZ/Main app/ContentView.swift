@@ -18,7 +18,7 @@ struct ContentView: View {
     @State var timer = TimerStruct()
     @State var navigationPath: NavigationPath = NavigationPath()
     @State var exercisePlans = [
-        ExercisePlan(title: "Exercise Plan 1", details: "Choose this plan for a more basic workout",
+        ExercisePlan(title: "Exercise Plan 1", details: "Basic Workout Plan",
                      exercise: exercise2,
                      exercise2: exercise7,
                      exercise3: exercise10,
@@ -26,7 +26,7 @@ struct ContentView: View {
                      exercise5: exercise5
                     ),
         
-        ExercisePlan(title: "Exercise Plan 2", details: "Choose this for a medium difficulty workout",
+        ExercisePlan(title: "Exercise Plan 2", details: "Medium Workout Plan",
                      exercise: exercise10,
                      exercise2: exercise7,
                      exercise3: exercise5,
@@ -34,7 +34,7 @@ struct ContentView: View {
                      exercise5: exercise6
                     ),
         
-        ExercisePlan(title: "Exercise Plan 3", details: "Choose this plan for a more intermediate set of workouts (Warning: Only recommended for elderly who regulary exercise/are very active)",
+        ExercisePlan(title: "Exercise Plan 3", details: ("Intermediate Workout Plan \n(Suitable for seniors who exercise frequently)"),
                      exercise: exercise2,
                      exercise2: exercise3,
                      exercise3: exercise6,
@@ -42,7 +42,7 @@ struct ContentView: View {
                      exercise5: exercise8
                      ),
         
-        ExercisePlan(title: "Exercise Plan 4", details: "Choose this plan for a more advanced workout (Warning: Only recommended for elderly who regulary exercise/are very active)",
+        ExercisePlan(title: "Exercise Plan 4", details: "Advanced Workout Plan \n(Suitable for seniors who exercise regularly)",
                      exercise: exercise3,
                      exercise2: exercise5,
                      exercise3: exercise9,

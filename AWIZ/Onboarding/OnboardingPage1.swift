@@ -12,19 +12,22 @@ struct OnboardingPage1: View {
     var body: some View {
         ZStack {
             Color("Onboarding")
-            .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
             VStack {
                 Text("Welcome to ElderlyFit!")
-                    .font(.largeTitle)
-                    .frame(alignment: .center)
-                Text("Let's get you started with a short tutorial of the app")
-                    .font(.headline)
-                    .frame(alignment: .center)
-                
-                Text("Swipe left to continue")
-                    .font(.subheadline)
+                    .font(.system(size: 35, weight: .semibold, design: .rounded))
+                    .padding(1)
+                Text("Get started with a short tutorial of the app")
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .padding(1)
+                Text("Swipe right to continue")
+                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                    .padding(1)
+                Image(systemName: "arrow.right")
+                    .font(.system(size: 50))
             }
             .multilineTextAlignment(.center)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
     }
 }
